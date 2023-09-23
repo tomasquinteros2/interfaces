@@ -1,7 +1,3 @@
-
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -13,4 +9,64 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    color: #DCDCDD;
+  }
+
+
+/*main*/
+/*¨seccion categoria*/
+section.category{
+    position: relative;
+    padding-left: 3px;
+    margin-bottom: 40px;
+}
+/*titulo categoria*/
+section.category h2.game-category{
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 36px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: baseline;
+    column-gap: 15px;
+    position: relative;
+  }
+/*carrusel juego*/
+.slide{
+    display: flex;
+    column-gap: 15px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+/* card juego carrusel*/
+section.category ul.slide .game-card{
+    height: 120px;
+    width: 240px;
+  }
+/*imagen card juego*/
+section.category ul.slide .game-card .game-card-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 2px 2px 0 2px; 
+  }
+section.category ul.slide .game-card .game-card-img img{
+    width: 240px;
+    height: 100px;
+    object-fit: cover;
+
+}
+/* info card*/
+section.category ul.slide .game-card .card-info{
+    height: 33px;
+    width:240px;
+    text-align: center;
+}
+section.category ul.slide .game-card .card-info .card-title{
+    font-size: 23px;
+    font-weight: 400;
+    word-wrap: break-word;
+    background-color: #5D5191;
+      
   }
