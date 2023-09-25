@@ -34,39 +34,48 @@ section.category h2.game-category{
 /*carrusel juego*/
 .slide{
     display: flex;
-    column-gap: 15px;
+    column-gap: 80px;
     overflow: hidden;
     scroll-behavior: smooth;
     padding-bottom: 10px;
+    
   }
 /* card juego carrusel*/
 section.category ul.slide .game-card{
-    height: 120px;
-    width: 240px;
+    width: 270px; 
+    height: 122px; 
+    position: relative; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    display: flex
   }
-/*imagen card juego*/
+/* imagen card juego*/
 section.category ul.slide .game-card .game-card-img{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 2px 2px 0 2px; 
-  }
+    width: 240px; 
+    height: 95px; 
+    
+}
+/* imagen */
 section.category ul.slide .game-card .game-card-img img{
     width: 240px;
-    height: 100px;
+    height: 95px;
     object-fit: cover;
 
 }
-/* info card*/
 section.category ul.slide .game-card .card-info{
-    height: 33px;
-    width:240px;
-    text-align: center;
+  height: 25px;
+  width: 240px;
+  padding: 3px 3px;
+  text-align: center;
+  background-color: #5D5191;
 }
 section.category ul.slide .game-card .card-info .card-title{
-    font-size: 23px;
-    font-weight: 400;
-    word-wrap: break-word;
-    background-color: #5D5191;
-      
-  }
+  font-style: normal;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: transparent;
+    
+}
