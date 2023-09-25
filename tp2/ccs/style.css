@@ -70,3 +70,13 @@ section.category ul.slide .game-card .card-info .card-title{
     background-color: #5D5191;
       
 }
+
+.menuDesplegable.show{
+  display: flex;
+  flex-direction: column;
+}
+
+.menuDesplegable li{
+  list-style: none;
+
+}
