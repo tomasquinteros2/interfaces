@@ -4,118 +4,734 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rattata Games</title>
-    <link rel="stylesheet" href="ccs/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
-    
     <header>
-        <nav>
-            <button class="menu">
-                <img src="../img/icons/menuIcon.png"alt="boton menu navegacion desplegable">
-            </button>
-            <section class="menuDesplegable">
-                <img src="../img/icons/crossIcon.png" alt="cerrar menu">
-                <ul>
-                    <li>
-                        <img src="../img/icons/homeIcon.png" alt="inicio">Inicio
-                    </li>
-                    <li>
-                        <img src="../img/icons/collectionIcon.png" alt="mi coleccion"> Mi coleccion
-                    </li>
-                    <li>
-                        <img src="../img/icons/joystickIcon.png" alt="categorias">Categorias
-                    </li>
-                    <li>
-                        <img src="../img/icons/helpIcon.png" alt="ayuda">Ayuda
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <img src="../img/icons/facebookIcon.png" alt="link al facebook de Rattata">
-                    </li>
-                    <li>
-                        <img src="../img/icons/instagramIcon.png" alt="link al instagram de Rattata">
-                    </li>
-                    <li>
-                        <img src="../img/icons/twitter.png" alt="link al twitter de Rattata">
-                    </li>
-                </ul>
-
+        <div class="left-header"> 
+            <a class="menu" href="#"><img src="../img/icons/menuIcon.png" alt="boton menu navegacion desplegable" class="icon"></a>
+            <a href="index.html"><img src="../img/logoRattata.png" alt="RattataLogo" class="logoR"></a>
+        </div>
+        <div class="search-header">
+            <section class="search-input-content">
+                <input class="search-input" type="text" placeholder="Buscar juegos, generos y mas">
+                <a class="search-button" href="#"></a>
             </section>
-        </nav>
-        <img src="../img/logoRattata.png" alt="RattataLogo" id="logo">
-        <nav>
-            <button class="menu">
-                <img src="../img/icons/userIcon.png" alt="boton menu usuario desplegable">
-            </button>
-            <section class="menuDesplegable">
-                <img src="../img/icons/crossIcon.png" alt="cerrar menu">
-                <ul>
-                <!-- insertar la imagen de Josema
-                    <li><img src="" alt="">NombreUsuario</li>
-                -->
-                    <li>
-                        <img src="../img/icons/userIcon.png" alt="mi perfil">Mi perfil
-                    </li>
-                    <li>
-                        <img src="../img/icons/communityIcon.png" alt="mis amigos">Mis amigos
-                    </li>
-                    <li>
-                        <img src="../img/icons/editionIcon.png" alt="administrar cuenta">Administrar cuenta
-                    </li>
-                    <li>
-                        <img src="../img/icons/closeSessionIcon.png" alt="cerrar sesion">Cerrar sesion
-                    </li>
-                </ul>
-            </section>
-        </nav>
+        </div>
+        <div class="right-header">
+            <a href="#" class="user-image icon-user"><img src="../img/icons/userIcon.png" alt="boton menu usuario desplegable" class="icon"></a>
+        </div> 
     </header>
+    <nav>
+        <section class="menuDesplegable">
+            <img src="../img/icons/crossIcon.png" alt="cerrar menu" class="icon">
+            <ul>
+                <li>
+                    <img src="../img/icons/homeIcon.png" alt="inicio" class="icon">Inicio
+                </li>
+                <li>
+                    <img src="../img/icons/collectionIcon.png" alt="mi coleccion" class="icon"> Mi coleccion
+                </li>
+                <li>
+                    <img src="../img/icons/joystickIcon.png" alt="categorias" class="icon">Categorias
+                </li>
+                <li>
+                    <img src="../img/icons/helpIcon.png" alt="ayuda" class="icon">Ayuda
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="../img/icons/facebookIcon.png" alt="link al facebook de Rattata" class="icon">
+                </li>
+                <li>
+                    <img src="../img/icons/instagramIcon.png" alt="link al instagram de Rattata" class="icon">
+                </li>
+                <li>
+                    <img src="../img/icons/twitter.png" alt="link al twitter de Rattata" class="icon">
+                </li>
+            </ul>
+
+        </section>
+    </nav>
+    <nav>
+        <button class="menu">
+            <img src="../img/icons/userIcon.png" alt="boton menu usuario desplegable" class="icon">
+        </button>
+        <section class="menuDesplegable">
+            <img src="../img/icons/crossIcon.png" alt="cerrar menu" class="icon">
+            <ul>
+            <!-- insertar la imagen de Josema
+                <li><img src="" alt="">NombreUsuario</li>
+            -->
+                <li>
+                    <img src="../img/icons/userIcon.png" alt="mi perfil" class="icon">Mi perfil
+                </li>
+                <li>
+                    <img src="../img/icons/communityIcon.png" alt="mis amigos" class="icon">Mis amigos
+                </li>
+                <li>
+                    <img src="../img/icons/editionIcon.png" alt="administrar cuenta" class="icon">Administrar cuenta
+                </li>
+                <li>
+                    <img src="../img/icons/closeSessionIcon.png" alt="cerrar sesion" class="icon">Cerrar sesion
+                </li>
+            </ul>
+        </section>
+    </nav>
     <main>
         <section class="category">
             <h2 class="game-category">Recomendado para ti</h2>
             <button class="button-left"><i class="fas fa-angle-left"></i></button>
             <ul class="slide">
                 <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
                     <div class="game-card-img">
+                        <!-- imagen del juego-->
                         <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
                     </div>
                     <div class="card-info">
+                        <!-- titulo del juego-->
                         <h3 class="card-title">demon Slayer: 4 en linea</h3>
-                    </div>  
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>  
                 </ul>
         </section>
-        <section>
-            <p>carrousel</p>      
+        <section class="category">
+            <h2 class="game-category">Recomendado para ti</h2>
+            <button class="button-left"><i class="fas fa-angle-left"></i></button>
+            <ul class="slide">
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>  
+                </ul>
         </section>
-        <section>
-            <p>carrousel</p>
+        <section class="category">
+            <h2 class="game-category">Recomendado para ti</h2>
+            <button class="button-left"><i class="fas fa-angle-left"></i></button>
+            <ul class="slide">
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>  
+                </ul>
         </section>
-        <section>
-            <p>carrousel</p>
+        <section class="category">
+            <h2 class="game-category">Recomendado para ti</h2>
+            <button class="button-left"><i class="fas fa-angle-left"></i></button>
+            <ul class="slide">
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>  
+                </ul>
         </section>
-        <section>
-            <p>carrousel</p>
+        <section class="category">
+            <h2 class="game-category">Recomendado para ti</h2>
+            <button class="button-left"><i class="fas fa-angle-left"></i></button>
+            <ul class="slide">
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>  
+                </ul>
         </section>
-        <section>
-            <p>carrousel</p>
-        </section>
-        <section>
-            <p>carrousel</p>
-        </section>
-        <section>
-            <p>carrousel</p>
-        </section>
-        <section>
-            <p>carrousel</p>
-        </section>
-        <section>
-            <p>carrousel</p>
+        <section class="category">
+            <h2 class="game-category">Recomendado para ti</h2>
+            <button class="button-left"><i class="fas fa-angle-left"></i></button>
+            <ul class="slide">
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>
+                <li class="game-card">
+                    <div class="etiquetafree">
+                        <div class="icon-free">
+                            <img src="../img/icons/iconofree.jpg">
+                        </div>
+                        <h3 class="title-etiqueta">free</h3>
+                    </div>
+                    <div class="etiqueta-triangulo"></div>
+                    <div class="game-card-img">
+                        <!-- imagen del juego-->
+                        <img src="../img/games/multijugador/4EnlineaDemonSlayer.jpg" alt="demons slayer: 4 en linea">
+                    </div>
+                    <div class="card-info">
+                        <!-- titulo del juego-->
+                        <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                    </div>
+                </li>  
+                </ul>
         </section>
     </main>
     <footer>
         <div>
-            <img src="../img/logoRattata.png" alt="logo Rattata">
+            <img src="../img/logoRattata.png" alt="logo Rattata" class="logoR">
             <article>
                 <h3>Links</h3>
                 <ul>

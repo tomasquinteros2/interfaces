@@ -1,0 +1,195 @@
+*{
+  margin: 0;
+  padding: 0;
+  border:0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background-color: #0B0C12;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #DCDCDD;
+}
+/* header*/
+header{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: #1A1B26;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/*seccion logo y menu hamburguesa*/
+header .left-header{
+  width: 10%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: .6em;
+}
+header .search-header{
+  width:52%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+/*///// buscador /////*/
+header .search-header .search-input-content{
+  background-color: #ffffff;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  transition: .35s ease-out;
+}
+header .search-header .search-input-content .search-input{
+  width: 100%;
+  height: 100%;
+  padding-left:8px;
+  font-size: 14px;
+}
+
+header .search-header .search-input-content a{
+  padding-right:8px;
+}
+/*seccion usuario*/
+header .right-header{
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.logoR{
+  height: 30%;
+  width: 50%;
+}
+.menuDesplegable{
+  display:flex;
+  flex-direction: column;
+}
+
+.menuDesplegable li{
+  list-style: none;
+  font-style: normal;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+body{
+  display: grid;
+  grid-template-rows: "header header header"
+  "main main main"
+  "main main main"
+  "footer footer footer";
+}
+
+.icon{
+  width: 40px;
+  height: 40px;
+}
+/*main*/
+/*¨seccion categoria*/
+section.category{
+  position: relative;
+  padding-left: 3px;
+  margin-bottom: 40px;
+}
+/*titulo categoria*/
+section.category h2.game-category{
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 36px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: baseline;
+  column-gap: 15px;
+  position: relative;
+}
+/*carrusel juego*/
+.slide{
+  display: flex;
+  column-gap: 30px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  
+}
+/* card juego carrusel*/
+section.category ul.slide .game-card{
+  width: 270px; 
+  height: 122px; 
+  position: relative; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+}
+/* imagen card juego*/
+section.category ul.slide .game-card .game-card-img{
+  width: 240px; 
+  height: 95px; 
+  left: 100px;
+}
+/* imagen */
+section.category ul.slide .game-card .game-card-img img{
+  position: absolute;
+  width: 240px;
+  height: 95px;
+  object-fit: cover;
+  left: 10px;
+}
+section.category ul.slide .game-card .card-info{
+  position: absolute;
+  height: 25px;
+  width: 240px;
+  padding: 3px 3px;
+  text-align: center;
+  background-color: #5D5191;
+  left: 10px;
+}
+section.category ul.slide .game-card .card-info .card-title{
+font-style: normal;
+text-transform: capitalize;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+background-color: transparent;
+  
+}
+section.category ul.slide .game-card .etiquetafree{
+  display: flex;
+  position:absolute;
+  justify-content: center;
+  z-index:7;
+  left:0px;
+  top: 15px;
+  width: 80px;
+  height: 22px;
+  border-radius: 2px;
+  background: #51915D;
+}
+section.category ul.slide .game-card .title-etiqueta{
+  background-color: transparent;
+}
+section.category ul.slide .game-card .etiqueta-triangulo{
+  width: 14px;
+  height: 11px;
+  transform: rotate(140grad);
+  background: #2D5034;
+  position: relative;
+  top: 29px;
+  left: 2px;
+  border-radius: 1px;
+}
+section.category ul.slide .game-card .icon-free{
+  width: 19px;
+  height: 19px;
+
+}
+  
+
+
