@@ -5,61 +5,10 @@
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background-color: #0B0C12;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
   color: #DCDCDD;
-}
-/* header*/
-header{
-  display: flex;
-  width: 100%;
-  height: 80px;
-  background-color: #1A1B26;
-  flex-direction: row;
-  justify-content: space-between;
-}
-/*seccion logo y menu hamburguesa*/
-header .left-header{
-  width: 10%;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: .6em;
-}
-header .search-header{
-  width:52%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-/*///// buscador /////*/
-header .search-header .search-input-content{
-  background-color: #ffffff;
-  width: 100%;
-  height: 40px;
-  border-radius: 10px;
-  align-items: center;
-  display: flex;
-  transition: .35s ease-out;
-}
-header .search-header .search-input-content .search-input{
-  width: 100%;
-  height: 100%;
-  padding-left:8px;
-  font-size: 14px;
-}
-
-header .search-header .search-input-content a{
-  padding-right:8px;
-}
-/*seccion usuario*/
-header .right-header{
-  width: auto;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
 }
 .logoR{
   height: 30%;
@@ -77,10 +26,10 @@ header .right-header{
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  background-color: transparent;
 }
 
 body{
+  background-color: #0B0C12;
   display: grid;
   grid-template-rows: "header header header"
   "main main main"
@@ -157,7 +106,6 @@ text-transform: capitalize;
 text-overflow: ellipsis;
 overflow: hidden;
 white-space: nowrap;
-background-color: transparent;
   
 }
 section.category ul.slide .game-card .etiquetafree{
@@ -171,9 +119,6 @@ section.category ul.slide .game-card .etiquetafree{
   height: 22px;
   border-radius: 2px;
   background: #51915D;
-}
-section.category ul.slide .game-card .title-etiqueta{
-  background-color: transparent;
 }
 section.category ul.slide .game-card .etiqueta-triangulo{
   width: 14px;
@@ -190,6 +135,83 @@ section.category ul.slide .game-card .icon-free{
   height: 19px;
 
 }
-  
+/*footer*/
+.footer-container{
+  background-color: #1A1B26;
+  width: 100%;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+}
+.footer-container .footer-logo-container{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container .footer-logo-container .footer-logo{
+  width: 160px;
+  height: 70px;
+  margin-top: 70px;
+}
+.footer-container .footer-nav .footer-links h3{
+  padding: 16px 0px 10px 18px;
+  letter-spacing: 3px;
+  color: #DCDCDD;
+}
+
+.footer-container .footer-nav .footer-links li{
+  padding: 4px 0px 10px 18px;
+  font-size: 14px;
+}
+
+.line{
+  width: 90%;
+  border-top: 1px solid #B8B8B8;
+  margin: 20px 5%;
+}
+
+.footer-container .footer-social{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-container .footer-social a{
+  margin: 10px 16px 10px 16px;
+}
+
+.footer-container span{
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 768px){
+  .footer-container .footer-nav{
+    display: grid;
+    width: 80%;
+    margin: 25px 4% 0% 16%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  } 
+}
+@media only screen and (min-width: 1024px){
+  .footer-container .footer-grid{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 80%;
+    height: 300px;
+    margin: 20px 10%;
+  }
+
+  .footer-container .footer-nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 0 0 20%;
+  }  
+}
+
 
 
