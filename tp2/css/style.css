@@ -10,6 +10,9 @@
   box-sizing: border-box;
   color: #DCDCDD;
 }
+a:hover{
+  text-decoration: underline;
+}
 .logoR{
   height: 30%;
   width: 50%;
@@ -29,12 +32,8 @@
 }
 
 body{
+  
   background-color: #0B0C12;
-  display: grid;
-  grid-template-rows: "header header header"
-  "main main main"
-  "main main main"
-  "footer footer footer";
 }
 
 .icon{
@@ -55,18 +54,37 @@ section.category h2.game-category{
   line-height: 36px;
   text-transform: capitalize;
   display: flex;
-  align-items: baseline;
-  column-gap: 15px;
   position: relative;
+  margin-left: 6%;
 }
 /*carrusel juego*/
 .slide{
+  width: 88%;
   display: flex;
-  column-gap: 30px;
+  column-gap: 50px;
   overflow: hidden;
   scroll-behavior: smooth;
   padding-bottom: 10px;
-  
+  position: relative;
+  margin-left: 6%;
+}
+.button-right, .button-left{
+  position: absolute;
+  top: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor:pointer;
+}
+.button-left{
+  left: 2%;
+}
+
+.button-right{
+  right: 2%;
 }
 /* card juego carrusel*/
 section.category ul.slide .game-card{
@@ -81,7 +99,6 @@ section.category ul.slide .game-card{
 section.category ul.slide .game-card .game-card-img{
   width: 240px; 
   height: 95px; 
-  left: 100px;
 }
 /* imagen */
 section.category ul.slide .game-card .game-card-img img{
@@ -89,7 +106,7 @@ section.category ul.slide .game-card .game-card-img img{
   width: 240px;
   height: 95px;
   object-fit: cover;
-  left: 10px;
+  
 }
 section.category ul.slide .game-card .card-info{
   position: absolute;
@@ -98,7 +115,6 @@ section.category ul.slide .game-card .card-info{
   padding: 3px 3px;
   text-align: center;
   background-color: #5D5191;
-  left: 10px;
 }
 section.category ul.slide .game-card .card-info .card-title{
 font-style: normal;
@@ -112,13 +128,35 @@ section.category ul.slide .game-card .etiquetafree{
   display: flex;
   position:absolute;
   justify-content: center;
+  column-gap: 10px;
+  left: -10px;
   z-index:7;
-  left:0px;
   top: 15px;
   width: 80px;
   height: 22px;
   border-radius: 2px;
   background: #51915D;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+section.category ul.slide .game-card .etiquetapremium{
+  display: flex;
+  position:absolute;
+  justify-content: center;
+  column-gap: 10px;
+  left: -10px;
+  z-index:7;
+  top: 15px;
+  width: 80px;
+  height: 22px;
+  border-radius: 2px;
+  background: #C69414;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+section.category ul.slide .game-card .etiquetapremium .title-etiqueta{
+  margin-top: 2px;
+}
+section.category ul.slide .game-card .etiquetafree .title-etiqueta{
+  margin-top: 2px;
 }
 section.category ul.slide .game-card .etiqueta-triangulo{
   width: 14px;
@@ -127,13 +165,26 @@ section.category ul.slide .game-card .etiqueta-triangulo{
   background: #2D5034;
   position: relative;
   top: 29px;
-  left: 2px;
+  left: -8px;
   border-radius: 1px;
 }
-section.category ul.slide .game-card .icon-free{
-  width: 19px;
-  height: 19px;
-
+section.category ul.slide .game-card .etiqueta-triangulo-premium{
+  width: 14px;
+  height: 11px;
+  transform: rotate(140grad);
+  background: #A77C0D;
+  position: relative;
+  top: 29px;
+  left: -8px;
+  border-radius: 1px;
+}
+section.category ul.slide .game-card .etiquetapremium .icon-etiqueta{
+  width: 15px;
+  height: 15px;
+}
+section.category ul.slide .game-card .etiquetafree .icon-etiqueta{
+  width: 20px;
+  height: 20px;
 }
 /*footer*/
 .footer-container{
@@ -175,8 +226,10 @@ section.category ul.slide .game-card .icon-free{
   height: 10%;
   display: flex;
   justify-content: center;
+  column-gap: 40px;
   margin-top: 20px;
   margin-bottom: 10px;
+  
 }
 
 .footer-container .footer-social a{
