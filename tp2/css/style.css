@@ -193,11 +193,13 @@ section.category ul.slide .game-card .etiquetafree .icon-etiqueta{
   margin: 10px 10%;
   padding: 16px 0;
 }
+/*ruta*/
 .game-container .breadcrums{
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 16px;
 }
+/*section*/
 .game-container section{
   width: 100%;
   height: auto;
