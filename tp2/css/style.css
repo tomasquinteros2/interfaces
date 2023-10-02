@@ -13,13 +13,20 @@
 a:hover{
   text-decoration: underline;
 }
+header{
+  display: inline-flex;
+  justify-content: space-between;
+  height: 300px;
+  width: 100%;
+}
 .logoR{
-  height: 30%;
-  width: 50%;
+  height: 150px;
+  width: 350px ;
 }
 .menuDesplegable{
   display:flex;
   flex-direction: column;
+  display: none;
 }
 
 .menuDesplegable li{
@@ -29,7 +36,9 @@ a:hover{
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  background-color: transparent;
 }
+
 
 body{
   
