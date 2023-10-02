@@ -186,6 +186,202 @@ section.category ul.slide .game-card .etiquetafree .icon-etiqueta{
   width: 20px;
   height: 20px;
 }
+/*4 en linea*/
+.game-container{
+  width: 80%;
+  height: auto;
+  margin: 10px 10%;
+  padding: 16px 0;
+}
+/*ruta*/
+.game-container .breadcrums{
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+/*section*/
+.game-container section{
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow:hidden;
+}
+.game-container section .section-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game-container section .section-image .bk-game-image{
+  width: 100%;
+}
+.game-container section .section-image .play-section{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.game-image{
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.game-container section .game-info{
+  width: 100%;
+  height: 100px;
+  background-color:#5D5191;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.game-container section .game-info h1{
+  font-weight: 390;
+  font-size: 28px;
+  line-height: 96px;
+  margin-left: 46px;
+  width: auto;
+}
+
+.game-container section .game-info .info-section{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: auto;
+}
+.game-container h2{
+  font-weight: 500;
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+/*instrucciones 4en linea*/
+.game-container .game-instructions{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 10px 10px 10px 0;
+  margin-bottom: 20px;
+}
+
+.game-container .game-instructions img{
+  width: 340px;
+  height: 295px;
+  border-radius: 10px;
+}
+
+.game-container h3{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 30px 0 20px 0;
+}
+
+/*formulario comentario*/
+.game-container .form-container{
+  width: 84%;
+  height: auto;
+  margin: 20px 8%;
+  border: 1px solid #515257;
+  background-color: #1A1B26;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.user-content{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+}
+
+.user-content img{
+  width:45px;
+  height: 45px;
+  background-color: #4d4d4d;
+  border-radius: 100%;
+  margin-left: 20px;
+  object-fit: cover;
+}
+
+.game-container .form-container .form-comment{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.game-container .form-container .form-comment input{
+  width: 90%;
+  height: 50px;
+  padding: 10px;
+  border: solid 1px #515257;
+  background-color: #0B0C12;
+  border-radius:10px 0 0 10px ;
+  margin-left: 20px;
+}
+
+.game-container .form-container .form-comment button{
+  width: 10%;
+  height: 50px;
+  background-color: #A48EFF;
+  border-radius:0 10px 10px 0;
+  cursor: pointer;
+  margin-right: 20px;
+}
+ /*comentarios*/
+ .game-container .comments .comment-list{
+  width: 84%;
+  height: auto;
+  margin: 20px 8%;
+}
+
+.game-container .comments .comment-list .comment{
+  width: 100%;
+  height: auto;
+  border: 1px solid #515257;
+  background-color: #1A1B26;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.game-container .comments .comment-list .comment .top-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+}
+
+.game-container .comments .comment-list .comment .top-content .like-comment{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-right: 20px;
+}
+
+
+.game-container .comments .comment-list .comment .line-center{
+  width: 100%;
+  border-top: 1px solid #d9d9d9;
+  margin: 16px 0;
+}
+
+.game-container .comments .comment-list .comment .bottom-content{
+  display: flex;
+  flex-direction: column;
+  padding: 5px 40px 20px 40px;
+}
+
+.game-container .comments .comment-list .comment .bottom-content .date-comment{
+  color: #929292;
+  margin-top: 18px;
+}
 /*footer*/
 .footer-container{
   background-color: #1A1B26;
@@ -240,6 +436,20 @@ section.category ul.slide .game-card .etiquetafree .icon-etiqueta{
   font-size: 12px;
   text-align: center;
   padding-bottom: 20px;
+}
+/*boton jugar*/
+.button-play{
+  background-color: #A48EFF;
+  cursor: pointer;
+}
+.card-button{
+  height: 30px;
+  width: 90px;
+  border-radius: 10px;
+}
+/*texto boton*/
+.card-button a{
+  font-size: 18px;
 }
 @media only screen and (min-width: 768px){
   .footer-container .footer-nav{
