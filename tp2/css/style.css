@@ -23,13 +23,17 @@ header{
   height: 150px;
   width: 350px ;
 }
-.menuDesplegable{
+#menuH, #menuU {
   display:flex;
   flex-direction: column;
   display: none;
 }
 
-.menuDesplegable li{
+#menuH.show, #menuU.show{
+  display: block;
+}
+
+#menuH li, #menuU li{
   list-style: none;
   font-style: normal;
   text-transform: capitalize;
@@ -38,6 +42,11 @@ header{
   white-space: nowrap;
   background-color: transparent;
 }
+.iconoRedes{
+  display: flex;
+  flex-direction: row;
+}
+
 
 
 body{
