@@ -15,10 +15,23 @@ a:hover{
 }
 header{
   display: inline-flex;
-  justify-content: space-between;
+  justify-content:space-between;
   height: 50px;
   width: 100%;
   margin-bottom: 30px;
+}
+.headerLeft{
+  display: inline-flex;
+  justify-content: flex-start;
+  column-gap: 15px;
+}
+.search{
+  width: 100%;
+  margin: 10px;
+}
+.headerRight{
+  display: inline-flex;
+  justify-content: flex-end ;
 }
 
 .logoR{
@@ -29,6 +42,8 @@ header{
 #searchInput{
   height: 50px;
   width: 120px;
+  border-radius: 60px;
+  background-color: #DCDCDD;
 }
 #menuH, #menuU {
   display:flex;
