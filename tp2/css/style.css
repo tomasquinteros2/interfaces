@@ -24,6 +24,7 @@ header{
 .logoR{
   height: 50px;
   width: 107px ;
+  
 }
 #searchInput{
   height: 50px;
@@ -38,6 +39,7 @@ header{
 #menuH.show, #menuU.show{
   display: block;
   background-color: #0B0C12;
+  z-index: 8;
 }
 
 #menuH li, #menuU li{
@@ -482,6 +484,21 @@ section.category ul.slide .game-card .etiquetafree .icon-etiqueta{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   } 
+  header{
+    height: 100px
+  }
+  .logoR{
+    height:100px ;
+    width: 215px;
+  }
+  .icon{
+    height: 70px;
+    width: 70px;
+  }
+  #searchInput{
+    height: 100px;
+    width: 21 0px;
+  }
 }
 @media only screen and (min-width: 1024px){
   .footer-container .footer-grid{
