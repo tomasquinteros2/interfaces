@@ -19,6 +19,7 @@ function load(){
             
        
         /*paginacion slide hacia adelante*/
+                debugger;
                 item.scrollLeft += contenedorWidth;
         })
         /*paginacion slide hacia atras*/
