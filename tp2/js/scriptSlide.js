@@ -19,8 +19,7 @@ function load(){
             
        
         /*paginacion slide hacia adelante*/
-           
-                item.scrollLeft += contenedorWidth;  
+                item.scrollLeft += contenedorWidth;
         })
         /*paginacion slide hacia atras*/
         preBtn[i].addEventListener("click", () => {

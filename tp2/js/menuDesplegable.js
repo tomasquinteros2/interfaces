@@ -1,8 +1,13 @@
 'use strict'
 
-document.querySelector('.menu').addEventListener("click", toggleMenu);
+document.querySelector("#menuHome").addEventListener("click", toggleMenuH);
+document.querySelector("#userMenu").addEventListener("click", toggleMenuU)
 
-function toggleMenu(){
-    document.querySelector('.menuDesplegable').classList.toggle("show");
+function toggleMenuH(){
+    document.querySelector("#menuH").classList.toggle("show");
+
+}
+function toggleMenuU(){
+    document.querySelector("#menuU").classList.toggle("show");
 
 }
