@@ -36,11 +36,10 @@ header{
 
 .logoR{
   height: 50px;
-  width: 107px ;
-  
+  width: 107px;
 }
 #searchInput{
-  height: 50px;
+  height: 40px;
   width: 120px;
   border-radius: 60px;
   background-color: #DCDCDD;
@@ -50,11 +49,15 @@ header{
   flex-direction: column;
   display: none;
 }
-
 #menuH.show, #menuU.show{
   display: block;
   background-color: #0B0C12;
+  position:relative;
   z-index: 8;
+  top: 100%;
+}
+#menuH.show{
+  right: 65px;
 }
 
 #menuH li, #menuU li{
