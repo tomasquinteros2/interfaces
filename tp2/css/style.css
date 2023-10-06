@@ -54,12 +54,11 @@ header{
   background-color: #0B0C12;
   position:relative;
   z-index: 8;
+  margin-bottom: 20px;
 }
-#menuH.show{
-  right: 65px;
-  top: 100%;
+#menuU.show{
+  transform: translate(230px);
 }
-
 #menuH li, #menuU li{
   list-style: none;
   font-style: normal;
