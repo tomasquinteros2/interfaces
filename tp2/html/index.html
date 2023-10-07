@@ -9,74 +9,75 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="../img/icons/menuIcon.png"alt="boton menu navegacion desplegable" class="icon"id="menuHome">
-            <section id="menuH">
-                <img src="../img/icons/crossIcon.png" alt="cerrar menu" class="icon">
-                <ul>
-                    <li>
-                        <img src="../img/icons/homeIcon.png" alt="inicio" class="icon">Inicio
-                    </li>
-                    <li>
-                        <img src="../img/icons/collectionIcon.png" alt="mi coleccion" class="icon"> Mi coleccion
-                    </li>
-                    <li></li>
-                        <img src="../img/icons/joystickIcon.png" alt="categorias" class="icon">Categorias
-                    </li>
-                    <li>
-                        <img src="../img/icons/helpIcon.png" alt="ayuda" class="icon">Ayuda
-                    </li>
-                </ul>
-                <ul class="iconoRedes">
-                    <li>
-                        <img src="../img/icons/facebookIcon.png" alt="link al facebook de Rattata" class="icon">
-                    </li>
-                    <li>
-                        <img src="../img/icons/instagramIcon.png" alt="link al instagram de Rattata" class="icon">
-                    </li>
-                    <li>
-                        <img src="../img/icons/twitter.png" alt="link al twitter de Rattata" class="icon">
-                    </li>
-                </ul>
-
-            </section>
-        </nav>
-        <img src="../img/logoRattata.png" alt="RattataLogo" class="logoR">
-        <input type="text" name="search" id="searchInput" placeholder="Buscar...">
-        <nav>
+        <div class="headerLeft">
+            <img src="../img/icons/menuIcon.png"alt="boton menu navegacion desplegable" class="icon"id="menuHome">        
+            <img src="../img/logoRattata.png" alt="RattataLogo" class="logoR">
+        </div>
+        <div class="search">
+            <input type="text" name="search" id="searchInput" placeholder="Buscar...">
+        </div>
+        <div class="headerRight">
+            <img src="../img/icons/cartIcon.png" alt="carrito" class="icon" id="carrito">
             <img src="../img/icons/userIcon.png" alt="boton menu usuario desplegable" class="icon"id="userMenu">
-            <section id="menuU">
-                <img src="../img/icons/crossIcon.png" alt="cerrar menu" class="icon">
-                <ul>
-                <!-- insertar la imagen de Josema
-                    <li><img src="" alt="">NombreUsuario</li>
-                -->
-                    <li>
-                        <img src="../img/icons/userIcon.png" alt="mi perfil" class="icon">Mi perfil
-                    </li>
-                    <li>
-                        <img src="../img/icons/communityIcon.png" alt="mis amigos" class="icon">Mis amigos
-                    </li>
-                    <li>
-                        <img src="../img/icons/editionIcon.png" alt="administrar cuenta" class="icon">Administrar cuenta
-                    </li>
-                    <li>
-                        <img src="../img/icons/closeSessionIcon.png" alt="cerrar sesion" class="icon">Cerrar sesion
-                    </li>
-                </ul>
-            </section>
-        </nav>
+        </div>
     </header>
-    
+    <div class="menus">
+        <nav id="menuH">
+            <img src="../img/icons/crossIcon.png" alt="cerrar menu" class="icon" id="cierraMenuH">
+            <ul>
+                <li>
+                    <img src="../img/icons/homeIcon.png" alt="inicio" class="icon">Inicio
+                </li>
+                <li>
+                    <a> <img src="../img/icons/collectionIcon.png" alt="mi coleccion" class="icon"> Mi coleccion </a>
+                </li>
+                <li></li>
+                    <a><img src="../img/icons/joystickIcon.png" alt="categorias" class="icon">Categorias</a>
+                </li>
+                <li>
+                    <a><img src="../img/icons/helpIcon.png" alt="ayuda" class="icon">Ayuda</a>
+                </li>
+            </ul>
+            <ul class="iconoRedes">
+                <li>
+                    <a><img src="../img/icons/facebookIcon.png" alt="link al facebook de Rattata" class="icon"></a>
+                </li>
+                <li>
+                    <a><img src="../img/icons/instagramIcon.png" alt="link al instagram de Rattata" class="icon"></a>
+                </li>
+                <li>
+                    <a><img src="../img/icons/twitter.png" alt="link al twitter de Rattata" class="icon"></a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="menuU">
+            <img src="../img/icons/crossIcon.png" alt="cerrar menu" class="icon" id="cierraMenuU">
+            <ul>
+            <!-- insertar la imagen de Josema-->
+                <li><img src="../img/icons/claroquesi.png" alt="claroquesi" class="icon-perfil">NombreUsuario</li>
+            
+                <li>
+                    <img src="../img/icons/userIcon.png" alt="mi perfil" class="icon">Mi perfil
+                </li>
+                <li>
+                    <img src="../img/icons/communityIcon.png" alt="mis amigos" class="icon">Mis amigos
+                </li>
+                <li>
+                    <img src="../img/icons/editionIcon.png" alt="administrar cuenta" class="icon">Administrar cuenta
+                </li>
+                <li>
+                    <img src="../img/icons/closeSessionIcon.png" alt="cerrar sesion" class="icon">Cerrar sesion
+                </li>
+            </ul>
+        </nav>
+        </div>
     <main>
         <section class="category">
             <h2 class="game-category">Recomendado para ti</h2>
-           <div class="btn-next">
             <button class="button-left">
                 <img src="../img/buttons/FLECHITA2.png" alt="">
                 <div class="transition"></div>
-            </button>
-           </div>   
+            </button> 
             <ul class="slide">
                 <li class="game-card">
                     <a class="card" href="../html/game.html">
@@ -193,7 +194,7 @@
                     </a>
                 </li>  
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -205,9 +206,14 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/carreras/superstarcar.jpg" alt="superstarcar">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Super Star Car</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
                     </a>
                 </li> 
@@ -239,6 +245,12 @@
                         </button>
                     </div>
                 </div>-->
+                <button class="button-right-mobile">
+                    <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+                  </button>
+                  <button class="button-left-mobile">
+                     <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+                  </button>
                 <button class="button-right">
                     <img src="../img/buttons/FLECHITA.png" alt="button-right">
                 </button>
@@ -250,7 +262,6 @@
             </button>
             <ul class="slide">
                 <li class="game-card">
-                    <a class="card" href="index.html">
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -262,14 +273,17 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/accion/SandboxCity.jpg" alt="SandboxCity">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Sandbox City</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
                 </li>
                 <li class="game-card">
-                    <a class="card" href="index.html">
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -281,14 +295,17 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/accion/clash-of-skulls-cover.jpg" alt="clash-of-skulls-cover">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Clash Of Skull</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -300,14 +317,17 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/accion/endless-waves-survival-cover.jpg" alt="endless-waves-survival-cover">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Endless Waves Survival</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
                 </li>   
                 <li class="game-card">
-                    <a class="card" href="index.html">
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -319,14 +339,17 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/accion/dwarves.jpg" alt="dwarves">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Dwarves</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
                 </li>   
                 <li class="game-card">
-                    <a class="card" href="index.html">
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -338,14 +361,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/accion/monterlife.jpg" alt="monsterlife">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Monter Life</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li>   
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -357,14 +385,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/accion/ninja-escape-cover.jpg" alt="ninja-escape-cover">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Ninja Escape</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -376,14 +409,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/accion/stickmanParkour.png" alt="stickmanParkour">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Stickman Parkour</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -395,13 +433,24 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/accion/stickman-archero-fight-cover.jpg" alt="StickmanArchero">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Stickman Archero</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li> 
             </ul>
+                <button class="button-right-mobile">
+                  <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+                </button>
+                <button class="button-left-mobile">
+                   <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+                </button>
                 <button class="button-right">
                     <img src="../img/buttons/FLECHITA.png" alt="button-right">
                 </button>
@@ -565,6 +614,12 @@
                     </a>
                 </li>
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
@@ -747,6 +802,12 @@
                     </a>
                 </li>
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
@@ -758,7 +819,7 @@
             </button>
             <ul class="slide">
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -770,14 +831,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/carreras/mtox3m.jpg" alt="mtox3m">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Mtox3m</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -789,14 +855,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/carreras/highwayracer.jpg" alt="highwayracer">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Highway Racer</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                   
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -808,14 +879,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/carreras/crazydrift.jpg" alt="crazydrift">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Crazy Drift</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                  
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                   
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -827,14 +903,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/carreras/superbikethechamplion.jpg" alt="superbikethechamplion">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Super Bike The Champion</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                 
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -846,14 +927,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/carreras/crazyforspeed.jpg" alt="crazyforspeed">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Crazy For Speed</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -865,14 +951,18 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/carreras/superstarcar.jpg" alt="superstarcar">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Super Star Car</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -884,13 +974,23 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/carreras/turbo-crash-cover.jpg" alt="turbo-crash-cover">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Turbo Crash</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
                 </li> 
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
@@ -1054,6 +1154,12 @@
                     </a>
                 </li>
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
@@ -1217,6 +1323,12 @@
                     </a>
                 </li>
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
@@ -1228,7 +1340,6 @@
             </button>
             <ul class="slide">
                 <li class="game-card">
-                    <a class="card" href="index.html">
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -1240,11 +1351,15 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/disparos/airwars3.jpg" alt="airwars3">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Air Wars 3</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
                 </li> 
                 <li class="game-card">
                     <a class="card" href="index.html">
@@ -1285,7 +1400,7 @@
                     </a>
                 </li>
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -1297,14 +1412,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/disparos/snipermission.webp" alt="snipermission">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Sniper Mission</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                   
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -1316,11 +1436,16 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/disparos/zombie-hunters-online-cover.jpg" alt="zombie-hunters">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Zombie Hunters</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                  
                 </li> 
                 <li class="game-card">
                     <a class="card" href="index.html">
@@ -1361,7 +1486,7 @@
                     </a>
                 </li>
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -1373,13 +1498,24 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/disparos/forcebullet.jpg" alt="forcebullet">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Force Bullet</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li> 
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
@@ -1543,6 +1679,12 @@
                     </a>
                 </li>
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
@@ -1554,7 +1696,7 @@
             </button>
             <ul class="slide">
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -1566,11 +1708,16 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/multijugador/soccerlegends.jpg" alt="soccerlegends">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Soccer Legends</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li> 
                 <li class="game-card">
                     <a class="card" href="index.html">
@@ -1611,7 +1758,7 @@
                     </a>
                 </li>
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -1623,14 +1770,19 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/multijugador/house-of-hazards-cover.jpg" alt="house-of-hazards">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">House Of Hazards</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                   
                 </li> 
                 <li class="game-card">
-                    <a class="card" href="index.html">
+                    
                         <div class="etiquetapremium">
                             <div class="icon-etiqueta">
                                 <img src="../img/icons/premium.png">
@@ -1642,11 +1794,16 @@
                             <!-- imagen del juego-->
                             <img src="../img/games/multijugador/tenisbros.jpg" alt="tenisbros">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-premium">
                             <!-- titulo del juego-->
                             <h3 class="card-title">Tenis Bros</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
                         </div>
-                    </a>
+                    
                 </li> 
                 <li class="game-card">
                     <a class="card" href="index.html">
@@ -1687,6 +1844,12 @@
                     </a>
                 </li>               
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
@@ -1850,6 +2013,12 @@
                     </a>
                 </li>          
             </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
             <button class="button-right">
                 <img src="../img/buttons/FLECHITA.png" alt="button-right">
             </button>
