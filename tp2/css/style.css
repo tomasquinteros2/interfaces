@@ -59,6 +59,10 @@ header{
   background-color: #DCDCDD;
   margin-bottom: 10px;
 }
+.carritoContainer{
+  display: flex;
+  flex-direction: row;
+}
 #menuH, #menuU {
   display:flex;
   flex-direction: column;
