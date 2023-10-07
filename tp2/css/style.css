@@ -13,6 +13,23 @@
 p{
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
   'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+.carritoContainer p {
+  display: none;
+
+}
+.carritoContainer p.show{
+  display:inline;
+  height:30px;
+  width: 30px;
+  margin-top: 15px;
+  padding: 3px;
+  color:#DCDCDD;
+  font-size: larger;
+  font-weight: bold;
+  background-color: #A48EFF;
 }
 a:hover{
   text-decoration: underline;
