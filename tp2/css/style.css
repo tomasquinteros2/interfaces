@@ -19,8 +19,8 @@ a:hover{
 }
 header{
   display: inline-flex;
-  justify-content:space-between;
-  height: 50px;
+  justify-content:space-evenly;
+  height: 60px;
   width: 100%;
   margin-bottom: 30px;
   background-color: #1A1B26;
@@ -40,13 +40,12 @@ header{
   width: 100%;
   margin: 10px;
 }
+
 .headerRight{
-  display: inline-flex;
-  justify-content: flex-end ;
-}
-.headerRight{
-  display: inline-flex;
-  justify-content: flex-end ;
+  display:flex;
+  justify-content: space-between;
+  column-gap: 5px;
+  margin-top: 5px;
 }
 
 .logoR{
@@ -56,8 +55,9 @@ header{
 #searchInput{
   height: 40px;
   width: 120px;
-  border-radius: 60px;
+  border-radius: 20px;
   background-color: #DCDCDD;
+  margin-bottom: 10px;
 }
 #menuH, #menuU {
   display:flex;
@@ -98,8 +98,6 @@ body{
   margin: 10px;
 }
 .icon-perfil{
-  width: 40px;
-  height: 40px;
   border-radius: 50px;
 }
 /*main*/
@@ -885,31 +883,39 @@ section .carrousel .button-right{
 a.btn-login:hover{
   text-decoration:none;
 }
-@media only screen and (min-width: 768px){
-  .footer-container .footer-nav{
-    display: grid;
-    width: 80%;
-    margin: 25px 4% 0% 16%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  } 
+
+@media only screen and (min-width: 1024px){
   header{
-    height: 100px
+    height: 80px;
+    display:inline-flex;
+    justify-content:space-evenly ;
   }
   .logoR{
-    height:100px ;
-    width: 215px;
-  }
-  .icon{
     height: 70px;
-    width: 70px;
+    width: 150px;
+  }
+  .headerLeft{
+    width: 550px;
+    justify-content: space-evenly;
+
+  }
+  .search{
+    width: 100%;
+    height: 60px;
   }
   #searchInput{
-    height: 100px;
-    width: 21 0px;
+    margin-top: 10px;
+    width: 750px ;
+
   }
-}
-@media only screen and (min-width: 1024px){
+  .icon{
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+  }
+  #menuU.show{
+    transform: translate(1000px);
+  }
   .button-left-mobile, .button-right-mobile{
     display: none;
   }
@@ -1005,7 +1011,7 @@ a.btn-login:hover{
     display: grid;
     grid-template-columns: 1fr 4fr;
     width: 80%;
-    height: 300px;
+    height: 200px;
     margin: 20px 10%;
   }
 
