@@ -44,6 +44,11 @@ header{
   display: inline-flex;
   justify-content: flex-end ;
 }
+.headerRight{
+  display: inline-flex;
+  justify-content: flex-end ;
+}
+
 .logoR{
   height: 50px;
   width: 107px;
@@ -69,7 +74,6 @@ header{
 #menuU.show{
   transform: translate(230px);
 }
-
 #menuH li, #menuU li{
   list-style: none;
   font-style: normal;
@@ -83,16 +87,15 @@ header{
   display: flex;
   flex-direction: row;
 }
-
-
 body{
   width: 100%;
   background-color: #0B0C12;
 }
 
 .icon{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
 }
 .icon-perfil{
   width: 40px;
@@ -890,6 +893,21 @@ a.btn-login:hover{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   } 
+  header{
+    height: 100px
+  }
+  .logoR{
+    height:100px ;
+    width: 215px;
+  }
+  .icon{
+    height: 70px;
+    width: 70px;
+  }
+  #searchInput{
+    height: 100px;
+    width: 21 0px;
+  }
 }
 @media only screen and (min-width: 1024px){
   .button-left-mobile, .button-right-mobile{
