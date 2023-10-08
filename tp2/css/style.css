@@ -126,6 +126,45 @@ header{
   display: flex;
   flex-direction: row;
 }
+
+/*login*/
+.loginMain{
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1B26;
+  border: #A48EFF;
+  border-radius: 70px;
+  margin: 60px;
+  align-items: center;
+  padding: 20px;
+}
+.loginMain h2{
+  margin:20 px;
+}
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.loginForm h3{
+  margin:10px;
+}
+.loginForm input{
+  margin: 10px;
+  border-radius: 15px;
+  color: #DCDCDD;
+}
+
+.opcionesRegistro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.opcionesRegistro input{
+  margin: 30px;
+}
+
 body{
   width: 100%;
   background-color: #0B0C12;
@@ -912,7 +951,7 @@ section .carrousel .button-right{
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 100px;
   height: 55px;
   background-color: #51915D;
   border-radius: 30px;
