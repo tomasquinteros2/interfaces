@@ -34,6 +34,7 @@ header{
 .headerLeft{
   display: inline-flex;
   justify-content: flex-start;
+  cursor: pointer;
 }
 .search{
   width: 100%;
@@ -45,6 +46,7 @@ header{
   justify-content: space-between;
   column-gap: 5px;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .logoR{
