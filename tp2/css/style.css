@@ -18,11 +18,11 @@ a:hover{
   text-decoration: underline;
 }
 header{
-  display: inline-flex;
-  justify-content:space-evenly;
+  display: flex;
+  justify-content:space-between;
+  flex-direction: row;
   height: 60px;
   width: 100%;
-  margin-bottom: 30px;
   background-color: #1A1B26;
 }
 .header-register{
@@ -34,7 +34,6 @@ header{
 .headerLeft{
   display: inline-flex;
   justify-content: flex-start;
-  column-gap: 15px;
 }
 .search{
   width: 100%;
@@ -63,20 +62,40 @@ header{
   display: flex;
   flex-direction: row;
 }
-#menuH, #menuU {
-  display:flex;
+/*menu Plegable*/
+#menuH{
+  display: flex;
   flex-direction: column;
-  display: none;
-}
-#menuH.show, #menuU.show{
-  display: block;
   background-color: #0B0C12;
-  position:relative;
-  z-index: 8;
-  margin-bottom: 20px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  z-index: 150;
+  transition: .5s ease-out;
+  position: relative;
+}
+#menuH.show{
+  height: 350px;
+}
+#menuU{
+  display: flex;
+  flex-direction: column;
+  background-color: #0B0C12;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  z-index: 150;
+  transition: .5s ease-out;
+  position: relative;
 }
 #menuU.show{
-  transform: translate(230px);
+  height: 350px;
+}
+.menuHomeOn{
+  display: none;
+}
+.menuHomeOff{
+  display: none;
 }
 #menuH li, #menuU li{
   list-style: none;
@@ -87,7 +106,13 @@ header{
   white-space: nowrap;
   background-color: transparent;
 }
+.menuList{
+  display: flex;
+  align-items: center;
+}
+
 .iconoRedes{
+  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -102,6 +127,8 @@ body{
   margin: 10px;
 }
 .icon-perfil{
+  width: 50px;
+  height: 50px;
   border-radius: 50px;
 }
 /*main*/
@@ -303,7 +330,7 @@ section.category ul.slide .game-card .etiquetafree{
   justify-content: center;
   column-gap: 10px;
   left: -10px;
-  z-index:7;
+  z-index:6;
   top: 15px;
   width: 80px;
   height: 22px;
@@ -317,7 +344,7 @@ section.category ul.slide .game-card .etiquetapremium{
   justify-content: center;
   column-gap: 10px;
   left: -10px;
-  z-index:7;
+  z-index:6;
   top: 15px;
   width: 80px;
   height: 22px;
@@ -891,8 +918,10 @@ a.btn-login:hover{
 @media only screen and (min-width: 1024px){
   header{
     height: 80px;
-    display:inline-flex;
-    justify-content:space-evenly ;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 0%;
+    z-index: 8;
   }
   .logoR{
     height: 70px;
@@ -917,9 +946,58 @@ a.btn-login:hover{
     width: 40px;
     margin: 20px;
   }
-  #menuU.show{
-    transform: translate(1000px);
+  #menuH, #menuU {
+    display:flex;
+    flex-direction: column;
   }
+  #menuH{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    background-color: #1A1B26;
+    z-index: 8;
+    top: 80px;
+    left: -100%;
+    overflow: hidden;
+  }
+  #menuH.show{
+    height: 100%;
+    left: 0%;
+    transition: .5s ease-out;
+  }
+  #menuU{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    background-color: #1A1B26;
+    z-index: 8;
+    top: 80px;
+    right: -100%;
+    overflow: hidden;
+  }
+  #menuU.show{
+    height: 100%;
+    right: 0%;
+    transition: .5s ease-out;
+  }
+
+  /*fondo oscuro menu plegable*/
+  .dark-background{
+    visibility: hidden;
+    transition: .5s ease-in-out;
+  }
+
+  .dark-background.on{
+    visibility: visible;
+    content: '';
+    top: 80px;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: #00000094;
+    position: fixed;
+    z-index: 7;
+  }  
   .button-left-mobile, .button-right-mobile{
     display: none;
   }
