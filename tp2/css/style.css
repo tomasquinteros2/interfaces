@@ -10,6 +10,11 @@
   box-sizing: border-box;
   color: #DCDCDD;
 }
+h1{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 32px;
+}
 p{
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
   'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -18,10 +23,6 @@ p{
 
 .carritoContainer p {
   display: none;
-
-}
-.carritoContainer p.show{
-  display:inline;
   height:30px;
   width: 30px;
   margin-top: 15px;
@@ -30,16 +31,20 @@ p{
   font-size: larger;
   font-weight: bold;
   background-color: #A48EFF;
+  border-radius: 15px;
+}
+.carritoContainer p.show{
+  display:inline;
 }
 a:hover{
   text-decoration: underline;
 }
 header{
-  display: inline-flex;
-  justify-content:space-evenly;
+  display: flex;
+  justify-content:space-between;
+  flex-direction: row;
   height: 60px;
   width: 100%;
-  margin-bottom: 30px;
   background-color: #1A1B26;
 }
 .header-register{
@@ -51,7 +56,7 @@ header{
 .headerLeft{
   display: inline-flex;
   justify-content: flex-start;
-  column-gap: 15px;
+  cursor: pointer;
 }
 .search{
   width: 100%;
@@ -63,6 +68,7 @@ header{
   justify-content: space-between;
   column-gap: 5px;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .logoR{
@@ -80,20 +86,26 @@ header{
   display: flex;
   flex-direction: row;
 }
-#menuH, #menuU {
-  display:flex;
+/*menu Plegable*/
+#menuH, #menuU{
+  display: flex;
   flex-direction: column;
+  background-color: #0B0C12;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  z-index: 150;
+  transition: .5s ease-out;
+  position: relative;
+}
+#menuH.show #menuU.show{
+  height: 350px;
+}
+.menuHomeOn{
   display: none;
 }
-#menuH.show, #menuU.show{
-  display: block;
-  background-color: #0B0C12;
-  position:relative;
-  z-index: 8;
-  margin-bottom: 20px;
-}
-#menuU.show{
-  transform: translate(230px);
+.menuHomeOff{
+  display: none;
 }
 #menuH li, #menuU li{
   list-style: none;
@@ -104,7 +116,13 @@ header{
   white-space: nowrap;
   background-color: transparent;
 }
+.menuList{
+  display: flex;
+  align-items: center;
+}
+
 .iconoRedes{
+  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -119,6 +137,8 @@ body{
   margin: 10px;
 }
 .icon-perfil{
+  width: 50px;
+  height: 50px;
   border-radius: 50px;
 }
 /*main*/
@@ -320,7 +340,7 @@ section.category ul.slide .game-card .etiquetafree{
   justify-content: center;
   column-gap: 10px;
   left: -10px;
-  z-index:7;
+  z-index:6;
   top: 15px;
   width: 80px;
   height: 22px;
@@ -334,7 +354,7 @@ section.category ul.slide .game-card .etiquetapremium{
   justify-content: center;
   column-gap: 10px;
   left: -10px;
-  z-index:7;
+  z-index:6;
   top: 15px;
   width: 80px;
   height: 22px;
@@ -621,7 +641,7 @@ section.category ul.slide .game-card .etiquetafree .icon-etiqueta{
   margin-left: 20px;
 }
 
-.game-container .form-container .form-comment button{
+.game-container .form-container .form-comment .button{
   width: 10%;
   height: 50px;
   background-color: #A48EFF;
@@ -904,12 +924,87 @@ section .carrousel .button-right{
 a.btn-login:hover{
   text-decoration:none;
 }
-
+#form-register{
+  position: absolute;
+  display: flex;
+  width: 500px;
+  height: 650px;
+  background-color: #0B0C12;
+  flex-direction: column;
+  align-items: center;
+  top: -100%;
+}
+#form-register.showForm{
+  position: absolute;
+  display: flex;
+  top:10%;
+  transition: 0.3s ease-out;
+}
+#form-register .form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 500px;
+  background-color: #1A1B26;
+  gap: 10px;
+  border-radius: 20px;
+}
+#form-register .form .item{
+  align-items: center;
+}
+#form-register .form .input-register{
+  margin:10px;
+  padding: 20px;
+  width: 300px;
+  height: 50px;
+  background-color: #0B0C12;
+  border-radius: 15px;
+  border:1px solid #DCDCDD;
+}
+#form-register .container{
+  margin-top: 10px;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#form-register .button{
+  background-color: #8872df;
+  border-radius: 5px;
+  width: 100px;
+  height: 45px;
+}
+.icon-form{
+  position: absolute;
+  margin-top: 15px;
+  right: 115px;
+}
+.icon-form-perfil{
+  position: absolute;
+  margin-top: 19px;
+  right: 115px;
+}
+#captcha{
+  margin-top: 10px;
+  width: 60%;
+}
+#img-captcha{
+  width: 100%;
+}
+.button{
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #695aa3;
+}
 @media only screen and (min-width: 1024px){
   header{
     height: 80px;
-    display:inline-flex;
-    justify-content:space-evenly ;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 0%;
+    z-index: 8;
   }
   .logoR{
     height: 70px;
@@ -934,9 +1029,58 @@ a.btn-login:hover{
     width: 40px;
     margin: 20px;
   }
-  #menuU.show{
-    transform: translate(1000px);
+  #menuH, #menuU {
+    display:flex;
+    flex-direction: column;
   }
+  #menuH{
+    height: 100%;
+    width: 17%;
+    position: fixed;
+    background-color: #1A1B26;
+    z-index: 8;
+    top: 80px;
+    left: -100%;
+    overflow: hidden;
+  }
+  #menuH.show{
+    height: 100%;
+    left: 0%;
+    transition: .5s ease-out;
+  }
+  #menuU{
+    height: 100%;
+    width: 17%;
+    position: fixed;
+    background-color: #1A1B26;
+    z-index: 8;
+    top: 80px;
+    right: -100%;
+    overflow: hidden;
+  }
+  #menuU.show{
+    height: 100%;
+    right: 0%;
+    transition: .5s ease-out;
+  }
+
+  /*fondo oscuro menu plegable*/
+  .dark-background{
+    visibility: hidden;
+    transition: .5s ease-in-out;
+  }
+
+  .dark-background.on{
+    visibility: visible;
+    content: '';
+    top: 80px;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: #00000094;
+    position: fixed;
+    z-index: 7;
+  }  
   .button-left-mobile, .button-right-mobile{
     display: none;
   }
