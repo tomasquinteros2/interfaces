@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function (){
     let iconUser = document.querySelector("#userMenu");
     let menuUser = document.querySelector("#menuU");
     let closeMenuUser = document.querySelector("#cierraMenuU");
-    let formRegister = document.querySelector("#form-register");
+    
 
     document.querySelector("#cierraMenuH").addEventListener("click", () => {
         menuHome.classList.remove("show");
@@ -68,7 +68,5 @@ document.addEventListener("DOMContentLoaded", function (){
             background.classList.remove("on");
         }
     }
-    document.querySelector("#register").addEventListener("click", () => {
-        formRegister.classList.add("showForm");
-    })
+
 });
