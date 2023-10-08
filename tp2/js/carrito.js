@@ -2,13 +2,23 @@
 let agregables = document.querySelectorAll(".btn-agregar");
 let carrito= document.querySelector("#carrito");
 let agregados = 0;
+const estadosBotones=Array.from({ length: agregables.length }, () => false);
 
+agregables.forEach((agregable, index) => {
 
-agregables.forEach(agregable => {
+    estadosBotones[index]= false;
+
     agregable.addEventListener('click',() => {
+
+        if(estadosBotones[index]){
+            agregados--;
+        }else{
+            agregados++;
+        }
+
         toggleShow();
-        agregados++ ;
-        carrito.innerHTML=agregados;
+        carrito.innerHTML= agregados;
+        estadosBotones[index] = !estadosBotones[index]; 
     });
 });
 
@@ -20,4 +30,4 @@ function toggleShow(){
     }
     
 
-}
+};
