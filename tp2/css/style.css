@@ -157,21 +157,98 @@ header{
   border-radius: 15px;
   color: #DCDCDD;
 }
+.loginForm::placeholder{
+  color: #515257;
+}
+.loginForm:focus{
+  color:#0B0C12 ;
+}
 
 .opcionesRegistro{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.opcionesRegistro input{
-  margin: 30px;
-}
-.btn-registros{
+.btn-registros {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
   width: 300px;
   height: 40px;
   margin: 10px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-registros:hover {
+  transform: scale(1.2);
+}
+.btn-registros img{
+  margin: 5px;
+}
+.btn-registros p{
+ margin: 10px;
 }
 
+.registroManual{
+  background-color:#51915D;
+}
+.sesionFacebook{
+  background-color: #296CD1;
+}
+.sesionGoogle{
+  background-color: #DCDCDD;
+}
+.sesionGoogle p{
+  color: #0B0C12;
+}
+.overlay {
+  position: relative;
+}
+.overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay:hover::before {
+  opacity: 0.5;
+}
+
+/*.btn-loginExitoso{
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 55px;
+  background-color: #51915D;
+  border-radius: 30px;
+}*/
+.btn-loginExitoso:hover{
+  transition: 0.3s;
+  background-color: #377041;
+}
+.btn-loginExitoso{
+ display: inline-block;
+ width: 100px;
+ height: 55px;
+ font-size: 1em;
+ padding: 1em 2em;
+ margin:20px;
+ appearance: none;
+ background-color:#51915D;
+ color:#DCDCDD;
+ border-radius: 15px;
+ cursor: pointer;
+ position: relative;
+ transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+/*finaliza login*/
 body{
   width: 100%;
   background-color: #0B0C12;

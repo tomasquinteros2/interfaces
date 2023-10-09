@@ -15,19 +15,27 @@
     </header>
     <main class="loginMain">
         <h2>Con tu usuario y contrasenia</h2>
-        <section class="loginForm">
-            <h3>Inserte aqui su nombre de usuario</h3>
-            <input type="text" placeholder="josema@rattatagames" name="user">
-            <h3>Inserte aqui su contrasenia</h3>
-            <input type="password" placeholder="Josema1993" name="contrasenia">
-            <a href="../html/index.html" class="disabled"><button type="submit" class="btn-login" >Entrar</button></a>
-        </section>
+        <div class="loginForm">
+            <h3>Nombre de usuario</h3>
+            <input type="text" placeholder="josema@rattatagames" name="user" required>
+            <h3>Contrasenia</h3>
+            <input type="password" placeholder="Josema1993" name="contrasenia" required>
+            <a href="../html/index.html" ><button type="submit" class="btn-loginExitoso" >Entrar</button></a>
+        </div>
         <h2>En caso de no tener aun una cuenta en Rattata Games...</h2>
-        <section class="opcionesRegistro">
-            <a href="../html/register.html"> <img src="../img/buttons/registro.png" class="btn-registros"></a>
-            <a><img src="../img/buttons/btnFacebook.png" class="btn-registros"></a>
-            <a><img src="../img/buttons/btnGoogle.png" class="btn-registros"></a>
-        </section>
+        <div class="opcionesRegistro">
+            <div class="registroManual btn-registros overlay">
+                <a href="../html/register.html"><p>Registrarse</p></a>
+            </div>
+            <div class="sesionFacebook btn-registros overlay">
+                <img src="../img/icons/faceIcon.png">
+                <p>Iniciar sesion con Facebook</p>
+            </div>
+            <div class="sesionGoogle btn-registros overlay">
+                <img src="../img/icons/IconGoogle.png">
+                <p>Iniciar sesion con google</p>
+            </div>
+        </div>
 
     </main>
     <footer class="footer-container">
