@@ -18,6 +18,23 @@ h1{
 p{
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
   'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+
+.carritoContainer p {
+  display: none;
+  height:30px;
+  width: 30px;
+  margin-top: 15px;
+  padding: 3px;
+  color:#DCDCDD;
+  font-size: larger;
+  font-weight: bold;
+  background-color: #A48EFF;
+  border-radius: 15px;
+}
+.carritoContainer p.show{
+  display:inline;
 }
 a:hover{
   text-decoration: underline;
@@ -70,7 +87,7 @@ header{
   flex-direction: row;
 }
 /*menu Plegable*/
-#menuH{
+#menuH, #menuU{
   display: flex;
   flex-direction: column;
   background-color: #0B0C12;
@@ -81,21 +98,7 @@ header{
   transition: .5s ease-out;
   position: relative;
 }
-#menuH.show{
-  height: 350px;
-}
-#menuU{
-  display: flex;
-  flex-direction: column;
-  background-color: #0B0C12;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  z-index: 150;
-  transition: .5s ease-out;
-  position: relative;
-}
-#menuU.show{
+#menuH.show #menuU.show{
   height: 350px;
 }
 .menuHomeOn{
@@ -123,6 +126,52 @@ header{
   display: flex;
   flex-direction: row;
 }
+
+/*login*/
+.loginMain{
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1B26;
+  border: #A48EFF;
+  border-radius: 70px;
+  margin: 60px;
+  align-items: center;
+  padding: 20px;
+}
+.loginMain h2{
+  margin:20 px;
+}
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+.loginForm h3{
+  margin:10px;
+}
+.loginForm input{
+  height: 40px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 15px;
+  color: #DCDCDD;
+}
+
+.opcionesRegistro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.opcionesRegistro input{
+  margin: 30px;
+}
+.btn-registros{
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+}
+
 body{
   width: 100%;
   background-color: #0B0C12;
@@ -914,7 +963,7 @@ section .carrousel .button-right{
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 100px;
   height: 55px;
   background-color: #51915D;
   border-radius: 30px;
