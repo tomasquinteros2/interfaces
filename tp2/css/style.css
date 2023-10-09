@@ -157,10 +157,10 @@ header{
   border-radius: 15px;
   color: #DCDCDD;
 }
-.loginForm::placeholder{
+.loginForm input::placeholder{
   color: #515257;
 }
-.loginForm:focus{
+.loginForm input:focus{
   color:#0B0C12 ;
 }
 
@@ -213,12 +213,10 @@ header{
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .overlay:hover::before {
   opacity: 0.5;
 }
-
-/*.btn-loginExitoso{
+.btn-login{
   display: flex;
   cursor: pointer;
   justify-content: center;
@@ -227,26 +225,15 @@ header{
   height: 55px;
   background-color: #51915D;
   border-radius: 30px;
-}*/
-.btn-loginExitoso:hover{
+}
+.btn-login:hover{
   transition: 0.3s;
   background-color: #377041;
 }
-.btn-loginExitoso{
- display: inline-block;
- width: 100px;
- height: 55px;
- font-size: 1em;
- padding: 1em 2em;
- margin:20px;
- appearance: none;
- background-color:#51915D;
- color:#DCDCDD;
- border-radius: 15px;
- cursor: pointer;
- position: relative;
- transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+a.btn-login:hover{
+  text-decoration:none;
 }
+
 
 /*finaliza login*/
 body{
@@ -1035,21 +1022,21 @@ section .carrousel .button-right{
   transition: 0.3s;
   background-color: #8872df;
 }
-.btn-login{
+.btn-Irlogin{
   display: flex;
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 20%;
   height: 55px;
   background-color: #51915D;
   border-radius: 30px;
 }
-.btn-login:hover{
+.btn-Irlogin:hover{
   transition: 0.3s;
   background-color: #377041;
 }
-a.btn-login:hover{
+a.btn-Irlogin:hover{
   text-decoration:none;
 }
 #form-register{
