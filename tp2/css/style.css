@@ -1084,15 +1084,73 @@ a.btn-login:hover{
     background-color: #00000094;
     position: fixed;
     z-index: 7;
-  }  
+  }
+  /*botones carrousel*/
+  .button-right{
+    border-radius: 50px;
+    overflow: hidden;
+    right: 1%;
+  }
+  .button-right:hover{
+    color: #80ffd3;
+    transform: scale(1.1);
+  }
+  .button-right::before{
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #5f4caa;
+    position: absolute; 
+    transform: skewX(-20deg);   
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow:2px 0px 14px rgba(0,0,0,.6);
+  } 
+
+  .button-right::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #80ffd3;
+    position: absolute;
+    transform: skewX(-20deg);   
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+  }
+  .button-right:hover::before{
+    opacity:1;
+    width: 116%;
+  }
+  .button-right:hover::after{
+    opacity:1;
+    width: 120%;
+  }
+  .transition{
+    position: absolute;
+    top: -10%;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    background: #80ffd3;
+    z-index:-1;
+  }
   .button-left-mobile, .button-right-mobile{
     display: none;
   }
   .button-left, .button-right{
     position: absolute;
     top: 45%;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1109,11 +1167,55 @@ a.btn-login:hover{
 
   }
   .button-left{
+    border-radius: 50px;
     left: 1%;
+    overflow: hidden;
   }
-  .button-right{
-    right: 1%;
+  .button-left:hover{
+    color: #80ffd3;
+    transform: scale(1.1);
+    
   }
+  .button-left::before{
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #5f4caa;
+    position: absolute; 
+    transform: skewX(20deg);   
+    left: 0%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow:2px 0px 14px rgba(0,0,0,.6);
+  } 
+
+  .button-left::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #80ffd3;
+    position: absolute;
+    transform: skewX(20deg);   
+    left: 0%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+  }
+  .button-left:hover::before{
+    opacity:1;
+    width: 120%;
+  }
+  .button-left:hover::after{
+    opacity:1;
+    width: 120%;
+  }
+
   .slide{
     height: 150px;
     column-gap: 30px;
