@@ -20,7 +20,69 @@ p{
   'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
 }
+/*preloader*/
+.loader{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: sticky;
+  background-color: #0B0C12;
+}
 
+.ring{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.ring::before{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255,255,255,.3);
+  animation: ring .5s infinite;
+}
+
+.loader .ring span{
+  color: #bbbbbb;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 200px;
+}
+
+@keyframes ring {
+0%{
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #A48EFF;
+}
+25%{
+    transform: rotate(90deg);
+    box-shadow: 1px 5px 2px #A48EFF;
+}
+50%{
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #A48EFF;
+}
+75%{
+    transform: rotate(270deg);
+    box-shadow: 1px 5px 2px #A48EFF;
+}
+100%{
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #A48EFF;
+}
+}
 .carritoContainer p {
   display: none;
   height:30px;
@@ -679,6 +741,14 @@ section.category ul.slide .game-card .etiquetafree .icon-etiqueta{
   align-items: center;
   width: auto;
 }
+.game-container section .game-info .info-section .share-section{
+  display: flex;
+  margin: 20px;
+}
+.game-container section .game-info .info-section .share-section .item{
+  cursor: pointer;
+  margin: 10px;
+}
 .game-container h2{
   font-weight: 500;
   font-size: 26px;
@@ -759,6 +829,9 @@ section.category ul.slide .game-card .etiquetafree .icon-etiqueta{
   border-radius:0 10px 10px 0;
   cursor: pointer;
   margin-right: 20px;
+}
+.game-container .form-container .form-comment .button:hover{
+  background-color: #7867bd;
 }
  /*comentarios*/
  .game-container .comments .comment-list{
@@ -1048,7 +1121,7 @@ a.btn-Irlogin:hover{
   background-color: #0B0C12;
   flex-direction: column;
   align-items: center;
-  top: -100%;
+  top: -200%;
 }
 #form-register.showForm{
   position: absolute;
