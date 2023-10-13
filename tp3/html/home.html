@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rattata Games</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <div class="loader" id="onload">
+        <div class="ring">
+            <span>Cargando</span>
+            <span id="percentage">0%</span>
+        </div>
+    </div>
+<header>
+        <div class="headerLeft">
+            <img src="../img/icons/menuIcon.png"alt="boton menu navegacion desplegable" class="icon"id="menuHome">    
+            <img src="../img/icons/crossIcon.png" alt="cerrar menu" class="icon menuHomeOff" id="cierraMenuH">    
+            <a href="../html/home.html"><img src="../img/logoRattata.png" alt="RattataLogo" class="logoR"></a>
+        </div>
+        <div class="search">
+            <input type="text" name="search" id="searchInput" placeholder="   Buscar...">
+        </div>
+        <div class="headerRight">
+            <div class="carritoContainer">
+                <img src="../img/icons/cartIcon.png" alt="carrito" class="icon">
+                <p id="carrito"></p>
+            </div>
+            <img src="../img/icons/userIcon.png" alt="boton menu usuario desplegable" class="icon"id="userMenu">
+            <img src="../img/icons/crossIcon.png" alt="cerrar menu" class="icon menuHomeOff" id="cierraMenuU">
+        </div>
+    </header>
+        <nav id="menuH">
+            <ul>
+                <li>
+                    <a class="menuList" href="../html/home.html">
+                        <img src="../img/icons/homeIcon.png" alt="inicio" class="icon">
+                        <p>Inicio</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="menuList" href="#"> 
+                        <img src="../img/icons/collectionIcon.png" alt="mi coleccion" class="icon"> 
+                        <p>Mi coleccion</p>
+                    </a>
+                </li>
+                <li></li>
+                    <a class="menuList" href="#">
+                        <img src="../img/icons/joystickIcon.png" alt="categorias" class="icon">
+                        <p>Categorias</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="menuList" href="#">
+                        <img src="../img/icons/helpIcon.png" alt="ayuda" class="icon">
+                        <p>Ayuda</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="line"></div>
+            <ul class="iconoRedes">
+                <li>
+                    <a><img src="../img/icons/facebookIcon.png" alt="link al facebook de Rattata" class="icon"></a>
+                </li>
+                <li>
+                    <a><img src="../img/icons/instagramIcon.png" alt="link al instagram de Rattata" class="icon"></a>
+                </li>
+                <li>
+                    <a><img src="../img/icons/twitter.png" alt="link al twitter de Rattata" class="icon"></a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="menuU">
+            <ul>
+                <li>
+                    <a class="menuList" href="#">
+                        <img src="../img/icons/claroquesi.png" alt="claroquesi" class="icon icon-perfil">
+                        <p>Josema</p>
+                    </a>
+                    <div class="line"></div>
+                <li>
+                    <a class="menuList" href="#">
+                        <img src="../img/icons/userIcon.png" alt="mi perfil" class="icon">
+                        <p>Mi perfil</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="menuList" href="#">
+                        <img src="../img/icons/communityIcon.png" alt="mis amigos" class="icon">
+                        <p>Mis amigos</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="menuList" href="#">
+                        <img src="../img/icons/editionIcon.png" alt="administrar cuenta" class="icon">
+                        <p>Administrar cuenta</p>
+                    </a>
+                </li>
+                <div class="line"></div>
+                <li>
+                    <a class="menuList" href="../html/index.html">
+                        <img src="../img/icons/closeSessionIcon.png" alt="cerrar sesion" class="icon">
+                        Cerrar sesion
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="dark-background"></div>
+    <main>
+        <section class="category">
+            <h2 class="game-category">Recomendado para ti</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+                <div class="transition"></div>
+            </button> 
+            <ul class="slide">
+                <li class="game-card">
+                    <a class="card" href="../html/game.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                                <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                            <div class="game-card-img">
+                                <!-- imagen del juego-->
+                                <img src="../img/games/multijugador/4EnlineaDemonSlayer.png" alt="demons slayer: 4 en linea">
+                            </div>
+                            <div class="card-info">
+                                <!-- titulo del juego-->
+                                <h3 class="card-title">demon Slayer: 4 en linea</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/highwayracer.jpg" alt="highwayracer">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Highway Racer</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/fire-and-water.jpg" alt="fuego y agua">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Fuego y Agua</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/lol-new-logo.jpg" alt="lol-new-logo">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Vida Socialn`t</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/crazyforspeed.jpg" alt="crazyforspeed">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Crazy For Speed</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/8ballpool.webp" alt="8ballpool">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">8 Ball Pool</h3>
+                        </div>
+                    </a>
+                </li>  
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$0.30</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/superstarcar.jpg" alt="superstarcar">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Super Star Car</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    </a>
+                </li> 
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/soccerlegends.jpg" alt="8ballpool">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Soccer Legends</h3>
+                        </div>
+                    </a>
+                </li>   
+                </ul>
+                <button class="button-right-mobile">
+                    <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+                  </button>
+                  <button class="button-left-mobile">
+                     <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+                  </button>
+                <button class="button-right">
+                    <img src="../img/buttons/FLECHITA.png" alt="button-right">
+                </button>
+        </section>
+        <section class="category">
+            <h2 class="game-category">Accion</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$5.99</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/accion/SandboxCity.jpg" alt="SandboxCity">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Sandbox City</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                </li>
+                <li class="game-card">
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$1.55</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/accion/clash-of-skulls-cover.jpg" alt="clash-of-skulls-cover">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Clash Of Skull</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                </li> 
+                <li class="game-card">
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$4.00</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/accion/endless-waves-survival-cover.jpg" alt="endless-waves-survival-cover">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Endless Waves Survival</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                </li>   
+                <li class="game-card">
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$1.00</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/accion/dwarves.jpg" alt="dwarves">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Dwarves</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                </li>   
+                <li class="game-card">
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$2.66</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/accion/monterlife.jpg" alt="monsterlife">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Monter Life</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li>   
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$6.99</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/accion/ninja-escape-cover.jpg" alt="ninja-escape-cover">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Ninja Escape</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                
+                </li> 
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$3.30</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/accion/stickmanParkour.png" alt="stickmanParkour">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Stickman Parkour</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                
+                </li> 
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$2.66</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/accion/stickman-archero-fight-cover.jpg" alt="StickmanArchero">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Stickman Archero</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li> 
+            </ul>
+                <button class="button-right-mobile">
+                  <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+                </button>
+                <button class="button-left-mobile">
+                   <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+                </button>
+                <button class="button-right">
+                    <img src="../img/buttons/FLECHITA.png" alt="button-right">
+                </button>
+        </section> 
+        <section class="category">
+            <h2 class="game-category">Aventura</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/aventura/supplychainidle.jpg" alt="supplychainidle">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Supply Chain Idle</h3>
+                        </div>
+                    </a>
+                </li>  
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/aventura/aground.jpg" alt="aground">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Aground</h3>
+                        </div>
+                    </a>
+                </li>   
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/aventura/eternal-road-cover.jpg" alt="eternal-road-cover">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Eternal Road Cover</h3>
+                        </div>
+                    </a>
+                </li> 
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/aventura/machineroomescape.jpg" alt="machineroomescape">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Machine Room Escape</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/aventura/mystery-mansion-puzzle-escape-cover.jpg" alt="mystery-mansion-puzzle-escape">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Mystery Mansion Puzzle Escape Cover</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/aventura/roomshomescape.jpg" alt="roomshomescape">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Rooms Home Escape</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/aventura/senya-and-oscar-2-cover.jpg" alt="senya-and-oscar-2-cover">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Senya And Oscar 2</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/aventura/spooky-island-cover.jpg" alt="spooky-island-cover">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Spooky Island</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section>  
+        <section class="category">
+            <h2 class="game-category">Belleza</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/funny-kitty-care-cover.jpg" alt="funny-kitty-care">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Funny Kitty Care</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/junior-dentist-cover.jpg" alt="junior-dentist">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Junior Dentist</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/pancake-maker-cooking-game-cover.jpg" alt="pancake-maker">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Pancake Maker</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/summer-fashion-makeover-cover.jpg" alt="summer-fashion-makeover">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Summer Fashion Makeover</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/donut-maker-cooking-game-cover.jpg" alt="donut-maker">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Donut Maker</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/emergency-surgery-cover.jpg" alt="emergency-surgery">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Emergency Surgery</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/fashion-challenge-catwalk-run-cover.jpg" alt="fashion-challenge">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Fashion Challenge</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/fashion-challenge-catwalk-run-cover.jpg" alt="fashion-challenge">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Fashion Challenge</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/belleza/funny-angela-haircut-cover.jpg" alt="funny-angela-haircut">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Funny Angela Haircut</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section>   
+        <section class="category">
+            <h2 class="game-category">Carreras</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$3.00</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/mtox3m.jpg" alt="mtox3m">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Mtox3m</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li> 
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$2.99</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/highwayracer.jpg" alt="highwayracer">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Highway Racer</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li> 
+                <li class="game-card">
+                   
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$2.30</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/crazydrift.jpg" alt="crazydrift">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Crazy Drift</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                  
+                </li> 
+                <li class="game-card">
+                   
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$1.99</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/superbikethechamplion.jpg" alt="superbikethechamplion">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Super Bike The Champion</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                 
+                </li> 
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$0.50</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/crazyforspeed.jpg" alt="crazyforspeed">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Crazy For Speed</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li> 
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$0.30</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/superstarcar.jpg" alt="superstarcar">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Super Star Car</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li> 
+                <li class="game-card">
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$9.99</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/carreras/turbo-crash-cover.jpg" alt="turbo-crash-cover">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Turbo Crash</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                </li> 
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section> 
+        <section class="category">
+            <h2 class="game-category">Cartas</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/cartas/spades.jpg" alt="spades">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Spades</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/cartas/fourcolours_play.jpg" alt="fourcolours">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Four Colours</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/cartas/cardskeeper.webp" alt="cardskeeper">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Cardskeeper</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">  
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/cartas/magic-towers-solitaire-cover.jpg" alt="magic-towers-solitaire">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Magic Towers Solitaire</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/cartas/solitairesocial.jpg" alt="solitairesocial">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Solitaire Social</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/cartas/spooky-tripeaks.webp" alt="spooky-tripeaks">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Spooky Tripeaks</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/cartas/whooo-cover.jpg" alt="whooo">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">whooo</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/cartas/duo-wfriends.jpg" alt="duo-wfriends">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Duo With Friends</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section> 
+        <section class="category">
+            <h2 class="game-category">Click</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/click/candy-clicker-2-cover.jpg" alt="candy-clicker">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Candy Clicker</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/click/dogeminer2.jpg" alt="dogeminer2">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Dogeminer 2</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/click/clickerheroes.jpg" alt="clickerheroes">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Clicker Heroes</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/click/candy-clicker-2-cover.jpg" alt="candy-clicker">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Candy Clicker</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/click/gpumining.jpg" alt="gpumining">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">GPU Mining</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/click/fastfoodfactory.jpg" alt="fastfoodfactory">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Fast Food Factory</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/click/idle-farming-business-cover.jpg" alt="farming-business">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Farming Business</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/click/mister-mine-cover.jpg" alt="mister-mine">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Mister Mine</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section> 
+        <section class="category">
+            <h2 class="game-category">Disparos</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$6.33</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/disparos/airwars3.jpg" alt="airwars3">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Air Wars 3</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                </li> 
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/disparos/stickman-prison-counter-assault-cover.jpg" alt="stickman-prison">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Stickman Prison</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/disparos/toilets-worms-shooter-cover.jpg" alt="toilets-worms">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Toilets Worms</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$2.66</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/disparos/snipermission.webp" alt="snipermission">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Sniper Mission</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                   
+                </li> 
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$1.99</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/disparos/zombie-hunters-online-cover.jpg" alt="zombie-hunters">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Zombie Hunters</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                  
+                </li> 
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/disparos/buildnow-gg-cover.jpg" alt="Buildnow GG">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Buildnow GG</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/disparos/forwardassaultremix.jpg" alt="forwardassaultremix">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">forward assault remix</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$2.30</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/disparos/forcebullet.jpg" alt="forcebullet">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Force Bullet</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li> 
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section> 
+        <section class="category">
+            <h2 class="game-category">Defensa De Torres</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/defensa de torres/a-slime-hut-cover.jpg" alt="a-slime-hut">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">A Slime Hut</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/defensa de torres/daytowerrush.jpg" alt="daytowerrush">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Day Tower Rush</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/defensa de torres/cursed-treasure-2-cover.jpg" alt="cursed-treasure">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Cursed Treasure 2</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/defensa de torres/dualforce-idle-cover.jpg" alt="dualforce-idle">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Dual Force Idle</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/defensa de torres/human-resistance-cover.jpg" alt="human-resistance">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Human Resistance</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/defensa de torres/kiomet-com-cover.jpg" alt="kiomet">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Kiomet</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/defensa de torres/super-number-defense-cover.jpg" alt="super-number-defense">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Super Number Defense</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/defensa de torres/we-not-survive-cover.jpg" alt="we-not-survive">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">We Not Survive</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section> 
+        <section class="category">
+            <h2 class="game-category">multijugador</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$1.99</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/soccerlegends.jpg" alt="soccerlegends">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Soccer Legends</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li> 
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/masterchess.jpg" alt="masterchess">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Master Chess</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/baketbros.jpg" alt="baketbros">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Baket Bros</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$2.60</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/house-of-hazards-cover.jpg" alt="house-of-hazards">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">House Of Hazards</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                   
+                </li> 
+                <li class="game-card">
+                    
+                        <div class="etiquetapremium">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/premium.png">
+                            </div>
+                            <h3 class="title-etiqueta">$1.21</h3>
+                        </div>
+                        <div class="etiqueta-triangulo-premium"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/tenisbros.jpg" alt="tenisbros">
+                        </div>
+                        <div class="card-info-premium">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Tenis Bros</h3>
+                            <button class="btn-agregar">
+                                <img class="carrito" src="../img/icons/btn-cart (1).png" alt="carrito">
+                                <p class="info-btn">+</p>
+                                <p class="info-btn-">-</p>
+                            </button>
+                        </div>
+                    
+                </li> 
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/serpientes-escaleras.jpg" alt="serpientes-escaleras">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Serpientes Escaleras</h3>
+                        </div>
+                    </a>
+                </li>   
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/multijugador/sky-bros.png" alt="sky-bros">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Sky Bros</h3>
+                        </div>
+                    </a>
+                </li>               
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section> 
+        <section class="category">
+            <h2 class="game-category">Pool</h2>
+            <button class="button-left">
+                <img src="../img/buttons/FLECHITA2.png" alt="">
+            </button>
+            <ul class="slide">
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/poolbubbles.jpg" alt="poolbubbles">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Pool Bubbles</h3>
+                        </div>
+                    </a>
+                </li>
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/billieards.jpg" alt="billieards">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">8 Ball Billieards</h3>
+                        </div>
+                    </a>
+                </li>   
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/snookey-cover.jpg" alt="snookey">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Snookey</h3>
+                        </div>
+                    </a>
+                </li>  
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/speed-pool-king.png" alt="speed-pool-king">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Speed Pool King</h3>
+                        </div>
+                    </a>
+                </li>    
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/8ballpool.webp" alt="8ballpool">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">8 Ball Pool</h3>
+                        </div>
+                    </a>
+                </li>        
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/poolrush.jpg" alt="poolrush">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Pool Rush</h3>
+                        </div>
+                    </a>
+                </li>  
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/poolclub.jpg" alt="poolclub">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Pool Club</h3>
+                        </div>
+                    </a>
+                </li>   
+                <li class="game-card">
+                    <a class="card" href="home.html">
+                        <div class="etiquetafree">
+                            <div class="icon-etiqueta">
+                                <img src="../img/icons/free.png">
+                            </div>
+                            <h3 class="title-etiqueta">free</h3>
+                        </div>
+                        <div class="etiqueta-triangulo"></div>
+                        <div class="game-card-img">
+                            <!-- imagen del juego-->
+                            <img src="../img/games/pool/poolmania.jpg" alt="poolmania">
+                        </div>
+                        <div class="card-info">
+                            <!-- titulo del juego-->
+                            <h3 class="card-title">Pool Mania</h3>
+                        </div>
+                    </a>
+                </li>          
+            </ul>
+            <button class="button-right-mobile">
+                <img src="../img/icons/flechaderechaMobile.png" alt="button-right-mobile">
+              </button>
+              <button class="button-left-mobile">
+                 <img src="../img/icons/flechaIzquierdaMobile.png" alt="button-left-mobile">
+              </button>
+            <button class="button-right">
+                <img src="../img/buttons/FLECHITA.png" alt="button-right">
+            </button>
+        </section>     
+    </main>
+    <footer class="footer-container">
+        <div class="footer-grid">
+            <section class="footer-logo-container">
+                <img src="../img/logoRattata.png" alt="logo Rattata" class="footer-logo">
+            </section>
+            <nav class="footer-nav">
+                <ul class="footer-links">
+                    <h3>LINKS</h3>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Mi perfil</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Recomendados</a></li>
+                    <li><a href="#">Mi coleccion</a></li>
+                </ul>
+                <ul class="footer-links">
+                    <h3>EMPRESA</h3>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Terminos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+                <ul class="footer-links">
+                    <h3>ASISTENCIA</h3>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Cancelar subscription</a></li>
+                </ul>
+            </nav> 
+        </div>
+        <div class="line"></div>
+        <section class="footer-social">
+            <img src="../img/icons/facebookIcon.png" alt="link al facebook de Rattata">
+            <img src="../img/icons/twitter.png" alt="link al twitter de Rattata">
+            <img src="../img/icons/instagramIcon.png" alt="link al instagram de Rattata">
+        </section>
+    </footer>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/menuDesplegable.js"></script>
+    <script src="../js/scriptSlide.js"></script>
+    <script src="../js/loader.js"></script>
+</body>
+</html>
