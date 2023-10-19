@@ -11,8 +11,8 @@ let fichasJugador2 = [];
 
 let numFilas = 6;
 let numColumn = 7;
-const SIZEPOSBOARD = 40;
-const TAMANIOFICHA = 20;
+const SIZEPOSBOARD = 60;
+const TAMANIOFICHA = 30;
 let alturaTablero = (numFilas*SIZEPOSBOARD);
 let largoTablero = (numColumn*SIZEPOSBOARD);
 let canvasWidth=canvas.width;
