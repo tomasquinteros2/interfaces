@@ -1436,6 +1436,10 @@ a.btn-Irlogin:hover{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0 0 0 20%;
   }  
+  .canvas{
+    display: none;
+    background-color: white;
+  }
 }
 
 
