@@ -46,5 +46,13 @@ class Ficha{
         this.x = x;
         this.y = y;
     }
-
+    getY(){
+        return this.y;
+    }
+    getX(){
+        return this.x;
+    }
+    ponerEnTablero(){
+        this.puedeMoverse = false;
+    }
 }
