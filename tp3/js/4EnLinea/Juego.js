@@ -11,7 +11,7 @@ let fichasJugador2 = [];
 //arreglo de dropZone
 let dropZones = []
 
-let numFilas = 6;
+let numFilas = 3;
 let numColumn = 7;
 const TAMESPACIO = 60;
 const TAMANIOFICHA = 30;
@@ -24,7 +24,7 @@ let cantidadFichas = numFilas * numColumn;
 let jugador1 = new Jugador();
 let jugador2 = new Jugador();
 
-let turno = 2;
+let turno = 1;
 //imagenes
 let imgEspacio = "../img/4EnLinea/juego/espacio.png";
 let imgFicha1 = "../img/4EnLinea/juego/ficha1.png";
@@ -127,7 +127,7 @@ canvas.addEventListener("mousedown", (event) => {
             }
         }
     }
-    else{
+    if(turno == 2){
         for(let i = 0; i<fichasJugador2.length; i++){
             let ficha = fichasJugador2[i];
             if(ficha.isClicked(mouseX,mouseY)){
@@ -145,23 +145,33 @@ canvas.addEventListener("mousemove", (event) => {
     }
 })
 canvas.addEventListener("mouseup", () =>{
-    if(fichaActual != null){
-        let x = fichaActual.getX();
-        let y = fichaActual.getY();
-        for(let i =0;i<dropZones.length;i++){
-            if(dropZones[i].detectarFicha(x,y)){
-                insertarFicha(i);
-                console.log(i);
-            }
+    let x = fichaActual.getX();
+    let y = fichaActual.getY();
+    for(let i =0;i<dropZones.length;i++){
+        if(dropZones[i].detectarFicha(x,y)){
+            insertarFicha(i);
+            console.log(i);
+            fichaActual = null;
         }
     }
-    //let ficha = fichaActual;
-    //ficha.posInicial();
-    fichaActual = null;
-})
+    if(fichaActual != null){
+        fichaActual.posInicial();
+        console.log(turno)
+        fichaActual = null;
+        drawFigures()
+    }
 
+})
+function cambiarTurno(){
+    if(turno == 1){
+        turno = 2;
+    }
+    else{
+        turno = 1;
+    }
+}
 function insertarFicha(columna){
-    for(let i = matriz.length-1; i >= 0; i--){
+    for(let i = matriz.length-1; i >=  0; i--){
         let fila = matriz[i];
         if(!fila[columna].estaOcupada()){
             fila[columna].setFicha(fichaActual);
@@ -170,9 +180,14 @@ function insertarFicha(columna){
             fichaActual.move(x,y);
             fichaActual.ponerEnTablero();
             drawFigures()
-            console.log("se inserto");
+            cambiarTurno();
             break;
         }
+        if(i == 0){
+            fichaActual.posInicial();
+            drawFigures()
+        }
+
     }
 }
 /*canvas.addEventListener("mouseleave", ()=>{
