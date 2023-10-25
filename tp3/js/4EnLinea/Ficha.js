@@ -8,8 +8,8 @@ class Ficha{
         this.ctx=ctx;
         this.jugador=jugador;
         this.imagen= new Image();
-        this.xInicial = this.x;
-        this.yInicial = this.y;
+        this.xInicial;
+        this.yInicial;
     }
     drawImg(img){
         this.ctx.beginPath();
@@ -25,9 +25,6 @@ class Ficha{
             this.ctx.drawImage(this.imagen, this.x - this.radio,this.y - this.radio,this.radio/.6,this.radio/.6);
         }
     }
-    posInicial(){
-        this.move(this.xInicial,this.yInicial)
-    }
     isClicked(posx,posy){
         if(this.puedeMoverse){
             let _x = this.x - posx;
@@ -36,6 +33,8 @@ class Ficha{
             if(dist > this.radio){
                 return false;
             }else{
+                this.xInicial = this.x;
+                this.yInicial = this.y;
                 return true;
             }
         }else{
@@ -54,5 +53,9 @@ class Ficha{
     }
     ponerEnTablero(){
         this.puedeMoverse = false;
+    }
+    posInicial(){
+        this.move(this.xInicial,this.yInicial)
+        console.log("movida")
     }
 }
