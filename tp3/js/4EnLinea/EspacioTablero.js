@@ -8,7 +8,12 @@ class EspacioTablero {
         this.image = new Image();
         this.ficha=null;
     }
-
+    getY(){
+        return this.y;
+    }
+    getX(){
+        return this.x;
+    }
     setFicha(ficha){
         this.ficha=ficha;
     }
@@ -25,6 +30,22 @@ class EspacioTablero {
         }
         else{
             this.ctx.drawImage(this.image, this.x,this.y,this.width,this.width)
+        }
+    }
+    detectarFicha(posX,posY){
+        if((posX > this.x && posX <= (this.x + this.width)) && (posY > this.y && posY < (this.y+this.width))){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    estaOcupada(){
+        if(this.ficha == null){
+            return false;
+        }
+        else{
+            return true;
         }
     }
 }

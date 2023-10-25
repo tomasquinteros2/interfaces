@@ -8,6 +8,8 @@ class Ficha{
         this.ctx=ctx;
         this.jugador=jugador;
         this.imagen= new Image();
+        this.xInicial = this.x;
+        this.yInicial = this.y;
     }
     drawImg(img){
         this.ctx.beginPath();
@@ -20,7 +22,37 @@ class Ficha{
             this.imagen.onload = loadImg.bind(this);
         }
         else{
-            this.ctx.drawImage(this.imagen, this.x - this.radio,this.y - this.radio,this.this.radio/.6,this.this.radio/.6);
+            this.ctx.drawImage(this.imagen, this.x - this.radio,this.y - this.radio,this.radio/.6,this.radio/.6);
         }
+    }
+    posInicial(){
+        this.move(this.xInicial,this.yInicial)
+    }
+    isClicked(posx,posy){
+        if(this.puedeMoverse){
+            let _x = this.x - posx;
+            let _y = this.y - posy;
+            let dist = Math.sqrt(_x * _x + _y * _y);
+            if(dist > this.radio){
+                return false;
+            }else{
+                return true;
+            }
+        }else{
+            return false;
+        }
+    }
+    move(x, y){
+        this.x = x;
+        this.y = y;
+    }
+    getY(){
+        return this.y;
+    }
+    getX(){
+        return this.x;
+    }
+    ponerEnTablero(){
+        this.puedeMoverse = false;
     }
 }
