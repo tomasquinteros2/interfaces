@@ -11,7 +11,8 @@ let fichasJugador2 = [];
 //arreglo de dropZone
 let dropZones = []
 
-let numFilas = 3;
+let cantEnLinea = 3;
+let numFilas = 4;
 let numColumn = 7;
 const TAMESPACIO = 60;
 const TAMANIOFICHA = 30;
@@ -21,8 +22,8 @@ let canvasWidth=canvas.width;
 let canvasHeight=canvas.height;
 let cantidadFichas = numFilas * numColumn;
 //jugadores
-let jugador1 = new Jugador();
-let jugador2 = new Jugador();
+let jugador1 = new Jugador("tomas",1);
+let jugador2 = new Jugador("pedrito",2);
 
 let turno = 1;
 //imagenes
@@ -145,22 +146,32 @@ canvas.addEventListener("mousemove", (event) => {
     }
 })
 canvas.addEventListener("mouseup", () =>{
-    let x = fichaActual.getX();
-    let y = fichaActual.getY();
-    for(let i =0;i<dropZones.length;i++){
-        if(dropZones[i].detectarFicha(x,y)){
-            insertarFicha(i);
-            console.log(i);
-            fichaActual = null;
+    if(fichaActual!=null){
+        let x = fichaActual.getX();
+        let y = fichaActual.getY();
+        //recorro todos los dropzone
+        for(let i =0;i<dropZones.length;i++){
+            //si la ficha esta arriba de alguno
+            if(dropZones[i].detectarFicha(x,y)){
+                insertarFicha(i);
+                cambiarTurno();
+                fichaActual = null;
+            }
         }
+        if(fichaActual != null){
+            fichaActual.posInicial();
+            fichaActual = null;
+            drawFigures()
+        }
+    
     }
-    if(fichaActual != null){
+})
+canvas.addEventListener("mouseleave", ()=>{
+    if(fichaActual!=null){
         fichaActual.posInicial();
-        console.log(turno)
         fichaActual = null;
-        drawFigures()
+        drawFigures();
     }
-
 })
 function cambiarTurno(){
     if(turno == 1){
@@ -178,41 +189,187 @@ function insertarFicha(columna){
             let x = (fila[columna].getX() +TAMESPACIO/1.8);
             let y = fila[columna].getY() + TAMESPACIO/1.7;
             fichaActual.move(x,y);
+            checkGanador(i,columna);
             fichaActual.ponerEnTablero();
             drawFigures()
-            cambiarTurno();
             break;
         }
         if(i == 0){
             fichaActual.posInicial();
             drawFigures()
         }
-
     }
 }
-/*canvas.addEventListener("mouseleave", ()=>{
-    console.log("mouseleave")
-    fichaActual.posInicial();
-    fichaActual = null;
-})*/
-/*document.addEventListener("DOMContentLoaded", function (){
-    canvas.onmousedown = function(event){
-        console.log("yeah")
-        if(turno==jugador1){
-            for(let i = 0; i<fichasJugador1.length; i++){
-                let ficha = fichasJugador1[i];
-                if(ficha.isClicked(event.clientX,event.clientY)){
-                    fichaActual = ficha;
-                    break;
-                }
-            }
-        }
-        console.log(fichaActual);
+function checkGanador(fila,columna){
+    if(checkDiagonales(fila,columna) || checkFila(fila,columna) || checkColumna(fila,columna)){
+        console.log("gane el jugador = " + turno)
     }
-    canvas.onmousemove = function(event){
-        if(fichaActual !=null){
-            fichaActual.move(event.clientX,event.clientY);
-            drawFigures()        
+}
+function checkDiagonales(fila,columna){
+    let suma = 0;
+    let izqAbajo = checkDiagAbajIzq(suma,fila,columna);
+    let izqArriba = checkDiagArribIzq(suma,fila,columna);
+    let derAbajo = checkDiagAbajDer(suma,fila,columna);
+    let derArriba = checkDiagArribDer(suma,fila,columna);
+    if((izqAbajo + derArriba >= cantEnLinea) || (izqArriba+derAbajo >=cantEnLinea)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function checkColumna(fila,columna){
+    let suma = 0;
+    let abajo =  checkAbajo(suma,fila,columna);
+    if(abajo >= cantEnLinea){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function checkFila(fila,columna){
+    let suma = 0;
+    let derecha = checkDerecha(suma,fila,columna);
+    let izquierda = checkIzquierda(suma,fila,columna);
+    if(derecha + izquierda >= cantEnLinea){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function checkAbajo(suma,fila,columna){
+    let filaMatriz = matriz[fila]
+    let espacio = filaMatriz[columna]
+    let tipoFicha = espacio.getTipoDeFicha();
+    if(tipoFicha!=null){
+        if(tipoFicha == turno){
+            suma++
+            if(fila<numFilas-1){
+                suma = checkAbajo(suma,fila+1,columna)
+            } 
         }
     }
-})*/
+    if(suma<=1){
+        return 0;
+    }
+    else{
+        return suma;
+    }
+}
+function checkDerecha(suma,fila,columna){
+    let filaMatriz = matriz[fila]
+    let espacio = filaMatriz[columna]
+    let tipoFicha = espacio.getTipoDeFicha();
+    if(tipoFicha!=null){
+        if(tipoFicha == turno){
+            suma++
+            if(columna<numColumn-1){
+                suma = checkDerecha(suma,fila,columna+1)
+            } 
+        }
+    }
+    if(suma<=1){
+        return 0;
+    }
+    else{
+        return suma;
+    }
+}
+function checkIzquierda(suma,fila,columna){
+    let filaMatriz = matriz[fila]
+    let espacio = filaMatriz[columna]
+    let tipoFicha = espacio.getTipoDeFicha();
+    if(tipoFicha!=null){
+        if(tipoFicha == turno){
+            suma++
+            if(columna>0){
+                suma=checkIzquierda(suma,fila,columna-1)
+            } 
+        }
+    }
+    if(suma<=1){
+        return 0;
+    }
+    else{
+        return suma;
+    }
+}
+function checkDiagArribIzq(suma,fila,columna){
+    let filaMatriz = matriz[fila]
+    let espacio = filaMatriz[columna]
+    let tipoFicha = espacio.getTipoDeFicha();
+    if(tipoFicha!=null){
+        if(tipoFicha == turno){
+            suma++
+            if(columna>0 && fila>0){
+                suma = checkDiagArribIzq(suma,fila-1,columna-1);
+            } 
+        }
+    }
+    if(suma<=1){
+        return 0;
+    }
+    else{
+        return suma;
+    }
+}
+function checkDiagArribDer(suma,fila,columna){
+    let filaMatriz = matriz[fila]
+    let espacio = filaMatriz[columna]
+    let tipoFicha = espacio.getTipoDeFicha();
+    if(tipoFicha!=null){
+        if(tipoFicha == turno){
+            suma++
+            if(columna<numColumn-1 && fila>0){
+                suma = checkDiagArribDer(suma,fila-1,columna+1);
+            } 
+        }
+    }
+    if(suma<=1){
+        return 0;
+    }
+    else{
+        return suma;
+    }
+}
+function checkDiagAbajIzq(suma,fila,columna){
+    let filaMatriz = matriz[fila]
+    let espacio = filaMatriz[columna]
+    let tipoFicha = espacio.getTipoDeFicha();
+    if(tipoFicha!=null){
+        if(tipoFicha == turno){
+            suma++
+            if(columna>0 && fila<numFilas-1){
+                suma = checkDiagAbajIzq(suma,fila+1,columna-1);
+            } 
+        }
+    }
+    if(suma<=1){
+        return 0;
+    }
+    else{
+        return suma;
+    }
+}
+function checkDiagAbajDer(suma,fila,columna){
+    let filaMatriz = matriz[fila]
+    let espacio = filaMatriz[columna]
+    let tipoFicha = espacio.getTipoDeFicha();
+    if(tipoFicha!=null){
+        if(tipoFicha == turno){
+            suma++
+            if(columna<numColumn-1 && fila<numFilas-1){
+                suma = checkDiagAbajDer(suma,fila+1,columna+1);
+            } 
+        }
+    }
+    if(suma<=1){
+        return 0;
+    }
+    else{
+        return suma;
+    }
+}
+

@@ -48,4 +48,12 @@ class EspacioTablero {
             return true;
         }
     }
+    getTipoDeFicha(){
+        if(this.ficha != null){
+            return this.ficha.getJugador();
+        }
+        else{
+            return null;
+        }
+    }
 }
