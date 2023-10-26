@@ -58,4 +58,7 @@ class Ficha{
         this.move(this.xInicial,this.yInicial)
         console.log("movida")
     }
+    getJugador(){
+        return this.jugador.getId();
+    }
 }
