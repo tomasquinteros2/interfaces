@@ -6,4 +6,10 @@ class Jugador{
     getId(){
         return this.id
     }
+    setNombre(nombre){
+        this.nombre=nombre;
+    }
+    getNombre(){
+        return this.nombre;
+    }
 }

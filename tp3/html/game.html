@@ -106,8 +106,53 @@
         <div class="dark-background"></div>
     <main class="game-container">
         <p class="breadcrums"><a href="../html/home.html">Home</a> / Recomendados / <a href="../html/game.html">Demon Slayer: 4 En Linea</a> </p>
-        <section>  
-            <canvas class="canvas" id="canvas" width="1140" height="543"></canvas>
+        <section> 
+            <div class="canvas-form">
+                    <div>
+                        <h2>Elige tu nombre y tu ficha</h2>
+                    </div>
+                    <div class="player">
+                        <input type="text" value="" class="inputCanvas" id="namePlayer1" placeholder="jugador 1">
+                        <div class="token" id="ficha1">
+                            <img src="../img/4Enlinea/juego/ficha1.png" alt="ficha1" width="80px">
+                        </div>
+                        <div class="token" id="ficha3">
+                            <img src="../img/4Enlinea/juego/ficha3.png" alt="ficha1" width="80px">
+                        </div>
+                        <div class="token" id="ficha5">
+                            <img src="../img/4Enlinea/juego/ficha5.png" alt="ficha1" width="80px">
+                        </div>
+                    </div>
+                    <div class="player">
+                        <input type="text" value="" class="inputCanvas" id="namePlayer2" placeholder="jugador 2">
+                        <div class="token" id="ficha2">
+                            <img src="../img/4Enlinea/juego/ficha2.png" alt="ficha2" width="80px">
+                        </div>
+                        <div class="token" id="ficha4">
+                            <img src="../img/4Enlinea/juego/ficha4.png" alt="ficha1" width="80px">
+                        </div>
+                        <div class="token" id="ficha6">
+                            <img src="../img/4Enlinea/juego/ficha6.png" alt="ficha1" width="80px">
+                        </div>
+                    </div>
+                    <button class="button-play" id="play-game">Jugar
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span3"></span>
+                        <span id="span4"></span>
+                    </button>
+            </div>
+            <div class="canvas">
+                <div class="titles-canvas">
+                    <h1 class="namePlayer1" id="titulo1"></h1>
+                    <h1 class="namePlayer2" id="titulo2"></h1>
+                </div>
+                <h1 id="turno"></h1>
+                <h1 id="ganador"></h1>
+                <canvas id="canvas" width="1140" height="543"></canvas>
+                <p id="tiempo"></p>
+                <a id="restartGame">Reiniciar</a> 
+            </div>
             <div class="section-image">
                 <img class="bk-game-image" src="../img/4Enlinea/ImagenBorroneada2.png" alt="game-background">
                 <div class="play-section">
@@ -120,10 +165,10 @@
                         <span id="span3"></span>
                         <span id="span4"></span>
                         </button>
-                        
                     </div> 
                 </div>           
             </div>
+            
             <div class="game-info">
                 <h1>Demon Slayer: 4 En Linea</h1>
                 <section class="info-section">

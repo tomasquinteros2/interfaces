@@ -51,8 +51,8 @@ class Ficha{
     getX(){
         return this.x;
     }
-    ponerEnTablero(){
-        this.puedeMoverse = false;
+    ponerEnTablero(boolean){
+        this.puedeMoverse = boolean;
     }
     posInicial(){
         this.move(this.xInicial,this.yInicial)
@@ -60,5 +60,8 @@ class Ficha{
     }
     getJugador(){
         return this.jugador.getId();
+    }
+    setImagen(img){
+        this.imagen.src= img;
     }
 }
