@@ -22,15 +22,24 @@ let canvasWidth=canvas.width;
 let canvasHeight=canvas.height;
 let cantidadFichas = numFilas * numColumn;
 //jugadores
-let jugador1 = new Jugador("tomas",1);
-let jugador2 = new Jugador("pedrito",2);
+let jugador1 = new Jugador("",1);
+let jugador2 = new Jugador("",2);
 
-let turno = 1;
+let turno = null;
 //imagenes
+let imgFichaJugador1 = "../img/4Enlinea/juego/ficha1.png";
+let imgFichaJugador2 = "../img/4EnLinea/juego/ficha2.png";
 let imgEspacio = "../img/4EnLinea/juego/espacio.png";
-let imgFicha1 = "../img/4EnLinea/juego/ficha1.png";
+let imgFicha1 = "../img/4Enlinea/juego/ficha1.png";
 let imgFicha2 = "../img/4EnLinea/juego/ficha2.png";
+let imgFicha3 = "../img/4EnLinea/juego/ficha3.png";
+let imgFicha4 = "../img/4EnLinea/juego/ficha4.png";
+let imgFicha5 = "../img/4EnLinea/juego/ficha5.png";
+let imgFicha6 = "../img/4EnLinea/juego/ficha6.png";
 let dropimg = "../img/4EnLinea/juego/flecha-abajo.png";
+
+
+
 
 
 function cargarTablero(){
@@ -99,10 +108,16 @@ function drawFigures(){
         dropZones[i].drawImg(dropimg)
     }
     for(let i = 0;i<fichasJugador1.length;i++){
-        fichasJugador1[i].drawImg(imgFicha1);
-        fichasJugador2[i].drawImg(imgFicha2);
+        fichasJugador1[i].drawImg(imgFichaJugador1);
+        fichasJugador2[i].drawImg(imgFichaJugador2);
     }
-
+    ponerNombres();
+}
+function ponerNombres(){
+    let nombre1=document.querySelector("#titulo1");
+    let nombre2=document.querySelector("#titulo2");
+    nombre1.innerHTML = jugador1.getNombre();
+    nombre2.innerHTML = jugador2.getNombre();
 }
 let cronometro = 0;
 function iniciarTiempo(boolean){
@@ -113,8 +128,6 @@ function iniciarTiempo(boolean){
         cronometro = setInterval(()=>{
             let minutos = Math.floor(tiempo / 60);
             let segundos = tiempo % 60;
-            console.log(minutos)
-            console.log(segundos)
             segundos = segundos < 10 ? '0' + segundos : segundos;
             element.innerHTML = `${minutos}:${segundos}`;
             if(minutos == 0 && segundos == 0){
@@ -131,22 +144,97 @@ function iniciarTiempo(boolean){
         clearInterval(cronometro);
     }
 }
-function finishGame(){
+let ganador = document.querySelector("#ganador");
+function finalizarJuego(){
     iniciarTiempo(false);
+    titulo.style.display ="none";
+    ganador.style.display = "block";
+    ganador.innerHTML = `Gano `+ turno.getNombre();
     for(let i = 0; i < fichasJugador1.length; i++){
         fichasJugador1[i].ponerEnTablero(false);
         fichasJugador2[i].ponerEnTablero(false);
     }
 }
+function reiniciarJuego(){
+    arreglosDeEspacios = [];
+    matriz = [];
+    fichasJugador1 = [];
+    fichasJugador2 = [];
+    turno = null;
+    cambiarTurno()
+    clearCanvas();
+    cargarTablero();
+    drawFigures();
+    iniciarTiempo(false);
+    iniciarTiempo(true);
+}
 function clearCanvas(){
     ctx.clearRect(0, 0,canvasWidth,canvasHeight);
 }
+//reiniciar Juego
+document.querySelector('#restartGame').addEventListener('click',()=>{
+    reiniciarJuego();
+})
+//nombre de los jugadores
+document.querySelector('#namePlayer1').addEventListener('keyup', ()=>{
+    jugador1.setNombre(document.querySelector('#namePlayer1').value);
+});
+document.querySelector('#namePlayer2').addEventListener('keyup', ()=>{
+    jugador2.setNombre(document.querySelector('#namePlayer2').value);
+});
 
 //juegar 4 en linea
 document.querySelector('#play-canvas').addEventListener('click',()=>{
-    document.querySelector('.canvas').style.display="flex";
     document.querySelector('.section-image').style.display="none";
+    document.querySelector('.canvas-form').style.display="flex";
+})
+document.querySelector("#play-game").addEventListener('click',()=>{
+    document.querySelector('.canvas').style.display="flex";
+    document.querySelector('.canvas-form').style.display="none";
+    drawFigures();
     iniciarTiempo(true);
+    cambiarTurno();
+})
+//fichas
+document.querySelector("#ficha1").addEventListener('click',()=>{
+    for(let i = 0; i < fichasJugador1.length;i++){
+        fichasJugador1[i].setImagen(imgFicha1)
+        imgFichaJugador1 = imgFicha1;
+    }
+})
+document.querySelector("#ficha2").addEventListener('click',()=>{
+    for(let i = 0; i < fichasJugador2.length;i++){
+        fichasJugador2[i].setImagen(imgFicha2)
+        imgFichaJugador2 = imgFicha2;
+    }
+})
+document.querySelector("#ficha3").addEventListener('click',()=>{
+    for(let i = 0; i < fichasJugador1.length;i++){
+        fichasJugador1[i].setImagen(imgFicha3)
+        imgFichaJugador1 = imgFicha3;
+    }
+    
+})
+document.querySelector("#ficha4").addEventListener('click',()=>{
+    for(let i = 0; i < fichasJugador2.length;i++){
+        fichasJugador2[i].setImagen(imgFicha4)
+        imgFichaJugador2 = imgFicha4;
+    }
+    
+})
+document.querySelector("#ficha5").addEventListener('click',()=>{
+    for(let i = 0; i < fichasJugador1.length;i++){
+        fichasJugador1[i].setImagen(imgFicha5)
+        imgFichaJugador1 = imgFicha5;
+    }
+    
+})
+document.querySelector("#ficha6").addEventListener('click',()=>{
+    for(let i = 0; i < fichasJugador2.length;i++){
+        fichasJugador2[i].setImagen(imgFicha6)
+        imgFichaJugador2 = imgFicha6;
+    }
+    
 })
 cargarTablero();
 drawFigures();
@@ -155,7 +243,7 @@ let fichaActual=null;
 canvas.addEventListener("mousedown", (event) => {
     let mouseX = event.layerX;
     let mouseY = event.layerY;
-    if(turno==1){
+    if(turno.getId()==1){
         for(let i = 0; i<fichasJugador1.length; i++){
             let ficha = fichasJugador1[i];
             if(ficha.isClicked(mouseX,mouseY)){
@@ -164,7 +252,7 @@ canvas.addEventListener("mousedown", (event) => {
             }
         }
     }
-    if(turno == 2){
+    if(turno.getId() == 2){
         for(let i = 0; i<fichasJugador2.length; i++){
             let ficha = fichasJugador2[i];
             if(ficha.isClicked(mouseX,mouseY)){
@@ -209,12 +297,24 @@ canvas.addEventListener("mouseleave", ()=>{
         drawFigures();
     }
 })
+titulo = document.querySelector("#turno");
 function cambiarTurno(){
-    if(turno == 1){
-        turno = 2;
+    if(turno == null){
+        ganador.style.display = "none";
+        titulo.innerHTML = `Turno de `+jugador1.getNombre();
+        turno = jugador1;
+        titulo.style.display="block";
+        titulo.style.color="#791111";
+    }
+    else if(turno.getId() == 1){
+        turno = jugador2;
+        titulo.innerHTML = `Turno de `+jugador2.getNombre();
+        titulo.style.color="#296CD1";
     }
     else{
-        turno = 1;
+        titulo.innerHTML = `Turno de `+jugador1.getNombre();
+        turno = jugador1;
+        titulo.style.color="#791111";
     }
 }
 function insertarFicha(columna){
@@ -241,7 +341,7 @@ function checkGanador(fila,columna){
 
     }
     if(checkDiagonales(fila,columna) || checkFila(fila,columna) || checkColumna(fila,columna)){
-        console.log("gane el jugador = " + turno)
+        finalizarJuego();
         
     }
 }
@@ -302,7 +402,7 @@ function checkAbajo(suma,fila,columna){
     let espacio = filaMatriz[columna]
     let tipoFicha = espacio.getTipoDeFicha();
     if(tipoFicha!=null){
-        if(tipoFicha == turno){
+        if(tipoFicha == turno.getId()){
             suma++
             if(arreglo.length!=0){
                 arreglo.push(espacio);
@@ -327,7 +427,7 @@ function checkDerecha(suma,fila,columna){
     let espacio = filaMatriz[columna]
     let tipoFicha = espacio.getTipoDeFicha();
     if(tipoFicha!=null){
-        if(tipoFicha == turno){
+        if(tipoFicha == turno.getId()){
             suma++
             if(columna<numColumn-1){
                 suma = checkDerecha(suma,fila,columna+1)
@@ -365,7 +465,7 @@ function checkDiagArribIzq(suma,fila,columna){
     let espacio = filaMatriz[columna]
     let tipoFicha = espacio.getTipoDeFicha();
     if(tipoFicha!=null){
-        if(tipoFicha == turno){
+        if(tipoFicha == turno.getId()){
             suma++
             if(columna>0 && fila>0){
                 suma = checkDiagArribIzq(suma,fila-1,columna-1);
@@ -384,7 +484,7 @@ function checkDiagArribDer(suma,fila,columna){
     let espacio = filaMatriz[columna]
     let tipoFicha = espacio.getTipoDeFicha();
     if(tipoFicha!=null){
-        if(tipoFicha == turno){
+        if(tipoFicha == turno.getId()){
             suma++
             if(columna<numColumn-1 && fila>0){
                 suma = checkDiagArribDer(suma,fila-1,columna+1);
@@ -403,7 +503,7 @@ function checkDiagAbajIzq(suma,fila,columna){
     let espacio = filaMatriz[columna]
     let tipoFicha = espacio.getTipoDeFicha();
     if(tipoFicha!=null){
-        if(tipoFicha == turno){
+        if(tipoFicha == turno.getId()){
             suma++
             if(columna>0 && fila<numFilas-1){
                 suma = checkDiagAbajIzq(suma,fila+1,columna-1);
@@ -422,7 +522,7 @@ function checkDiagAbajDer(suma,fila,columna){
     let espacio = filaMatriz[columna]
     let tipoFicha = espacio.getTipoDeFicha();
     if(tipoFicha!=null){
-        if(tipoFicha == turno){
+        if(tipoFicha == turno.getId()){
             suma++
             if(columna<numColumn-1 && fila<numFilas-1){
                 suma = checkDiagAbajDer(suma,fila+1,columna+1);

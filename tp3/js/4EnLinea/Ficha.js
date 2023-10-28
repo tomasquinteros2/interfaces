@@ -61,4 +61,7 @@ class Ficha{
     getJugador(){
         return this.jugador.getId();
     }
+    setImagen(img){
+        this.imagen.src= img;
+    }
 }
