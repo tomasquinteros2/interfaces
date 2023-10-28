@@ -1440,6 +1440,28 @@ a.btn-Irlogin:hover{
     display: none;
     background-color: white;
   }
+  #restartGame{
+    right: 10px;
+    top:10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #7867bd;
+    width: 200px;
+    height: 40px;
+    align-items: center;
+    cursor:pointer;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  #tiempo{
+    position: absolute;
+    top: 10px;
+    left: 47.8%;
+    color: #0c0505;
+    margin-left: 10px;
+    width: 50px;
+  }
 }
 
 

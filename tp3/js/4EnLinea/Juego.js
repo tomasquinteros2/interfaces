@@ -102,6 +102,41 @@ function drawFigures(){
         fichasJugador1[i].drawImg(imgFicha1);
         fichasJugador2[i].drawImg(imgFicha2);
     }
+
+}
+let cronometro = 0;
+function iniciarTiempo(boolean){
+    let element = document.getElementById("tiempo");
+    let cantminutos = 3;
+    let tiempo = cantminutos * 60;
+    if(boolean){
+        cronometro = setInterval(()=>{
+            let minutos = Math.floor(tiempo / 60);
+            let segundos = tiempo % 60;
+            console.log(minutos)
+            console.log(segundos)
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+            element.innerHTML = `${minutos}:${segundos}`;
+            if(minutos == 0 && segundos == 0){
+                clearInterval();
+                finishGame();
+
+            }
+            else{
+                tiempo--;
+            }
+        }, 1000);
+    }
+    else{
+        clearInterval(cronometro);
+    }
+}
+function finishGame(){
+    iniciarTiempo(false);
+    for(let i = 0; i < fichasJugador1.length; i++){
+        fichasJugador1[i].ponerEnTablero(false);
+        fichasJugador2[i].ponerEnTablero(false);
+    }
 }
 function clearCanvas(){
     ctx.clearRect(0, 0,canvasWidth,canvasHeight);
@@ -111,6 +146,7 @@ function clearCanvas(){
 document.querySelector('#play-canvas').addEventListener('click',()=>{
     document.querySelector('.canvas').style.display="flex";
     document.querySelector('.section-image').style.display="none";
+    iniciarTiempo(true);
 })
 cargarTablero();
 drawFigures();
@@ -189,9 +225,9 @@ function insertarFicha(columna){
             let x = (fila[columna].getX() +TAMESPACIO/1.8);
             let y = fila[columna].getY() + TAMESPACIO/1.7;
             fichaActual.move(x,y);
+            fichaActual.ponerEnTablero(false);
+            drawFigures();
             checkGanador(i,columna);
-            fichaActual.ponerEnTablero();
-            drawFigures()
             break;
         }
         if(i == 0){
@@ -201,10 +237,31 @@ function insertarFicha(columna){
     }
 }
 function checkGanador(fila,columna){
+    if(checkDiagonales(fila,columna)){
+
+    }
     if(checkDiagonales(fila,columna) || checkFila(fila,columna) || checkColumna(fila,columna)){
         console.log("gane el jugador = " + turno)
+        
     }
 }
+/*function verifyWinner(modo){
+    if(tablero.thereIsWinner(modo)){
+        
+        let img = new Image();
+        let x = canvas.width / 2 - 170
+        img.src = "img/thanos.jpg"
+        ctx.drawImage(img, 0, 0,1200,600);
+        ctx.font = '48px serif';
+        ctx.fillStyle = "#FFFFFF";
+        //ctx.textAlign("center");
+        if(jugador == j1){
+            ctx.fillText('Ganó el Jugador 1', x, 50);
+        }else{
+            ctx.fillText('Ganó el Jugador 2', x, 50);
+        }
+    }
+}*/
 function checkDiagonales(fila,columna){
     let suma = 0;
     let izqAbajo = checkDiagAbajIzq(suma,fila,columna);
@@ -218,6 +275,7 @@ function checkDiagonales(fila,columna){
         return false;
     }
 }
+let arreglo = [];
 function checkColumna(fila,columna){
     let suma = 0;
     let abajo =  checkAbajo(suma,fila,columna);
@@ -246,9 +304,15 @@ function checkAbajo(suma,fila,columna){
     if(tipoFicha!=null){
         if(tipoFicha == turno){
             suma++
+            if(arreglo.length!=0){
+                arreglo.push(espacio);
+            }
+            if(suma == cantEnLinea){
+                arreglo.push(espacio);
+            }
             if(fila<numFilas-1){
                 suma = checkAbajo(suma,fila+1,columna)
-            } 
+            }
         }
     }
     if(suma<=1){

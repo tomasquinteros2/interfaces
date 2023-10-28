@@ -106,8 +106,12 @@
         <div class="dark-background"></div>
     <main class="game-container">
         <p class="breadcrums"><a href="../html/home.html">Home</a> / Recomendados / <a href="../html/game.html">Demon Slayer: 4 En Linea</a> </p>
-        <section>  
-            <canvas class="canvas" id="canvas" width="1140" height="543"></canvas>
+        <section> 
+            <div class="canvas">
+                <canvas id="canvas" width="1140" height="543"></canvas>
+                <p id="tiempo"></p>
+                <a id="restartGame" href="#">Reiniciar</a> 
+            </div>
             <div class="section-image">
                 <img class="bk-game-image" src="../img/4Enlinea/ImagenBorroneada2.png" alt="game-background">
                 <div class="play-section">
@@ -120,10 +124,10 @@
                         <span id="span3"></span>
                         <span id="span4"></span>
                         </button>
-                        
                     </div> 
                 </div>           
             </div>
+            
             <div class="game-info">
                 <h1>Demon Slayer: 4 En Linea</h1>
                 <section class="info-section">

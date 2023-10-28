@@ -51,8 +51,8 @@ class Ficha{
     getX(){
         return this.x;
     }
-    ponerEnTablero(){
-        this.puedeMoverse = false;
+    ponerEnTablero(boolean){
+        this.puedeMoverse = boolean;
     }
     posInicial(){
         this.move(this.xInicial,this.yInicial)
