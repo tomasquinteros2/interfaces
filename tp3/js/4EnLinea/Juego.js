@@ -11,11 +11,11 @@ let fichasJugador2 = [];
 //arreglo de dropZone
 let dropZones = []
 
-let cantEnLinea = 3;
-let numFilas = 4;
+let cantEnLinea = 4;
+let numFilas = 6;
 let numColumn = 7;
-const TAMESPACIO = 60;
-const TAMANIOFICHA = 30;
+let TAMESPACIO = 60;
+let TAMANIOFICHA = 30;
 let alturaTablero = (numFilas*TAMESPACIO);
 let largoTablero = (numColumn*TAMESPACIO);
 let canvasWidth=canvas.width;
@@ -160,6 +160,7 @@ function reiniciarJuego(){
     matriz = [];
     fichasJugador1 = [];
     fichasJugador2 = [];
+    dropZones= [];
     turno = null;
     cambiarTurno()
     clearCanvas();
@@ -235,6 +236,39 @@ document.querySelector("#ficha6").addEventListener('click',()=>{
         imgFichaJugador2 = imgFicha6;
     }
     
+})
+//cambiar cantidad en linea
+document.querySelector("#linea4").addEventListener('click',()=>{
+    cantEnLinea = 4;
+    numColumn = 7;
+    numFilas = 6;
+    TAMESPACIO = 60;
+    TAMANIOFICHA = 30;
+    reiniciarJuego();
+})
+document.querySelector('#linea5').addEventListener('click',()=>{
+    cantEnLinea = 5;
+    numColumn = 8;
+    numFilas = 7;
+    TAMESPACIO = 50;
+    TAMANIOFICHA = 25;
+    reiniciarJuego();
+})
+document.querySelector('#linea6').addEventListener('click',()=>{
+    cantEnLinea = 6;
+    numColumn = 9;
+    numFilas = 8;
+    TAMESPACIO = 45;
+    TAMANIOFICHA = 22;
+    reiniciarJuego();
+})
+document.querySelector('#linea7').addEventListener('click',()=>{
+    cantEnLinea = 7;
+    numColumn = 10;
+    numFilas = 9;
+    TAMESPACIO = 40;
+    TAMANIOFICHA = 20;
+    reiniciarJuego();
 })
 cargarTablero();
 drawFigures();

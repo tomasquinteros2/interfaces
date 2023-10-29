@@ -1523,6 +1523,28 @@ a.btn-Irlogin:hover{
     text-align: center;
     color: #377041;
   }
+  .canvas .menuCantLinea{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 70px;
+    gap: 20px;
+    margin-left: 10px;
+    width: 240px;
+  }
+  .canvas .menuCantLinea .btn-x-inLine{
+    height: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .canvas .cantLinea{
+    width: 300px;
+    position: absolute;
+    margin: 0px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    color: #7867bd;
+  }
 }
 
 
