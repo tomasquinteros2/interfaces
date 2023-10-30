@@ -132,7 +132,7 @@ function iniciarTiempo(boolean){
             element.innerHTML = `${minutos}:${segundos}`;
             if(minutos == 0 && segundos == 0){
                 clearInterval();
-                finishGame();
+                finalizarJuego();
 
             }
             else{
@@ -351,51 +351,54 @@ function cambiarTurno(){
         titulo.style.color="#791111";
     }
 }
+let pos = 0
+let intervalo=0;
+let fichaAnimada = null;
 function insertarFicha(columna){
     for(let i = matriz.length-1; i >=  0; i--){
         let fila = matriz[i];
         if(!fila[columna].estaOcupada()){
             fila[columna].setFicha(fichaActual);
+            console.log(i)
+            console.log(fila)
+            console.log(columna)
             let x = (fila[columna].getX() +TAMESPACIO/1.8);
             let y = fila[columna].getY() + TAMESPACIO/1.7;
-            fichaActual.move(x,y);
+            //moverFicha(x,y);
+            fichaAnimada = fichaActual;
+            pos=0;
             fichaActual.ponerEnTablero(false);
+            mover(x,y);
             drawFigures();
             checkGanador(i,columna);
             break;
         }
-        if(i == 0){
+        else if(i == 0){
             fichaActual.posInicial();
             drawFigures()
+            cambiarTurno()
+        }    
         }
-    }
+       
+
+}
+function mover(x,y){
+    intervalo = setInterval(() => {
+        pos += 1;
+        fichaAnimada.move(x,fichaAnimada.getY()+pos);
+        drawFigures()
+        if(fichaAnimada.getY()>y){
+            fichaAnimada.move(x+1,y);
+            clearInterval(intervalo);
+            drawFigures()
+        }
+    },10)
 }
 function checkGanador(fila,columna){
-    if(checkDiagonales(fila,columna)){
-
-    }
     if(checkDiagonales(fila,columna) || checkFila(fila,columna) || checkColumna(fila,columna)){
         finalizarJuego();
-        
     }
 }
-/*function verifyWinner(modo){
-    if(tablero.thereIsWinner(modo)){
-        
-        let img = new Image();
-        let x = canvas.width / 2 - 170
-        img.src = "img/thanos.jpg"
-        ctx.drawImage(img, 0, 0,1200,600);
-        ctx.font = '48px serif';
-        ctx.fillStyle = "#FFFFFF";
-        //ctx.textAlign("center");
-        if(jugador == j1){
-            ctx.fillText('Ganó el Jugador 1', x, 50);
-        }else{
-            ctx.fillText('Ganó el Jugador 2', x, 50);
-        }
-    }
-}*/
 function checkDiagonales(fila,columna){
     let suma = 0;
     let izqAbajo = checkDiagAbajIzq(suma,fila,columna);
@@ -480,7 +483,7 @@ function checkIzquierda(suma,fila,columna){
     let espacio = filaMatriz[columna]
     let tipoFicha = espacio.getTipoDeFicha();
     if(tipoFicha!=null){
-        if(tipoFicha == turno){
+        if(tipoFicha == turno.getId()){
             suma++
             if(columna>0){
                 suma=checkIzquierda(suma,fila,columna-1)
