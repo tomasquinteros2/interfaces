@@ -1545,8 +1545,11 @@ a.btn-Irlogin:hover{
     padding-bottom: 5px;
     color: #7867bd;
   }
-  .namePlayer1,.namePlayer2{
-    color: #bbbbbb;
+  .namePlayer1{
+    color: #791111;
+  }
+  .namePlayer2{
+    color : #296CD1
   }
 }
 

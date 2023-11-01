@@ -139,8 +139,17 @@ function drawFigures(){
 function ponerNombres(){
     let nombre1=document.querySelector("#titulo1");
     let nombre2=document.querySelector("#titulo2");
-    nombre1.innerHTML = jugador1.getNombre();
-    nombre2.innerHTML = jugador2.getNombre();
+    if(nombre1 == ''){
+        nombre1 = "jugador1";
+    }
+    else if(nombre2 == ''){
+        nombre2 = "jugador2";
+    }
+    else{
+        nombre1.innerHTML = jugador1.getNombre();
+        nombre2.innerHTML = jugador2.getNombre();
+    }
+
 }
 let cronometro = 0;
 function iniciarTiempo(boolean){
