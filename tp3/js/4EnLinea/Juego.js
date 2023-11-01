@@ -28,16 +28,16 @@ let jugador2 = new Jugador("",2);
 let turno = null;
 //imagenes
 let imgFichaJugador1 = "../img/4Enlinea/juego/ficha1.png";
-let imgFichaJugador2 = "../img/4EnLinea/juego/ficha2.png";
-let imgEspacio = "../img/4EnLinea/juego/espacio.png";
+let imgFichaJugador2 = "../img/4Enlinea/juego/ficha2.png";
+let imgEspacio = "../img/4Enlinea/juego/espacio.png";
 let imgFicha1 = "../img/4Enlinea/juego/ficha1.png";
-let imgFicha2 = "../img/4EnLinea/juego/ficha2.png";
-let imgFicha3 = "../img/4EnLinea/juego/ficha3.png";
-let imgFicha4 = "../img/4EnLinea/juego/ficha4.png";
-let imgFicha5 = "../img/4EnLinea/juego/ficha5.png";
-let imgFicha6 = "../img/4EnLinea/juego/ficha6.png";
-let dropimg = "../img/4EnLinea/juego/flecha-abajo.png";
-let fondo = "../img/4EnLinea/juego/fondo6.png";
+let imgFicha2 = "../img/4Enlinea/juego/ficha2.png";
+let imgFicha3 = "../img/4Enlinea/juego/ficha3.png";
+let imgFicha4 = "../img/4Enlinea/juego/ficha4.png";
+let imgFicha5 = "../img/4Enlinea/juego/ficha5.png";
+let imgFicha6 = "../img/4Enlinea/juego/ficha6.png";
+let dropimg = "../img/4Enlinea/juego/flecha-abajo.png";
+let fondo = "../img/4Enlinea/juego/fondo6.png";
 //fondo
 let imgFondo= new Image();
 imgFondo.src = fondo;
