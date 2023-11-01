@@ -229,45 +229,65 @@ document.querySelector("#play-game").addEventListener('click',()=>{
     cambiarTurno();
 })
 //fichas
-document.querySelector("#ficha1").addEventListener('click',()=>{
+function seleccionarFichaJugador2(ficha){
+    ficha2.style.scale = "1.0"
+    ficha4.style.scale = "1.0"
+    ficha6.style.scale = "1.0"
+    ficha.style.scale = "1.2"
+}
+function seleccionarFichaJugador1(ficha){
+    ficha1.style.scale = "1.0"
+    ficha3.style.scale = "1.0"
+    ficha5.style.scale = "1.0"
+    ficha.style.scale = "1.2"
+}
+ficha1 = document.querySelector("#ficha1");
+ficha2 = document.querySelector("#ficha2");
+ficha3 = document.querySelector("#ficha3");
+ficha4 = document.querySelector("#ficha4");
+ficha5 = document.querySelector("#ficha5");
+ficha6 = document.querySelector("#ficha6");
+ficha1.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador1.length;i++){
         fichasJugador1[i].setImagen(imgFicha1)
         imgFichaJugador1 = imgFicha1;
     }
+    seleccionarFichaJugador1(ficha1);
 })
-document.querySelector("#ficha2").addEventListener('click',()=>{
+ficha2.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador2.length;i++){
         fichasJugador2[i].setImagen(imgFicha2)
         imgFichaJugador2 = imgFicha2;
     }
+    seleccionarFichaJugador2(ficha2);
 })
-document.querySelector("#ficha3").addEventListener('click',()=>{
+ficha3.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador1.length;i++){
         fichasJugador1[i].setImagen(imgFicha3)
         imgFichaJugador1 = imgFicha3;
     }
-    
+    seleccionarFichaJugador1(ficha3);
 })
-document.querySelector("#ficha4").addEventListener('click',()=>{
+ficha4.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador2.length;i++){
         fichasJugador2[i].setImagen(imgFicha4)
         imgFichaJugador2 = imgFicha4;
     }
-    
+    seleccionarFichaJugador2(ficha4);
 })
-document.querySelector("#ficha5").addEventListener('click',()=>{
+ficha5.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador1.length;i++){
         fichasJugador1[i].setImagen(imgFicha5)
         imgFichaJugador1 = imgFicha5;
     }
-    
+    seleccionarFichaJugador1(ficha5);
 })
-document.querySelector("#ficha6").addEventListener('click',()=>{
+ficha6.addEventListener('click',()=>{
     for(let i = 0; i < fichasJugador2.length;i++){
         fichasJugador2[i].setImagen(imgFicha6)
         imgFichaJugador2 = imgFicha6;
     }
-    
+    seleccionarFichaJugador2(ficha6);
 })
 //cambiar cantidad en linea
 document.querySelector("#linea4").addEventListener('click',()=>{
