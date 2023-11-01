@@ -162,7 +162,7 @@ function iniciarTiempo(boolean){
             element.innerHTML = `${minutos}:${segundos}`;
             if(minutos == 0 && segundos == 0){
                 clearInterval();
-                finalizarJuego();
+                finalizarJuegoEmpate();
 
             }
             else{
@@ -175,6 +175,16 @@ function iniciarTiempo(boolean){
     }
 }
 let ganador = document.querySelector("#ganador");
+function finalizarJuegoEmpate(){
+    iniciarTiempo(false);
+    titulo.style.display ="none";
+    ganador.style.display = "block";
+    ganador.innerHTML = `Empate, Se acabo el tiempo`;
+    for(let i = 0; i < fichasJugador1.length; i++){
+        fichasJugador1[i].ponerEnTablero(false);
+        fichasJugador2[i].ponerEnTablero(false);
+    }
+}
 function finalizarJuego(){
     iniciarTiempo(false);
     titulo.style.display ="none";
@@ -204,6 +214,7 @@ function clearCanvas(){
 }
 //menu
 document.querySelector('#menuGame').addEventListener('click',()=>{
+    reiniciarJuego();
     document.querySelector('.canvas-form').style.display="flex";
     document.querySelector('.canvas').style.display="none";
 })
@@ -227,9 +238,7 @@ document.querySelector('#play-canvas').addEventListener('click',()=>{
 document.querySelector("#play-game").addEventListener('click',()=>{
     document.querySelector('.canvas').style.display="flex";
     document.querySelector('.canvas-form').style.display="none";
-    drawFigures();
-    iniciarTiempo(true);
-    cambiarTurno();
+    reiniciarJuego();
 })
 //fichas
 function seleccionarFichaJugador2(ficha){
