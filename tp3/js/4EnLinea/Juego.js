@@ -44,8 +44,6 @@ imgFondo.src = fondo;
 
 
 
-
-
 function cargarTablero(){
     cantidadFichas = numFilas * numColumn;
     posicionTableroX = (canvasWidth/2)-(((numColumn)*TAMESPACIO)/2);
@@ -204,6 +202,11 @@ function reiniciarJuego(){
 function clearCanvas(){
     ctx.clearRect(0, 0,canvasWidth,canvasHeight);
 }
+//menu
+document.querySelector('#menuGame').addEventListener('click',()=>{
+    document.querySelector('.canvas-form').style.display="flex";
+    document.querySelector('.canvas').style.display="none";
+})
 //reiniciar Juego
 document.querySelector('#restartGame').addEventListener('click',()=>{
     reiniciarJuego();
