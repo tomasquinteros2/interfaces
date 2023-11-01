@@ -457,6 +457,16 @@ function checkDiagonales(fila,columna){
     let izqArriba = checkDiagArribIzq(suma,fila,columna);
     let derAbajo = checkDiagAbajDer(suma,fila,columna);
     let derArriba = checkDiagArribDer(suma,fila,columna);
+    if(izqAbajo == 0 || derArriba == 0){
+        if((izqAbajo + derArriba) >= cantEnLinea){
+            return true;
+        }
+    }
+    if(derAbajo == 0 || izqArriba== 0){
+        if((izqArriba+derAbajo) >=cantEnLinea){
+            return true;
+        }
+    }
     if((((izqAbajo + derArriba)-1) >= cantEnLinea) || (((izqArriba+derAbajo)-1) >=cantEnLinea)){
         return true;
     }
@@ -479,6 +489,11 @@ function checkFila(fila,columna){
     let suma = 0;
     let derecha = checkDerecha(suma,fila,columna);
     let izquierda = checkIzquierda(suma,fila,columna);
+    if(derecha == 0 || izquierda==0){
+        if((derecha + izquierda) >= cantEnLinea){
+            return true;
+        }
+    }
     if(((derecha + izquierda)-1) >= cantEnLinea){
         return true;
     }
