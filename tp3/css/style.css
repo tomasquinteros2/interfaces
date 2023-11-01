@@ -1458,9 +1458,9 @@ a.btn-Irlogin:hover{
     position: absolute;
     top: 10px;
     left: 47.8%;
-    color: #0c0505;
+    color: #ffffff;
     margin-left: 10px;
-    width: 50px;
+    width: 1px;
   }
   .canvas-form{
     display: none;
@@ -1544,6 +1544,9 @@ a.btn-Irlogin:hover{
     margin-left: 10px;
     padding-bottom: 5px;
     color: #7867bd;
+  }
+  .namePlayer1,.namePlayer2{
+    color: #bbbbbb;
   }
 }
 

@@ -37,6 +37,10 @@ let imgFicha4 = "../img/4EnLinea/juego/ficha4.png";
 let imgFicha5 = "../img/4EnLinea/juego/ficha5.png";
 let imgFicha6 = "../img/4EnLinea/juego/ficha6.png";
 let dropimg = "../img/4EnLinea/juego/flecha-abajo.png";
+let fondo = "../img/4EnLinea/juego/fondo6.png";
+//fondo
+let imgFondo= new Image();
+imgFondo.src = fondo;
 
 
 
@@ -78,8 +82,23 @@ function cargarTablero(){
         dropZones.push(zona);
     }
     //cargarFichas
+    let posx1 = (posicionTableroX - TAMESPACIO*2);
+    let posx2 = (posicionTableroX+largoTablero) +TAMESPACIO*2
+    let posYregresiva = canvasHeight - alturaTablero/2;
     for(let i = 0; i < cantidadFichas/2; i++){
         //fichas jugador 1
+        if(posYregresiva<TAMESPACIO*2){
+            posYregresiva = canvasHeight - alturaTablero/2;
+            posx1 = (posicionTableroX - TAMESPACIO*3);
+            posx2 = (posicionTableroX+largoTablero) +TAMESPACIO*3
+        }
+        let fichaJugador1 = new Ficha(posx1, posYregresiva, TAMANIOFICHA, ctx, jugador1);
+        fichasJugador1.push(fichaJugador1);
+        //fichas jugador 2
+        let fichaJugador2 = new Ficha(posx2, posYregresiva, TAMANIOFICHA, ctx, jugador2);
+        fichasJugador2.push(fichaJugador2);
+        posYregresiva -= 10;
+        /*
         let posx = Math.round(Math.random() * (posicionTableroX - TAMESPACIO*2) + TAMESPACIO);
         let posy = canvasHeight - Math.round(Math.random()*alturaTablero) - TAMESPACIO;
         let fichaJugador1 = new Ficha(posx, posy, TAMANIOFICHA, ctx, jugador1);
@@ -89,8 +108,9 @@ function cargarTablero(){
         posx = Math.round(Math.random() * ((canvasWidth-TAMESPACIO*2) - (posicionTableroX+widhtBoard+TAMESPACIO)) + (posicionTableroX+widhtBoard+TAMESPACIO));
         posy = canvasHeight - Math.round(Math.random()*alturaTablero) - TAMESPACIO;
         let fichaJugador2 = new Ficha(posx, posy, TAMANIOFICHA, ctx, jugador2);
-        fichasJugador2.push(fichaJugador2);
+        fichasJugador2.push(fichaJugador2);*/
     }
+    posYregresiva = canvasHeight - alturaTablero/2;
 
 }
 function addEspacio(locationX,locationY){
@@ -98,12 +118,10 @@ function addEspacio(locationX,locationY){
     arreglosDeEspacios.push(rect);
     return rect;
 }
-
 function drawFigures(){
     clearCanvas();
-    for(let i = 0; i<arreglosDeEspacios.length; i++){
-        arreglosDeEspacios[i].drawImg(imgEspacio);
-    }
+    ctx.drawImage(imgFondo,0,0,canvasWidth,canvasHeight)
+    //ctx.fillRect(0, 0,canvasWidth,canvasHeight);
     for(let i = 0; i<dropZones.length; i++){
         dropZones[i].drawImg(dropimg)
     }
@@ -111,6 +129,11 @@ function drawFigures(){
         fichasJugador1[i].drawImg(imgFichaJugador1);
         fichasJugador2[i].drawImg(imgFichaJugador2);
     }
+    for(let i = 0; i<arreglosDeEspacios.length; i++){
+        arreglosDeEspacios[i].drawImg(imgEspacio);
+    }
+
+
     ponerNombres();
 }
 function ponerNombres(){
@@ -278,7 +301,7 @@ canvas.addEventListener("mousedown", (event) => {
     let mouseX = event.layerX;
     let mouseY = event.layerY;
     if(turno.getId()==1){
-        for(let i = 0; i<fichasJugador1.length; i++){
+        for(let i = fichasJugador1.length-1; i>=0; i--){
             let ficha = fichasJugador1[i];
             if(ficha.isClicked(mouseX,mouseY)){
                 fichaActual = ficha;
@@ -287,7 +310,7 @@ canvas.addEventListener("mousedown", (event) => {
         }
     }
     if(turno.getId() == 2){
-        for(let i = 0; i<fichasJugador2.length; i++){
+        for(let i = fichasJugador2.length-1; i>=0; i--){
             let ficha = fichasJugador2[i];
             if(ficha.isClicked(mouseX,mouseY)){
                 fichaActual = ficha;
@@ -321,7 +344,6 @@ canvas.addEventListener("mouseup", () =>{
             fichaActual = null;
             drawFigures()
         }
-    
     }
 })
 canvas.addEventListener("mouseleave", ()=>{
@@ -359,9 +381,6 @@ function insertarFicha(columna){
         let fila = matriz[i];
         if(!fila[columna].estaOcupada()){
             fila[columna].setFicha(fichaActual);
-            console.log(i)
-            console.log(fila)
-            console.log(columna)
             let x = (fila[columna].getX() +TAMESPACIO/1.8);
             let y = fila[columna].getY() + TAMESPACIO/1.7;
             //moverFicha(x,y);
@@ -390,11 +409,44 @@ function mover(x,y){
         if(fichaAnimada.getY()>y){
             fichaAnimada.move(x+1,y);
             clearInterval(intervalo);
+            if(fichaAnimada.getY()==y && fichaAnimada.getX()==x+1){
+                revotarFicha(x,y);
+            }
             drawFigures()
         }
     },10)
+
+}
+function revotarFicha(x,y){
+    let posicion = 0;
+    intervalo2 = setInterval(() => {
+        if(fichaAnimada.getY()>(y-TAMESPACIO/3)){
+            posicion -=0.5;
+            fichaAnimada.move(x,(fichaAnimada.getY()+posicion));
+            drawFigures()
+        }
+        else{
+            clearInterval(intervalo2);
+            drawFigures()
+            bajarFicha(x,y);
+        }
+    },10)
+}
+function bajarFicha(x,y){
+    pos = 0;
+    intervalo = setInterval(() => {
+        pos += 0.25;
+        fichaAnimada.move(x,fichaAnimada.getY()+pos);
+        drawFigures()
+        if(fichaAnimada.getY()>y){
+            fichaAnimada.move(x+1,y);
+            clearInterval(intervalo);
+            drawFigures()
+        }
+    },20)
 }
 function checkGanador(fila,columna){
+    console.log(checkDiagonales(fila,columna),checkFila(fila,columna),checkColumna(fila,columna));
     if(checkDiagonales(fila,columna) || checkFila(fila,columna) || checkColumna(fila,columna)){
         finalizarJuego();
     }
@@ -441,12 +493,6 @@ function checkAbajo(suma,fila,columna){
     if(tipoFicha!=null){
         if(tipoFicha == turno.getId()){
             suma++
-            if(arreglo.length!=0){
-                arreglo.push(espacio);
-            }
-            if(suma == cantEnLinea){
-                arreglo.push(espacio);
-            }
             if(fila<numFilas-1){
                 suma = checkAbajo(suma,fila+1,columna)
             }

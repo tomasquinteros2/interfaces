@@ -25,6 +25,9 @@ class Ficha{
             this.ctx.drawImage(this.imagen, this.x - this.radio,this.y - this.radio,this.radio/.6,this.radio/.6);
         }
     }
+    getpuedeMoverse(){
+        return this.puedeMoverse;
+    }
     isClicked(posx,posy){
         if(this.puedeMoverse){
             let _x = this.x - posx;
