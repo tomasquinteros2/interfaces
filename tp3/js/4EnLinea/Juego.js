@@ -2,19 +2,23 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
 //arreglodeespaciosCHATO
+//se usa para el draw
 let arreglosDeEspacios = []
 //arreglo de columnas
+//se usa para la logica
 let matriz = []
 //arreglos de fichas
 let fichasJugador1 = [];
 let fichasJugador2 = [];
 //arreglo de dropZone
 let dropZones = []
-
+//por default arranca en 4 la cantidad en linea
 let cantEnLinea = 4;
 let numFilas = 6;
 let numColumn = 7;
+//tamanio de casillero
 let TAMESPACIO = 60;
+//tamanio de la ficha
 let TAMANIOFICHA = 30;
 let alturaTablero = (numFilas*TAMESPACIO);
 let largoTablero = (numColumn*TAMESPACIO);
@@ -43,31 +47,35 @@ let imgFondo= new Image();
 imgFondo.src = fondo;
 
 
-
+//se carga el tablero y las fichas
 function cargarTablero(){
+    //cantidad de fichas para completar el tablero
     cantidadFichas = numFilas * numColumn;
     posicionTableroX = (canvasWidth/2)-(((numColumn)*TAMESPACIO)/2);
     posicionTableroY = (canvasHeight/2)-(((TAMESPACIO)*(numFilas))/2);
     widhtBoard = (numColumn * (TAMESPACIO));
     heightBoard = (numFilas * (TAMESPACIO));
 
-    fichasJugadas = 0;
+    //se inicializa el primer espacio en la esquina superior derecha
     let posicionEspacioX = posicionTableroX;
     let posicionEspacioY = posicionTableroY;   
+    
     //recorro todas las filas
-
     for(let i=0;i<numFilas;i++){
-        //a cada i le cargo un arreglo que es una fila
+        //a cada pos[i] le cargo un arreglo que es una fila
         let fila=[];
         //recorrolasColumnas
         for(let j=0;j<numColumn;j++){
             if(j==0){
+                //vuelve al inicio
                 posicionEspacioX = posicionTableroX;
             }
+            //creo el espacio
             let rect = addEspacio(posicionEspacioX,posicionEspacioY);
             posicionEspacioX+=TAMESPACIO;
             fila.push(rect); 
         }
+        //se pushea a la matriz la fila completa
         matriz.push(fila)
         posicionEspacioY+=TAMESPACIO;
     }
@@ -75,6 +83,7 @@ function cargarTablero(){
     //cargo los dropZone
     for(let i = 0; i < numColumn; i++){
         let x = posicionTableroX + (i*TAMESPACIO);
+        //se posicionan arriba de la primer fila
         let y = posicionTableroY - (TAMESPACIO);
         let zona = new EspacioTablero(x,y,TAMESPACIO,ctx);
         dropZones.push(zona);
@@ -82,9 +91,11 @@ function cargarTablero(){
     //cargarFichas
     let posx1 = (posicionTableroX - TAMESPACIO*2);
     let posx2 = (posicionTableroX+largoTablero) +TAMESPACIO*2
+    //la pos de Y va decreciendo por ficha
     let posYregresiva = canvasHeight - alturaTablero/2;
     for(let i = 0; i < cantidadFichas/2; i++){
         //fichas jugador 1
+        //si llega a cierta altura empieza a apilar al lado
         if(posYregresiva<TAMESPACIO*2){
             posYregresiva = canvasHeight - alturaTablero/2;
             posx1 = (posicionTableroX - TAMESPACIO*3);
@@ -95,22 +106,13 @@ function cargarTablero(){
         //fichas jugador 2
         let fichaJugador2 = new Ficha(posx2, posYregresiva, TAMANIOFICHA, ctx, jugador2);
         fichasJugador2.push(fichaJugador2);
+        //sube en Y
         posYregresiva -= 10;
-        /*
-        let posx = Math.round(Math.random() * (posicionTableroX - TAMESPACIO*2) + TAMESPACIO);
-        let posy = canvasHeight - Math.round(Math.random()*alturaTablero) - TAMESPACIO;
-        let fichaJugador1 = new Ficha(posx, posy, TAMANIOFICHA, ctx, jugador1);
-        fichasJugador1.push(fichaJugador1);
-    
-        //fichas jugador 2
-        posx = Math.round(Math.random() * ((canvasWidth-TAMESPACIO*2) - (posicionTableroX+widhtBoard+TAMESPACIO)) + (posicionTableroX+widhtBoard+TAMESPACIO));
-        posy = canvasHeight - Math.round(Math.random()*alturaTablero) - TAMESPACIO;
-        let fichaJugador2 = new Ficha(posx, posy, TAMANIOFICHA, ctx, jugador2);
-        fichasJugador2.push(fichaJugador2);*/
     }
     posYregresiva = canvasHeight - alturaTablero/2;
 
 }
+//crea un espacio del tablero y lo pushea al arreglo de espacios
 function addEspacio(locationX,locationY){
     let rect = new EspacioTablero(locationX,locationY,TAMESPACIO,ctx);
     arreglosDeEspacios.push(rect);
@@ -119,7 +121,6 @@ function addEspacio(locationX,locationY){
 function drawFigures(){
     clearCanvas();
     ctx.drawImage(imgFondo,0,0,canvasWidth,canvasHeight)
-    //ctx.fillRect(0, 0,canvasWidth,canvasHeight);
     for(let i = 0; i<dropZones.length; i++){
         dropZones[i].drawImg(dropimg)
     }
@@ -130,13 +131,12 @@ function drawFigures(){
     for(let i = 0; i<arreglosDeEspacios.length; i++){
         arreglosDeEspacios[i].drawImg(imgEspacio);
     }
-
-
     ponerNombres();
 }
+//obtiene los nombres y si estan vacios los setea como jugador 1 y 2
+let nombre1=document.querySelector("#titulo1");
+let nombre2=document.querySelector("#titulo2");
 function ponerNombres(){
-    let nombre1=document.querySelector("#titulo1");
-    let nombre2=document.querySelector("#titulo2");
     if(nombre1 == ''){
         nombre1 = "jugador1";
     }
@@ -150,16 +150,22 @@ function ponerNombres(){
 
 }
 let cronometro = 0;
+//funcion de cronometro
 function iniciarTiempo(boolean){
     let element = document.getElementById("tiempo");
+    //setea la cantidad de minutos
     let cantminutos = 3;
+    //se pasa a segundos
     let tiempo = cantminutos * 60;
+    //si se recibio un true
     if(boolean){
         cronometro = setInterval(()=>{
             let minutos = Math.floor(tiempo / 60);
             let segundos = tiempo % 60;
+            //si segundos es < 10 coloca un 0 adelante
             segundos = segundos < 10 ? '0' + segundos : segundos;
             element.innerHTML = `${minutos}:${segundos}`;
+            //si llega a cero finaliza el juego como Empate
             if(minutos == 0 && segundos == 0){
                 clearInterval();
                 finalizarJuegoEmpate();
@@ -171,31 +177,37 @@ function iniciarTiempo(boolean){
         }, 1000);
     }
     else{
+        //si se recibe un false termina el intervalo
         clearInterval(cronometro);
     }
 }
 let ganador = document.querySelector("#ganador");
 function finalizarJuegoEmpate(){
+    //frena el tiempo
     iniciarTiempo(false);
     titulo.style.display ="none";
     ganador.style.display = "block";
     ganador.innerHTML = `Empate, Se acabo el tiempo`;
+    //setea a las fichas para q no se puedan mover
     for(let i = 0; i < fichasJugador1.length; i++){
         fichasJugador1[i].ponerEnTablero(false);
         fichasJugador2[i].ponerEnTablero(false);
     }
 }
 function finalizarJuego(){
+    //frena el tiempo
     iniciarTiempo(false);
     titulo.style.display ="none";
     ganador.style.display = "block";
     ganador.innerHTML = `Gano `+ turno.getNombre();
+    //setea a las fichas para q no se puedan mover
     for(let i = 0; i < fichasJugador1.length; i++){
         fichasJugador1[i].ponerEnTablero(false);
         fichasJugador2[i].ponerEnTablero(false);
     }
 }
 function reiniciarJuego(){
+    //vacia todos los arreglos
     arreglosDeEspacios = [];
     matriz = [];
     fichasJugador1 = [];
@@ -206,6 +218,7 @@ function reiniciarJuego(){
     clearCanvas();
     cargarTablero();
     drawFigures();
+    //detiene el tiempo y despues lo inicia de cero
     iniciarTiempo(false);
     iniciarTiempo(true);
 }
@@ -241,6 +254,7 @@ document.querySelector("#play-game").addEventListener('click',()=>{
     reiniciarJuego();
 })
 //fichas
+//animacion de seleccion en el menu
 function seleccionarFichaJugador2(ficha){
     ficha2.style.scale = "1.0"
     ficha4.style.scale = "1.0"
@@ -334,26 +348,34 @@ document.querySelector('#linea7').addEventListener('click',()=>{
     TAMANIOFICHA = 20;
     reiniciarJuego();
 })
+
 cargarTablero();
 drawFigures();
-//let fichita = new Ficha(40)
+
 let fichaActual=null;
 canvas.addEventListener("mousedown", (event) => {
+    //se obtiene la pos del mouse
     let mouseX = event.layerX;
     let mouseY = event.layerY;
     if(turno.getId()==1){
+        //reccore todas las fichas del jugador1
         for(let i = fichasJugador1.length-1; i>=0; i--){
             let ficha = fichasJugador1[i];
+            //le pregunta a ficha si esta clickeada
             if(ficha.isClicked(mouseX,mouseY)){
+                //setea la ficha actual
                 fichaActual = ficha;
                 break;
             }
         }
     }
     if(turno.getId() == 2){
+        //reccore todas las fichas del jugador1
         for(let i = fichasJugador2.length-1; i>=0; i--){
             let ficha = fichasJugador2[i];
+            //le pregunta a ficha si esta clickeada
             if(ficha.isClicked(mouseX,mouseY)){
+                //setea la ficha actual
                 fichaActual = ficha;
                 break;
             }
@@ -362,13 +384,17 @@ canvas.addEventListener("mousedown", (event) => {
 })
 
 canvas.addEventListener("mousemove", (event) => {
+    //si hay una ficha agarrada
     if(fichaActual!=null){
+        //mueve la ficha de lugar y redibuja todo
         fichaActual.move(event.layerX,event.layerY);
         drawFigures();
     }
 })
 canvas.addEventListener("mouseup", () =>{
+    //si hay una ficha agarrada
     if(fichaActual!=null){
+        //se obtiene la pos de la ficha
         let x = fichaActual.getX();
         let y = fichaActual.getY();
         //recorro todos los dropzone
@@ -380,6 +406,7 @@ canvas.addEventListener("mouseup", () =>{
                 fichaActual = null;
             }
         }
+        //si la ficha no estaba en ningun dropzone vuelve a su pos inicial
         if(fichaActual != null){
             fichaActual.posInicial();
             fichaActual = null;
@@ -388,6 +415,7 @@ canvas.addEventListener("mouseup", () =>{
     }
 })
 canvas.addEventListener("mouseleave", ()=>{
+    //si el mouse sale del canvas devuelve la ficha actual a su pos inicial
     if(fichaActual!=null){
         fichaActual.posInicial();
         fichaActual = null;
@@ -396,6 +424,7 @@ canvas.addEventListener("mouseleave", ()=>{
 })
 titulo = document.querySelector("#turno");
 function cambiarTurno(){
+    //si no hay un turno puesto cambia el turno a jugador 1
     if(turno == null){
         ganador.style.display = "none";
         titulo.innerHTML = `Turno de `+jugador1.getNombre();
@@ -403,6 +432,7 @@ function cambiarTurno(){
         titulo.style.display="block";
         titulo.style.color="#791111";
     }
+    //si es el turno del jugador 1 lo cambia al 2
     else if(turno.getId() == 1){
         turno = jugador2;
         titulo.innerHTML = `Turno de `+jugador2.getNombre();
@@ -418,13 +448,17 @@ let pos = 0
 let intervalo=0;
 let fichaAnimada = null;
 function insertarFicha(columna){
+    //se reccorre la matriz
     for(let i = matriz.length-1; i >=  0; i--){
         let fila = matriz[i];
+        //si la posicion en la matriz esta libre
         if(!fila[columna].estaOcupada()){
+            //se le setea una ficha
             fila[columna].setFicha(fichaActual);
-            let x = (fila[columna].getX() +TAMESPACIO/1.8);
+            //se calcula la pos para q la ficha entre en el espacio
+            let x = (fila[columna].getX() + TAMESPACIO/1.7);
             let y = fila[columna].getY() + TAMESPACIO/1.7;
-            //moverFicha(x,y);
+            //se guarda la ficha actual en otra variable para animarla
             fichaAnimada = fichaActual;
             pos=0;
             fichaActual.ponerEnTablero(false);
@@ -443,14 +477,18 @@ function insertarFicha(columna){
 
 }
 function mover(x,y){
+    //comienza un intervalo
     intervalo = setInterval(() => {
         pos += 1;
+        //mueve la ficha sumandole pos
         fichaAnimada.move(x,fichaAnimada.getY()+pos);
         drawFigures()
+        //cuando llega a espacio del casillero
         if(fichaAnimada.getY()>y){
-            fichaAnimada.move(x+1,y);
+            fichaAnimada.move(x,y);
+            //termina el intervalo
             clearInterval(intervalo);
-            if(fichaAnimada.getY()==y && fichaAnimada.getX()==x+1){
+            if(fichaAnimada.getY()==y && fichaAnimada.getX()==x){
                 revotarFicha(x,y);
             }
             drawFigures()
@@ -461,6 +499,7 @@ function mover(x,y){
 function revotarFicha(x,y){
     let posicion = 0;
     intervalo2 = setInterval(() => {
+        //incrementa la pos en Y hasta cierta altura
         if(fichaAnimada.getY()>(y-TAMESPACIO/3)){
             posicion -=0.5;
             fichaAnimada.move(x,(fichaAnimada.getY()+posicion));
@@ -473,6 +512,7 @@ function revotarFicha(x,y){
         }
     },10)
 }
+//mueve la ficha de a poco hacia la posicion
 function bajarFicha(x,y){
     pos = 0;
     intervalo = setInterval(() => {
@@ -486,6 +526,7 @@ function bajarFicha(x,y){
         }
     },20)
 }
+//si se cumple alguno de los checkeos termina el juego
 function checkGanador(fila,columna){
     console.log(checkDiagonales(fila,columna),checkFila(fila,columna),checkColumna(fila,columna));
     if(checkDiagonales(fila,columna) || checkFila(fila,columna) || checkColumna(fila,columna)){
@@ -493,6 +534,7 @@ function checkGanador(fila,columna){
     }
 }
 function checkDiagonales(fila,columna){
+    //llama a las funciones que checkean en las distintas diagonales
     let suma = 0;
     let izqAbajo = checkDiagAbajIzq(suma,fila,columna);
     let izqArriba = checkDiagArribIzq(suma,fila,columna);
@@ -508,6 +550,7 @@ function checkDiagonales(fila,columna){
             return true;
         }
     }
+    //cuando ninguno de los dos es == 0, se le resta 1 en el calculo
     if((((izqAbajo + derArriba)-1) >= cantEnLinea) || (((izqArriba+derAbajo)-1) >=cantEnLinea)){
         return true;
     }
@@ -515,7 +558,7 @@ function checkDiagonales(fila,columna){
         return false;
     }
 }
-let arreglo = [];
+//llama a la funcion checkAbajo y si resultado es > a la cantidad en Linea retorna true
 function checkColumna(fila,columna){
     let suma = 0;
     let abajo =  checkAbajo(suma,fila,columna);
@@ -526,6 +569,9 @@ function checkColumna(fila,columna){
         return false;
     }
 }
+//llama a la funcion checkDerecha y checkIzquierda
+//si alguno de los resultados es == 0 suma los resultados y retorna
+//si en ambos lados hay fichas, a la cuenta se le resta 1
 function checkFila(fila,columna){
     let suma = 0;
     let derecha = checkDerecha(suma,fila,columna);
@@ -542,6 +588,10 @@ function checkFila(fila,columna){
         return false;
     }
 }
+//obtiene la posicion en la que se inserto la ficha
+//y si el tipo de ficha en ese casillero es == al tipo de ficha del turno actual
+//incrementa suma y se llama recursivamente una fila arriba
+//si el resultado  <= 1 es porq no se encontraron fichas asi que devuelve 0
 function checkAbajo(suma,fila,columna){
     let filaMatriz = matriz[fila]
     let espacio = filaMatriz[columna]
