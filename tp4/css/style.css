@@ -16,14 +16,31 @@
     width: 100%;
 }
 .hamburger-menu{
+    margin-top: 20px;
+    margin-left: 100px;
     height: 26px;
     width: 34px;
-    display: flex;
-    flex-direction: column;
 }
 .line-hamburger{
-    height: 40px;
+    height: 4px;
+    width: 100%;
     background-color: #FFE901;
     border-radius: 111px;
-    border: solid 4px #2981FF ;
+    border: solid 4px #2981FF;
+    box-shadow: 4px 5px 0px 0px #02187E;
+    cursor: pointer;
+}
+.btn-header{
+    margin-top: 20px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 111px;
+    border: solid 8px #2981FF;
+    background: #FFE901;
+    box-shadow: 4px 5px 0px 0px #02187E;
+    cursor: pointer;
 }
