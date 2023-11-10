@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+  }
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #5499F8;
+    height: 103px;
+    width: 100%;
+}
+.hamburger-menu{
+    height: 26px;
+    width: 34px;
+    display: flex;
+    flex-direction: column;
+}
+.line-hamburger{
+    height: 40px;
+    background-color: #FFE901;
+    border-radius: 111px;
+    border: solid 4px #2981FF ;
+}
