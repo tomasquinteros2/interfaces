@@ -8,6 +8,21 @@
     list-style: none;
     text-decoration: none;
 }
+h1{
+    color: #FFF;
+    font-family: Lato;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%; /* 56.7px */
+}
+p{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -151,11 +166,7 @@ body{
     top: 180px;
     left: 95px;
     width:646px;
-    color: #FFF;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 94.5%; 
+
 }
 .container .group-two #texto{
     width: 586px;
@@ -164,11 +175,6 @@ body{
     position: absolute;
     top: 316px;
     left: 95px;
-    color: #FFF;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 .container .group-two #duende-verde{
     position: absolute;
@@ -199,6 +205,74 @@ body{
 }
 .container .group-thre #card3{
     width: 332px;
+}
+.container .group-four{
+    margin-top: 145px;
+    position: relative;
+    z-index: 2;
+}
+.container .group-four #card1{
+    position: absolute;
+    left: 50px;
+    top: -160px;
+}
+.container .group-four #card2{
+    position: absolute;
+    left: 20px;
+    top: -20px;
+}
+.container .group-four #card3{
+    position: absolute;
+    left: 53px;
+    top: 167px;
+}
+.container .group-five{
+    background-color: black;
+    position: relative;
+    width: 100%;
+    top: -100px;
+    height: 1000px;
+    z-index: 1;
+}
+.container .group-five #title{
+    position: absolute;
+    top: 260px;
+    color: #FFF;
+    width: 667px;
+    left: 104px;
+}
+.container .group-five #phanter{
+    position: absolute;
+    right: 240px;
+    top: 220px;
+    z-index: 1;
+}
+.container .group-five #elastic{
+    position: absolute;
+    left: 128px;
+    top: 395px;
+    z-index: 4;
+}
+.container .group-five #hulk{
+    position: absolute;
+    right: 35px;
+    top: 590px;
+    z-index: 4;
+}
+.container .group-five .fondo{
+    position: relative;
+    top: 490px;
+    left: 101px;
+}
+.container .group-five .fondo #part2{
+    position: absolute;
+    left: 0px;
+    z-index: 5;
+}
+.container .group-five .fondo #part3{
+    position: absolute;
+    left: 0px;
+    z-index: 3;
 }
 /*footer*/
 footer{
