@@ -3,6 +3,7 @@
     padding: 0;
     border:0;
     outline: 0;
+<<<<<<< HEAD
     font-size: 100%;
     vertical-align: baseline;
     list-style: none;
@@ -10,11 +11,44 @@
     font-family: 'Lato';
   }
 
+=======
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    color: #FFF;
+    font-family: Lato;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%; /* 56.7px */
+}
+p{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container1280{
+    width: 1280px;
+}
+.container1080{
+    width: 1080px;
+}
+/******* header ********/
+>>>>>>> main
 .header{
     display: flex;
     justify-content: space-between;
-    background-color: #5499F8;
-    height: 103px;
+    background: #5499F8;
+    /*background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);*/
+    height: 91px;
     width: 100%;
 }
 .hamburger-menu{
@@ -46,6 +80,18 @@
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+.btn-header h1{
+    color: #02187E;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%;
+    letter-spacing: 2.2px;
+}
+>>>>>>> main
 /*primer parallax*/
 .par1 div{
     position: absolute;
@@ -159,6 +205,262 @@
 
   
 /*finaliza anotarse a lista*/
+<<<<<<< HEAD
+=======
+
+/***** grupo 1 *****/
+.group-one{
+    width: 100%;
+}
+.group-one #logo{
+    width: 1280px;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+}
+.group-one #logo #img-logo{
+    z-index: 3;
+}
+
+.group-one #fondo{
+    width: 100%;
+    position: relative;
+}
+.group-one #fondo #img-fondo{
+    z-index: 1;
+    width: 100%;
+}
+.group-one #fondo #img-edificioIzq{
+    z-index: 2;
+    position: absolute;
+    left: -54px;
+    top: 40px;
+}
+.group-one #fondo #img-edificioCentro{
+    z-index: 2;
+    position: absolute;
+    left: 383px;
+    bottom: -34px;
+}
+.group-one #fondo #img-edificioDerecha{
+    position: absolute;
+    z-index: 2;
+    right: -8px;
+    bottom: -40px;
+    
+}
+.group-one #spiders-group-one{
+    position: absolute;
+    top: 360px;
+    z-index: 4;
+}
+
+.group-one #spiders-group-one #img-ween{
+    margin-left: 90px;
+}
+
+.group-one #spiders-group-one #img-spider-man{
+    position: relative;
+    right: 50px;
+    top: 38px;
+    
+}
+.group-one #spiders-group-one #img-miles{
+    position: relative;
+    right: 230px;
+    top: -105px;
+}
+.group-one #spiders-group-one #teladeaniaDerecha{
+    position: absolute;
+    right: -111px;
+    top: 18px;
+}
+#teladeaniaIzquierda{
+    position: absolute;
+    left: -181px;
+    top: 9px;
+}
+/******* grupo2 *******/
+.group-two{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 845px;
+}
+.group-two #rect-violet{
+    position:absolute;
+    z-index: 3;
+    top: -50px;
+}
+.group-two .container1080 #contenido{
+    position: absolute;
+}
+.group-two .container1080 #contenido #titulo{
+    z-index: 4;
+    position: absolute;
+    top: 180px;
+    left: 95px;
+    width:646px;
+}
+.group-two .container1080 #contenido #texto{
+    width: 586px;
+    height: 154px;
+    z-index: 4;
+    position: absolute;
+    top: 316px;
+    left: 95px;
+}
+.group-two #duende-verde{
+    position: absolute;
+    top: 85px;
+    right: 0px;
+    z-index: 5;
+}
+.group-two #card{
+    position: absolute;
+    top: 467px;
+    left: 90px;
+    z-index: 4;
+}
+/******* grupo3 *********/
+.group-thre{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 200px;
+}
+.group-thre #cards{
+    display: flex;
+    justify-content: space-between;
+}
+.group-thre #card1{
+    width: 332px;
+}
+.group-thre #card2{
+    width: 332px;
+}
+.group-thre #card3{
+    width: 332px;
+}
+.textBlack{
+    color: black;
+}
+/***** grup 4 *******/
+.group-four{
+    margin-top: 145px;
+    position: relative;
+    z-index: 2;
+}
+.group-four #card1{
+    position: absolute;
+    left: 50px;
+    top: -160px;
+}
+.group-four #card2{
+    position: absolute;
+    left: 20px;
+    top: -20px;
+}
+.group-four #card3{
+    position: absolute;
+    left: 53px;
+    top: 167px;
+}
+/****** grupo 5 *********/
+.group-five{
+    background-color: black;
+    position: relative;
+    width: 100%;
+    top: -100px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+.group-five #title{
+    position: absolute;
+    top: 260px;
+    color: #FFF;
+    width: 667px;
+    left: 104px;
+}
+.group-five #phanter{
+    position: absolute;
+    right: 240px;
+    top: 220px;
+    z-index: 1;
+}
+.group-five #elastic{
+    position: absolute;
+    left: 128px;
+    top: 395px;
+    z-index: 4;
+}
+  .group-five #hulk{
+    position: absolute;
+    right: 35px;
+    top: 590px;
+    z-index: 4;
+}
+  .group-five .fondo{
+    position: relative;
+    top: 490px;
+    left: 0px;
+}
+  .group-five .fondo #part2{
+    position: absolute;
+    left: 0px;
+    z-index: 5;
+}
+  .group-five .fondo #part3{
+    position: absolute;
+    left: 0px;
+    z-index: 3;
+}
+/*****grupo 6********/
+.group-six{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.group-six #rectBlanco{
+    position:absolute;
+    z-index: 1;
+    top: -230px;
+}
+.group-six .container1080 #title{
+    width: 802px;
+    position: relative;
+    right: 0px;
+    color: #000;
+    margin-bottom: 69px;
+    z-index: 2;
+}
+.group-six .container1080 #mas-diversion{
+    display: flex;
+    flex-direction: column;
+    gap: 121px;
+    z-index: 2;
+}
+.group-six .container1080 #mas-diversion .card-diversion .img{
+    height: fit-content;
+}
+.group-six .container1080 #mas-diversion .card-diversion{
+    display: flex;
+    gap: 57px;
+    z-index: 2;
+}
+.group-six .container1080 #mas-diversion .card-diversion .title{
+    color: #000;
+    width: 467px;
+    font-size: 40px;
+}
+.group-six .container1080 #mas-diversion .card-diversion .text{
+    color: #000;
+    margin-top: 25px;
+    width: 467px;
+}
+>>>>>>> main
 /*footer*/
 footer{
     width: 100%;
