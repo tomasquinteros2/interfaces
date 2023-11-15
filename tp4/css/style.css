@@ -194,6 +194,10 @@ body{
 /*finaliza anotarse a lista*/
 
 /***** grupo 1 *****/
+
+#section-one{
+    overflow: hidden;
+}
 .group-one{
     width: 100%;
 }
@@ -477,6 +481,10 @@ body{
     position: absolute;
     top: 272px;
 }
+/********** grupo 8 ******/
+#section-eight{
+    height: 550px;
+}
 .group-eight{
     position: relative;
     top: -200px;
@@ -488,8 +496,13 @@ body{
 }
 .group-eight .container1080 #spider-man{
     position: absolute;
-    top: 171px;
-    left: 190px;
+    top: 180px;
+    left: 394px;
+}
+.group-eight .container1080 #miles-morales{
+    position: absolute;
+    top: 180px;
+    right: 189px;
 }
 /*footer*/
 footer{
