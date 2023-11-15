@@ -10,8 +10,8 @@ h1{
     font-family: Lato;
     font-size: 60px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 94.5%; /* 56.7px */
+    font-weight: 400;
+    line-height: normal;
 }
 p{
     color: #FFF;
@@ -138,24 +138,24 @@ body{
     width: 1280px;
     height: 720px;
     background: url('../img/fondos/fondo3/fondo1.png') center/cover no-repeat; /* Imagen superpuesta */
-    
-  }
-  .ingresaCorreo{
+
+    }
+    .ingresaCorreo{
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .ingresaCorreo h2{
+    }
+    .ingresaCorreo h2{
     width: 816px;
     font-size: 60px;
     font-weight: lighter;
     text-align: justify;
     text-align-last: center; 
-  }
-  .ingresaCorreo .autorizacion p{
+    }
+    .ingresaCorreo .autorizacion p{
     font-size: 20px;
-  }
-  .ingresaCorreo  .input{
+    }
+    .ingresaCorreo  .input{
     display: flex;
     flex-direction: row;
     width: 780px;
@@ -163,16 +163,16 @@ body{
     border: 9px solid #2982FF;
     border-radius: 20px;
     background-color: #2982FF;
-  }
-  .ingresaCorreo  .input input{
+    }
+    .ingresaCorreo  .input input{
     width: 562px;
     height: 100px;
     border-radius: 10px;
-  }
-  .ingresaCorreo  .input input ::placeholder{
+    }
+    .ingresaCorreo  .input input ::placeholder{
     margin-left: 30px;
-  }
-  .ingresaCorreo  .input button{
+    }
+.ingresaCorreo  .input button{
     width: 218px;
     height: 100px;
     border-left: 9px solid #2982FF;
@@ -183,14 +183,14 @@ body{
     background-color:#FFE901;
     color: #02187E;
 
-  }
+}
 
-  .ingresaCorreo .autorizacion{
+.ingresaCorreo .autorizacion{
     width: 578px;
     height: 95px;
-  }
+}
 
-  
+
 /*finaliza anotarse a lista*/
 
 /***** grupo 1 *****/
@@ -383,8 +383,8 @@ body{
 }
   .group-five #hulk{
     position: absolute;
-    right: 35px;
-    top: 590px;
+    right: 45px;
+    top: 595px;
     z-index: 4;
 }
   .group-five .fondo{
@@ -444,6 +444,52 @@ body{
     color: #000;
     margin-top: 25px;
     width: 467px;
+}
+.group-six .container1080 #mas-diversion .card-diversion #text1{
+    height: 152px;
+}
+.group-six .container1080 #mas-diversion .card-diversion #text2{
+    height: 152px;
+}
+.group-six .container1080 #mas-diversion .card-diversion #text3{
+    height: 228px;
+}
+.group-six .container1080 #mas-diversion .card-diversion #text4{
+    height: 171px;
+}
+
+/********** grupo 7 **********/
+.group-eleven{
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 600px;
+}
+.group-eleven .container1080 #title{
+    position: absolute;
+    top: 100px;
+    width: 816px;
+}
+.group-eleven .container1080 .btn-header{
+    width: 292px;
+    position: absolute;
+    top: 272px;
+}
+.group-eight{
+    position: relative;
+    top: -200px;
+}
+.group-eight .container1080 #ween{
+    position: absolute;
+    top: 171px;
+    left: 190px;
+}
+.group-eight .container1080 #spider-man{
+    position: absolute;
+    top: 171px;
+    left: 190px;
 }
 /*footer*/
 footer{
