@@ -123,8 +123,8 @@ body{
 .listaEmail {
     position: relative;
     width: 1280px;
-    height: 1296px; /* Ajusta la altura según tus necesidades */
-    background: linear-gradient(to bottom, #8FBEFC, #F7E3D8); /* Degradado vertical */
+    height: 1296px;
+    background: linear-gradient(to bottom, #8FBEFC, #F7E3D8);
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -137,58 +137,75 @@ body{
     left: 0;
     width: 1280px;
     height: 720px;
-    background: url('../img/fondos/fondo3/fondo1.png') center/cover no-repeat; /* Imagen superpuesta */
+    background: url('../img/fondos/fondo3/fondo1.png') center/cover no-repeat;
 
-    }
-    .ingresaCorreo{
+}
+.ingresaCorreo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
-    .ingresaCorreo h2{
+}
+.ingresaCorreo div{
+    margin: 20px;
+}
+.ingresaCorreo h2{
+    margin-top: 145px;
+    margin-bottom: 70px;
     width: 816px;
+    height: 171px;
     font-size: 60px;
-    font-weight: lighter;
+    line-height: 58px;
     text-align: justify;
-    text-align-last: center; 
-    }
-    .ingresaCorreo .autorizacion p{
-    font-size: 20px;
-    }
-    .ingresaCorreo  .input{
+    text-align-last: center;
+}
+.ingresaCorreo h2 .lineaMedio{
+    word-spacing: 0px;
+}
+
+.ingresaCorreo  .input{
     display: flex;
     flex-direction: row;
     width: 780px;
     height: 100px;
     border: 9px solid #2982FF;
-    border-radius: 20px;
+    border-radius: 55px;
     background-color: #2982FF;
-    }
-    .ingresaCorreo  .input input{
+}
+.ingresaCorreo  .input input{
     width: 562px;
     height: 100px;
-    border-radius: 10px;
-    }
-    .ingresaCorreo  .input input ::placeholder{
-    margin-left: 30px;
-    }
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.ingresaCorreo .input input::placeholder{
+    font-size: 20px;
+    letter-spacing: 1.76px;
+    padding-left: 42px;
+}
 .ingresaCorreo  .input button{
     width: 218px;
     height: 100px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
     border-left: 9px solid #2982FF;
     border-right: 9px solid #2982FF;
     border-bottom: 1px solid #2982FF;
     border-top: 1px solid #2982FF;
-    border-radius: 20px;
     background-color:#FFE901;
     color: #02187E;
+    font-size: 20px;
+    font-weight: bold;
 
 }
-
 .ingresaCorreo .autorizacion{
     width: 578px;
     height: 95px;
 }
+.ingresaCorreo .autorizacion p{
+    color: #000;
+    font-size: 20px;
+}
+
 
 
 /*finaliza anotarse a lista*/
