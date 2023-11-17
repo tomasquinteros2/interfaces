@@ -38,6 +38,7 @@ body{
     justify-content: space-between;
     background: #5499F8;
     /*background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);*/
+
     height: 91px;
     width: 100%;
 }
@@ -79,45 +80,7 @@ body{
     line-height: 94.5%;
     letter-spacing: 2.2px;
 }
-/*primer parallax*/
-.par1 div{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: cover;
-}
 
-.par1 .fondo{
-    background-image: url("../img/fondos/fondo1/fondo1.png");
-}
-.par1 .edificioC{
-    background-image: url("../img/fondos/fondo1/edificiosCentro.png");
-}
-.par1 .edificioL{
-    background-image: url("../img/fondos/fondo1/edificioIzquierda.png");
-}
-.par1 .edificioR{
-    background-image: url("../img/fondos/fondo1/EdificiosDerecha.png");
-}
-.par1 .milesm{
-    background-image: url("../img/personajes/grupo1/MilesMorales.png");
-} 
-.par1 .spiderm{
-    background-image: url("../img/personajes/grupo1/SpiderMan.png");
-}
-.par1 .gwenS{
-    background-image: url("../img/personajes/grupo1/gwen.png");
-}
-.par1 .logo{
-    background-image: url("../img/logo.png");
-}
-.par1 .telaL{
-    background-image: url("../img/personajes/grupo1/teladeaniaIzquierda.png");
-}
-.par1 .telaR{
-    background-image: url("../img/personajes/grupo1/teladeaniaDerecha.png");
-}
-/*fin primr parallax*/
 
 /*anotarse a lista de correo*/
 .listaEmail {
@@ -261,7 +224,7 @@ body{
     z-index: 4;
 }
 
-.group-one #spiders-group-one #img-ween{
+.group-one #spiders-group-one #img-gwen{
     margin-left: 90px;
 }
 
@@ -506,7 +469,7 @@ body{
     position: relative;
     top: -200px;
 }
-.group-eight .container1080 #ween{
+.group-eight .container1080 #gwen{
     position: absolute;
     top: 171px;
     left: 190px;
