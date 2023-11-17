@@ -222,6 +222,7 @@ body{
     position: absolute;
     top: 360px;
     z-index: 4;
+    width: 1280px;
 }
 
 .group-one #spiders-group-one #img-gwen{
@@ -235,13 +236,13 @@ body{
     
 }
 .group-one #spiders-group-one #img-miles{
-    position: relative;
-    right: 230px;
-    top: -105px;
+    position: absolute;
+    right: 190px;
+    top: -35px;
 }
 .group-one #spiders-group-one #teladeaniaDerecha{
     position: absolute;
-    right: -111px;
+    right: -151px;
     top: 18px;
 }
 #teladeaniaIzquierda{
