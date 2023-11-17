@@ -242,7 +242,7 @@ body{
 }
 .group-one #spiders-group-one #teladeaniaDerecha{
     position: absolute;
-    right: -151px;
+    right: -149px;
     top: 18px;
 }
 #teladeaniaIzquierda{
@@ -521,6 +521,7 @@ body{
 /********** grupo 8 ******/
 #section-eight{
     height: 550px;
+    margin-top: 200px;
 }
 .group-eight{
     position: relative;
