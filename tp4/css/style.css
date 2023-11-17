@@ -72,9 +72,9 @@ body{
 }
 .btn-header h1{
     color: #02187E;
-    font-family: Lato;
+    font-family:'Lato';
     font-size: 20px;
-    font-style: normal;
+    font-style:normal;
     font-weight: 900;
     line-height: 94.5%;
     letter-spacing: 2.2px;
@@ -523,11 +523,11 @@ body{
 }
 /*footer*/
 footer{
-    width: 100%;
     display: flex;
     flex-direction: column;
+    /*
     height: 598px;
-    width: 1280px;
+    width: 1280px;*/
 }
 .topFooter{
     display: flex;
@@ -539,6 +539,8 @@ footer{
     flex-direction: column;
     background-color: #5E5E5D;
     align-content: flex-start;
+    height: 598px;
+    width: 1280px;
 }
 .botFooter h5{
     color: #FFFFFF;
@@ -548,7 +550,15 @@ footer{
     padding-left: 90px;
 }
 .botFooter .policies{
+    margin-top: 30px;
+    height: 380px;
     width: 820px;
+}
+.botFooter .policies h5{
+    letter-spacing: 1.76px;
+    font-size: 20.55px;
+    line-height: 18px;
+    font-weight: lighter;
 }
 .botFooter .socials{
     width: 212px;
