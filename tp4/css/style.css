@@ -38,7 +38,6 @@ body{
     justify-content: space-between;
     background: #5499F8;
     /*background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);*/
-
     height: 91px;
     width: 100%;
 }
@@ -80,7 +79,14 @@ body{
     line-height: 94.5%;
     letter-spacing: 2.2px;
 }
-
+#logoenHeader{
+    display: none;
+}
+#logoenHeader .show{
+    display: block;
+    width: 133px;
+    height: 68px;
+}
 
 /*anotarse a lista de correo*/
 .listaEmail {
@@ -180,10 +186,23 @@ body{
 }
 .group-one{
     width: 100%;
+
 }
+.group-one::before{
+    content: "";
+    position: absolute;
+    top: 99;
+    left: 0;
+    width: 1280px;
+    height: 720px;
+    background: url('../img/fondos/fondo1/fondo1.png');
+    z-index: 1;
+}
+
+
 .group-one #logo{
     width: 1280px;
-    position:absolute;
+    position:relative;
     display: flex;
     justify-content: center;
 }
@@ -191,63 +210,67 @@ body{
     z-index: 3;
 }
 
-.group-one #fondo{
-    width: 100%;
-    position: relative;
-}
-.group-one #fondo #img-fondo{
-    z-index: 1;
-    width: 100%;
-}
-.group-one #fondo #img-edificioIzq{
+.group-one #edificios #img-edificioIzq{
     z-index: 2;
     position: absolute;
-    left: -54px;
-    top: 40px;
+    left: -45px;
+   
 }
-.group-one #fondo #img-edificioCentro{
+.group-one #edificios #img-edificioCentro{
     z-index: 2;
     position: absolute;
-    left: 383px;
-    bottom: -34px;
+    left: 400px;
+    top: 488px;
 }
-.group-one #fondo #img-edificioDerecha{
+.group-one #edificios #img-edificioDerecha{
     position: absolute;
     z-index: 2;
-    right: -8px;
-    bottom: -40px;
+    right: -1300px;
+    bottom: -723px;
     
 }
-.group-one #spiders-group-one{
+#edificios{
     position: absolute;
-    top: 360px;
+    top: 135px;
+
+}
+.group-one #spiders-group-one{
+    position: relative;
     z-index: 4;
 }
 
 .group-one #spiders-group-one #img-gwen{
     margin-left: 90px;
+    position: relative;
+    top: -15px;
+    left: 10px;
 }
 
 .group-one #spiders-group-one #img-spider-man{
     position: relative;
-    right: 50px;
-    top: 38px;
+    right: 40px;
+    top: 18px;
     
 }
 .group-one #spiders-group-one #img-miles{
     position: relative;
-    right: 230px;
-    top: -105px;
+    left: 705px;
+    top: -525px;
 }
-.group-one #spiders-group-one #teladeaniaDerecha{
-    position: absolute;
-    right: -111px;
-    top: 18px;
+#telaDer{
+    width: 445.5px;
+    height: 388px;
+    position: relative;
+    top: -470px;
+    left: 595px;
 }
-#teladeaniaIzquierda{
-    position: absolute;
-    left: -181px;
-    top: 9px;
+#telaIzq{
+    width: 758;
+    height: 671;
+    position: relative;
+    top: -870px;
+    right: 170px;
+    z-index: 4;
 }
 /******* grupo2 *******/
 .group-two{
@@ -260,16 +283,17 @@ body{
 .group-two #rect-violet{
     position:absolute;
     z-index: 3;
-    top: -50px;
+    top: -1140px;
 }
 .group-two .container1080 #contenido{
     position: absolute;
 }
 .group-two .container1080 #contenido #titulo{
     z-index: 4;
+    line-height: 60px;
     position: absolute;
-    top: 180px;
-    left: 95px;
+    top: -940px;
+    left: 10px;
     width:646px;
 }
 .group-two .container1080 #contenido #texto{
@@ -277,18 +301,18 @@ body{
     height: 154px;
     z-index: 4;
     position: absolute;
-    top: 316px;
-    left: 95px;
+    top: -800px;
+    left: 10px;
 }
 .group-two #duende-verde{
     position: absolute;
-    top: 85px;
+    top: -1000px;
     right: 0px;
     z-index: 5;
 }
 .group-two #card{
     position: absolute;
-    top: 467px;
+    top: -600px;
     left: 90px;
     z-index: 4;
 }
@@ -297,7 +321,7 @@ body{
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 200px;
+    top: -930px;
 }
 .group-thre #cards{
     display: flex;
@@ -317,9 +341,12 @@ body{
 }
 /***** grup 4 *******/
 .group-four{
-    margin-top: 145px;
-    position: relative;
+    position: absolute;
+    width: 1280px;
+    height: 566px;
+    background: url('../img/fondos/fondoGwen.png') no-repeat;
     z-index: 2;
+    top: 2500px;
 }
 .group-four #card1{
     position: absolute;
@@ -341,10 +368,11 @@ body{
     background-color: black;
     position: relative;
     width: 100%;
-    top: -100px;
+    top: -310px;
     height: 1000px;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 .group-five #title{
     position: absolute;
@@ -363,7 +391,7 @@ body{
     position: absolute;
     left: 128px;
     top: 395px;
-    z-index: 4;
+    z-index: 12;
 }
   .group-five #hulk{
     position: absolute;
@@ -379,7 +407,7 @@ body{
   .group-five .fondo #part2{
     position: absolute;
     left: 0px;
-    z-index: 5;
+    z-index: 3;
 }
   .group-five .fondo #part3{
     position: absolute;
@@ -389,13 +417,14 @@ body{
 /*****grupo 6********/
 .group-six{
     position: relative;
+    top: -150px;
     display: flex;
     justify-content: center;
 }
 .group-six #rectBlanco{
     position:absolute;
     z-index: 1;
-    top: -230px;
+    top: -270px;
 }
 .group-six .container1080 #title{
     width: 802px;
