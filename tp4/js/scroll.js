@@ -1,3 +1,4 @@
+
 let img1 = document.querySelector("#img1")
 let img2 = document.querySelector("#img2")
 let img3 = document.querySelector("#img3")
@@ -7,9 +8,13 @@ let text2 = document.querySelector("#contenido2")
 let text3 = document.querySelector("#contenido3")
 let text4 = document.querySelector("#contenido4")
 
-window.onscroll = function () {
-    let scrollPosition = window.pageYOffset;
+let header = document.getElementById("header");
+let container = document.getElementById("header-container");
+let logoheader = document.getElementById("logo-header");
+let logo = document.querySelector("#logo");
 
+window.onscroll = function () {
+    let scrollPosition = window.pageYOffset;    
     
     if(scrollPosition>=3800 && scrollPosition<4200){
         img1.style.position = "sticky";
@@ -53,4 +58,19 @@ window.onscroll = function () {
         text3.style.opacity = "0"
         text4.style.opacity = "1"
     }
+    if(scrollPosition>=50){
+        container.style.zIndex = "10";
+        header.style.height = 91+"px";
+    }
+    if(scrollPosition<50){
+        header.style.height = 227+"px";
+        container.style.zIndex = "1";
+    }
+    if (window.scrollY > 0) {
+        logo.classList.add("fixed-img");
+        logo.style.zIndex=20;
+      } else {
+        logo.classList.remove("fixed-img");
+        logo.style.zIndex=3;
+      }
 }
