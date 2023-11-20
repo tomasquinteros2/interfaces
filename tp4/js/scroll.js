@@ -13,9 +13,44 @@ let container = document.getElementById("header-container");
 let logoheader = document.getElementById("logo-header");
 let logo = document.querySelector("#logo");
 
+/*** grupo1 */
+let spider1 = document.querySelector("#img-spider-man")
+let spider2 = document.querySelector("#img-gwen")
+let spider3 = document.querySelector("#img-miles")
+let teladeaniaDerecha = document.querySelector("#teladeaniaDerecha")
+let teladeaniaIzquierda = document.querySelector("#teladeaniaIzquierda")
+/** edificios */
+let edificioIzq = document.querySelector("#img-edificioIzq")
+let edificioCentro = document.querySelector("#img-edificioCentro")
+let edificioDerecha = document.querySelector("#img-edificioDerecha")
+let cielo = document.querySelector("#img-fondo");
+/** duende */
+let duende = document.querySelector("#duende-verde")
+let posPersonaje4Top = duende.getBoundingClientRect().top;
+let posPersonaje4Bottom = duende.getBoundingClientRect().bottom;
+
 window.onscroll = function () {
+    const scrolled = window.scrollY;
     let scrollPosition = window.pageYOffset;    
-    
+    /** grupo 1 paralax */
+    spider1.style.top = 38 - scrolled * 0.2 + "px";
+    spider2.style.top = 0 - scrolled * 0.2 + "px";
+    spider3.style.top = -35 - scrolled * 0.2 + "px";
+    teladeaniaIzquierda.style.top = 9 - scrolled * 0.2 + "px";
+    teladeaniaDerecha.style.top = 18 - scrolled * 0.2 + "px";
+
+    edificioIzq.style.top = 30 + scrolled * 0.5 + "px";
+    edificioCentro.style.top = 520 + scrolled * 0.5 + "px";
+    edificioDerecha.style.top = 30 + scrolled * 0.5 + "px";
+    cielo.style.top = 1 + scrolled * 0.6 + "px";
+    /** duende scroll */
+    if (((window.scrollY >= posPersonaje4Top+250))&&((posPersonaje4Bottom+100)>=window.scrollY)){
+        duende.style.top = 85 + scrolled * 0.21 + 'px';
+    }
+    if(window.scrollY < posPersonaje4Top+250){
+        duende.style.top = 85 + "px";
+    }
+    /**cards columnas */
     if(scrollPosition>=3800 && scrollPosition<4200){
         img1.style.position = "sticky";
         img1.style.top = 250 + "px";

@@ -216,7 +216,8 @@ body{
     position: relative;
 }
 .group-one #fondo #img-fondo{
-    z-index: 1;
+    position: relative;
+    z-index: 0;
     width: 100%;
 }
 .group-one #fondo #img-edificioIzq{
@@ -229,14 +230,13 @@ body{
     z-index: 2;
     position: absolute;
     left: 383px;
-    bottom: -34px;
+    top: 520px;
 }
 .group-one #fondo #img-edificioDerecha{
     position: absolute;
     z-index: 2;
     right: -8px;
     bottom: -40px;
-    
 }
 .group-one #spiders-group-one{
     position: absolute;
@@ -246,6 +246,7 @@ body{
 }
 
 .group-one #spiders-group-one #img-gwen{
+    position: relative;
     margin-left: 90px;
 }
 
@@ -306,6 +307,7 @@ body{
     top: 85px;
     right: 0px;
     z-index: 5;
+    transition: 0.3s;
 }
 .group-two #card{
     position: absolute;
