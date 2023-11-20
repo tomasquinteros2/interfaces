@@ -121,6 +121,7 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-top: 300px;
   }
   
 .listaEmail::before {
@@ -541,30 +542,97 @@ body{
 #section-eight{
     height: 550px;
     margin-top: 200px;
-}
-#layerGp8{
-    background-color: transparent;
-    width: 100%;
-    height: 550px;
+    
 }
 .group-eight{
     position: relative;
-    top: -200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+    transition: 0.5s;
 }
-.group-eight .container1080 #gwen{
+#fondogp8{
     position: absolute;
+}
+#line1{
+    position: absolute;
+}
+#line2{
+    position: absolute;
+    top: 700px;
+}
+#gwen,#spider-man,#miles-morales{
+    position: absolute;
+    transition: 0.5s;
+}
+.group-eight .container1080 .grupoInicial #gwen{
     top: 171px;
-    left: 190px;
+    left: 100px;
 }
-.group-eight .container1080 #spider-man{
+.group-eight .container1080 .grupoInicial #spider-man{
+    top: 180px;
+    left: 450px;
+}
+.group-eight .container1080 .grupoInicial #spider-man2{
     position: absolute;
     top: 180px;
-    left: 394px;
+    left: 450px;
 }
-.group-eight .container1080 #miles-morales{
-    position: absolute;
+.group-eight .container1080 .grupoInicial #miles-morales{
     top: 180px;
-    right: 189px;
+    right: 100px;
+}
+.grupoInicial{
+    display: block;
+}
+.grupoGwen{
+    display: none;
+}
+.group-eight .container1080 .grupoGwen #gwen{
+    top: 220px;
+    left: 220px;
+    scale: 1.5;
+}
+.group-eight .container1080 .grupoGwen #spider-man{
+    top: 270px;
+    left: 450px;
+}
+.group-eight .container1080 .grupoGwen #miles-morales{
+    top: 270px;
+    right: 170px
+}
+.grupoParker{
+    display: none;
+}
+.group-eight .container1080 .grupoParker #gwen{
+    top: 250px;
+    left: 100px;
+}
+.group-eight .container1080 .grupoParker #spider-man{
+    top: 220px;
+    left: 420px;
+    scale: 1.4;
+}
+.group-eight .container1080 .grupoParker #miles-morales{
+    top: 250px;
+    right: 100px
+}
+
+.grupoMorales{
+    display: none;
+}
+.group-eight .container1080 .grupoMorales #gwen{
+    top: 250px;
+    left: 100px;
+}
+.group-eight .container1080 .grupoMorales #spider-man{
+    top: 260px;
+    left: 400px;
+}
+.group-eight .container1080 .grupoMorales #miles-morales{
+    top: 200px;
+    right: 150px;
+    scale: 1.5;
 }
 /*footer*/
 footer{
