@@ -7,11 +7,9 @@ document.addEventListener("DOMContentLoaded", function (){
     let loader = document.querySelector('#onload');
     intervalo = setInterval(()=>{
         if(counter==100){
-            console.log("if")
             clearInterval(intervalo);
             loader.remove(loader);
         }else{
-            console.log("else")
             counter+=1;
             number.textContent = counter + "%";
         }
