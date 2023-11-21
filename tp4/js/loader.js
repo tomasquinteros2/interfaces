@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function (){
         if(counter==100){
             clearInterval();
             loader.remove(loader);
-            console.log('termino counter');
         }else{
-            console.log('entro counter');
             counter+=1;
             number.textContent = counter + "%";
         }
