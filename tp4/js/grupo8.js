@@ -5,8 +5,6 @@ let gwen = document.getElementById('gwen');
 let miles = document.getElementById('miles-morales');
 let spiderMan = document.getElementById('spider-man');
 
-let containerSpiders= document.getElementById("containerGp8");
-let layer = document.getElementById("layerGp8");
 
 let grupoInicial = document.querySelector("#grupoInicial")
 let grupoMorales = document.querySelector("#grupoMorales");
