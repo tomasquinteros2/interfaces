@@ -44,8 +44,12 @@ window.onscroll = function () {
     edificioDerecha.style.top = 30 + scrolled * 0.5 + "px";
     cielo.style.top = 1 + scrolled * 0.6 + "px";
     /** duende scroll */
-    if (((window.scrollY >= posPersonaje4Top+250))&&((posPersonaje4Bottom+100)>=window.scrollY)){
+    console.log(window.scrollY + " y")
+    console.log(posPersonaje4Top + " posPersonaje4Top")
+    console.log(posPersonaje4Bottom + " posPersonaje4Bottom")
+    if (((window.scrollY >= posPersonaje4Top-200))&&((posPersonaje4Bottom-100)>=window.scrollY)){
         duende.style.top = 85 + scrolled * 0.21 + 'px';
+        console.log("entro")
     }
     if(window.scrollY < posPersonaje4Top+250){
         duende.style.top = 85 + "px";

@@ -1,20 +1,20 @@
 'use strict'
 document.addEventListener("DOMContentLoaded", function (){
-
+    let intervalo = 0;
     //Preloader//
     let number = document.querySelector('#percentage');
     let counter = 0;
     let loader = document.querySelector('#onload');
-    setInterval(()=>{
+    intervalo = setInterval(()=>{
         if(counter==100){
-            clearInterval();
+            console.log("if")
+            clearInterval(intervalo);
             loader.remove(loader);
-            console.log('termino counter');
         }else{
-            console.log('entro counter');
+            console.log("else")
             counter+=1;
             number.textContent = counter + "%";
         }
-    }, 30);
+    }, 3);
 
 })
