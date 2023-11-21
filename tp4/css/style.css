@@ -175,18 +175,93 @@ body{
 .hamburger-menu{
     margin-top: 20px;
     margin-left: 100px;
-    height: 26px;
-    width: 34px;
+    height: 36px;
+    width: 42px; 
+}
+.hamburger-menu.open{
+    width: 42px;
+    height: 42px;
+}
+.hamburger-menu.open #top-line{
+    animation: top-line-animation 0.5s;
+    animation-fill-mode: forwards;
+}
+.hamburger-menu.open #middle-line{
+    animation: middle-line-animation 0.5s;
+    animation-fill-mode: forwards;
+}
+.hamburger-menu.open #bottom-line{
+    animation: bottom-line-animation 0.5s;
+    animation-fill-mode: forwards;
+}
+.hamburger-menu #top-line{
+    animation: top-line-animation-close 0.5s;
+    animation-fill-mode: forwards;
+}
+.hamburger-menu #middle-line{
+    animation: middle-line-animation-close 0.5s;
+    animation-fill-mode: forwards;
+}
+.hamburger-menu #bottom-line{
+    animation: bottom-line-animation-close 0.5s;
+    animation-fill-mode: forwards;
 }
 .line-hamburger{
     height: 4px;
-    width: 100%;
+    width: 34px;
     background-color: #FFE901;
     border-radius: 111px;
     border: solid 4px #2981FF;
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
 }
+@keyframes top-line-animation{
+    50%, 100%{
+        transform: translateY(12px) rotate(-45deg);
+        width: 42px;
+    }
+}
+@keyframes middle-line-animation{
+    20%, 100%{
+        width: 0px;
+        opacity: 0;
+    }
+}
+@keyframes bottom-line-animation{
+    50%, 100%{
+        transform: translateY(-12px) rotate(45deg);
+        width: 42px;
+        box-shadow: 5px 0px 0px 0px #02187E;
+    }
+}
+@keyframes top-line-animation-close{
+    0%{
+        transform: translateY(12px) rotate(-45deg);
+        width: 42px;
+    }
+    50%, 100%{
+        transform: translateY(0px) rotate(0deg);
+        width: 34px;
+    }
+}
+@keyframes middle-line-animation-close{
+    20%, 100%{
+        width: 34px;
+        opacity: 1;
+    }
+}
+@keyframes bottom-line-animation-close{
+    0%{
+        transform: translateY(-12px) rotate(45deg);
+        width: 42px;
+    }
+    50%, 100%{
+        transform: translateY(0px) rotate(0deg);
+        width: 34px;
+        box-shadow: 4px 5px 0px 0px #02187E;
+    }
+}
+
 .btn-header{
     margin-top: 10px;
     margin-right: 100px;
@@ -200,6 +275,10 @@ body{
     background: #FFE901;
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
+}
+.btn-header:hover{
+    scale:1.1;
+    transition: 0.3s;
 }
 .btn-header h1{
     color: #02187E;
