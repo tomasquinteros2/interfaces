@@ -457,28 +457,28 @@ body{
     position: relative;
     z-index: 2;
 }
-.group-four #card1{
+.group-four #ghostc1{
     position: absolute;
     left: 50px;
     top: -160px;
 }
-.group-four #card1 :hover{
+.group-four #ghostc1 :hover{
     transform: skew(20deg, 20deg);
 }
-.group-four #card2{
+.group-four #ghostc2{
     position: absolute;
     left: 20px;
     top: -20px;
 }
-.group-four #card2 :hover{
+.group-four #ghostc2 :hover{
     transform: skew(20deg, 20deg);
 }
-.group-four #card3{
+.group-four #ghostc3{
     position: absolute;
     left: 53px;
     top: 167px;
 }
-.group-four #card2 :hover{
+.group-four #ghostc3 :hover{
     transform: skew(20deg, 20deg);
 }
 /****** grupo 5 *********/

@@ -29,9 +29,9 @@ let posPersonaje4Top = duende.getBoundingClientRect().top;
 let posPersonaje4Bottom = duende.getBoundingClientRect().bottom;
 
 //ghost spider
-let card1= document.getElementById('card1');
-let card2= document.getElementById('card2');
-let card3= document.getElementById('card3');
+let card1= document.getElementById('ghostc1');
+let card2= document.getElementById('ghostc2');
+let card3= document.getElementById('ghostc3');
 
 window.onscroll = function () {
     const scrolled = window.scrollY;
@@ -48,9 +48,9 @@ window.onscroll = function () {
     edificioDerecha.style.top = 30 + scrolled * 0.5 + "px";
     cielo.style.top = 1 + scrolled * 0.6 + "px";
 //gwen
-    card1.style.top= -160 - scrolled * 0.5 + "px";
-    card2.style.top= -20 - scrolled * 0.5 + "px";
-    card3.style.top= 167 + scrolled * 0.5 + "px";
+    card1.style.top= 1100 - scrolled * 0.5 + "px";
+    card2.style.top= 1250 - scrolled * 0.5 + "px";
+    card3.style.top= 1430 - scrolled * 0.5 + "px";
 
     /** duende scroll */
     if (((window.scrollY >= posPersonaje4Top+250))&&((posPersonaje4Bottom+100)>=window.scrollY)){
