@@ -442,10 +442,15 @@ body{
 .group-thre #card1{
     width: 332px;
 }
+.group-thre #card1 :hover{
+    transform: skew(30deg, 10deg);
+}
 .group-thre #card2{
     width: 332px;
+    transform: skew(30deg, 10deg);
 }
 .group-thre #card3{
+    transform: skew(30deg, 10deg);
     width: 332px;
 }
 .textBlack{

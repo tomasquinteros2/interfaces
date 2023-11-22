@@ -1,4 +1,3 @@
-
 let img1 = document.querySelector("#img1")
 let img2 = document.querySelector("#img2")
 let img3 = document.querySelector("#img3")
@@ -29,6 +28,11 @@ let duende = document.querySelector("#duende-verde")
 let posPersonaje4Top = duende.getBoundingClientRect().top;
 let posPersonaje4Bottom = duende.getBoundingClientRect().bottom;
 
+//ghost spider
+let card1= document.getElementById('card1');
+let card2= document.getElementById('card2');
+let card3= document.getElementById('card3');
+
 window.onscroll = function () {
     const scrolled = window.scrollY;
     let scrollPosition = window.pageYOffset;    
@@ -43,6 +47,11 @@ window.onscroll = function () {
     edificioCentro.style.top = 520 + scrolled * 0.5 + "px";
     edificioDerecha.style.top = 30 + scrolled * 0.5 + "px";
     cielo.style.top = 1 + scrolled * 0.6 + "px";
+//gwen
+    card1.style.top= 10+ scrolled * 0.1 + "px";
+    card2.style.top= 10+ scrolled * 0.1 + "px";
+    card3.style.top= 10+ scrolled * 0.1 + "px";
+
     /** duende scroll */
     if (((window.scrollY >= posPersonaje4Top+250))&&((posPersonaje4Bottom+100)>=window.scrollY)){
         duende.style.top = 85 + scrolled * 0.21 + 'px';
