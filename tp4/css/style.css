@@ -462,24 +462,27 @@ body{
     left: 50px;
     top: -160px;
 }
-.group-four #ghostc1 :hover{
-    transform: skew(20deg, 20deg);
+.group-four #ghostc1:hover{
+    transform: skew(5deg, 5deg);
+    transition: ease-in-out;
 }
 .group-four #ghostc2{
     position: absolute;
     left: 20px;
     top: -20px;
 }
-.group-four #ghostc2 :hover{
-    transform: skew(20deg, 20deg);
+.group-four #ghostc2:hover{
+    transform: skew(5deg, 5deg);
+    transition: ease-in;
 }
 .group-four #ghostc3{
     position: absolute;
     left: 53px;
     top: 167px;
 }
-.group-four #ghostc3 :hover{
-    transform: skew(20deg, 20deg);
+.group-four #ghostc3:hover{
+    transform: skew(5deg, 5deg);
+    transition: ease-in;
 }
 /****** grupo 5 *********/
 .group-five{
