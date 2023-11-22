@@ -455,7 +455,7 @@ body{
     color: #02187E;
     font-size: 20px;
     font-weight: bold;
-
+    cursor: pointer;
 }
 .ingresaCorreo .autorizacion{
     width: 578px;
@@ -929,6 +929,29 @@ body{
     right: 150px;
     scale: 1.5;
 }
+/** spritesheet*/
+#container-sheet{
+    width: 1280px;
+    height: 50px;
+    background-color: #5E5E5D;
+    display: flex;
+    justify-content: center;
+}
+#spider-sheet{
+    position: absolute;
+    width: 44px;
+    height: 50px;
+    margin:auto;
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6d89e6c8-77a7-44fd-8541-1a24eb994c56/deyducf-3526ab6e-75b0-4563-b59a-5dda87e39d25.png/v1/fit/w_592,h_440,q_70,strp/spider_man_lsw_sprite_sheet__far_from_home__by_xxstevegamesxx_deyducf-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDQwIiwicGF0aCI6IlwvZlwvNmQ4OWU2YzgtNzdhNy00NGZkLTg1NDEtMWEyNGViOTk0YzU2XC9kZXlkdWNmLTM1MjZhYjZlLTc1YjAtNDU2My1iNTlhLTVkZGE4N2UzOWQyNS5wbmciLCJ3aWR0aCI6Ijw9NTkyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.GnVs1WFXE4mZK_bNcAYJktg_WEG2d0uAI7Ch0QLvIzM);
+    background-position:-22px -175px;
+    animation:walk 1.5s steps(11) infinite;
+}
+@keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:-22px -171px }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-559px -175px; }
+  }
 /*footer*/
 footer{
     display: flex;
