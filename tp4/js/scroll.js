@@ -94,12 +94,10 @@ window.onscroll = function () {
         text4.style.opacity = "1"
     }
     if(scrollPosition>=50){
-        container.style.zIndex = "10";
         header.style.height = 91+"px";
     }
     if(scrollPosition<50){
-        header.style.height = 227+"px";
-        container.style.zIndex = "1";
+        header.style.height = 120+"px";
     }
     if (window.scrollY > 0) {
         logo.classList.add("fixed-img");

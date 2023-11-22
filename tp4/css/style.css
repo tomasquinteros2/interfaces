@@ -26,10 +26,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 .container1280{
     width: 1280px;
+    
 }
 .container1080{
     width: 1080px;
@@ -152,14 +152,14 @@ body{
     position: absolute;
     justify-content: space-between;
     background: linear-gradient(180deg, #5499F8 0%, #5499F8 87.91%, rgba(84, 153, 248, 0.00) 100%);
-    height: 227px;
+    height: 120px;
     width: 1280px;
     z-index: 3;
 }
 #header-container{
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 10;
     
 }
 .header-sticky{
@@ -177,10 +177,15 @@ body{
     margin-left: 100px;
     height: 36px;
     width: 42px; 
+    animation: hamburger-menu-close 0.5s;
+    animation-fill-mode: forwards;
 }
 .hamburger-menu.open{
     width: 42px;
     height: 42px;
+    z-index: 11;
+    animation: hamburger-menu 0.5s;
+    animation-fill-mode: forwards;
 }
 .hamburger-menu.open #top-line{
     animation: top-line-animation 0.5s;
@@ -214,6 +219,19 @@ body{
     border: solid 4px #2981FF;
     box-shadow: 4px 5px 0px 0px #02187E;
     cursor: pointer;
+}
+@keyframes hamburger-menu{
+    90%, 100%{
+        transform: translateX(60px);
+    }
+}
+@keyframes hamburger-menu-close{
+    0%{
+        transform: translateX(60px);
+    }
+    90%, 100%{
+        transform: translateX(0px);
+    }
 }
 @keyframes top-line-animation{
     50%, 100%{
@@ -303,7 +321,64 @@ body{
     height: 68px;
 }
 
-
+#menuH{
+    background-color: #5499F8;
+    height: 1000px;
+    width: 220px;
+    left: -100px;
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+    top: 70px;
+}
+#menuH.view{
+    animation: menuDesplegable 1s;
+    animation-fill-mode: forwards;
+}
+#menuH.view #li1{
+    animation: animationLi1 1s;
+    animation-fill-mode: forwards;
+}
+#menuH.view #li2{
+    animation: animationLi1 1.5s;
+    animation-fill-mode: forwards;
+}
+#menuH.view #li3{
+    animation: animationLi1 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes animationLi1{
+    50%,100%{
+        transform: translateX(70px);
+        opacity: 1;
+    }
+}
+#menuH .list{
+    top: 100px;
+    left: -30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+#menuH .list li{
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+}
+#menuH .list li img{
+    width:30px;
+    height: 30px;
+}
+#menuH .list h2{
+    color:#FFF;
+}
+@keyframes menuDesplegable{
+    50%,100%{
+        transform: translateX(100px);
+        opacity: 1;
+    }
+}
 /*anotarse a lista de correo*/
 .listaEmail {
     position: relative;
@@ -397,6 +472,9 @@ body{
 /*finaliza anotarse a lista*/
 
 /***** grupo 1 *****/
+#section-one{
+    position: relative;
+}
 .group-one{
     width: 100%;
     margin-top: 100px;
