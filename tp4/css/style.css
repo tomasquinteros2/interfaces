@@ -442,15 +442,10 @@ body{
 .group-thre #card1{
     width: 332px;
 }
-.group-thre #card1 :hover{
-    transform: skew(30deg, 10deg);
-}
 .group-thre #card2{
     width: 332px;
-    transform: skew(30deg, 10deg);
 }
 .group-thre #card3{
-    transform: skew(30deg, 10deg);
     width: 332px;
 }
 .textBlack{
@@ -467,15 +462,24 @@ body{
     left: 50px;
     top: -160px;
 }
+.group-four #card1 :hover{
+    transform: skew(20deg, 20deg);
+}
 .group-four #card2{
     position: absolute;
     left: 20px;
     top: -20px;
 }
+.group-four #card2 :hover{
+    transform: skew(20deg, 20deg);
+}
 .group-four #card3{
     position: absolute;
     left: 53px;
     top: 167px;
+}
+.group-four #card2 :hover{
+    transform: skew(20deg, 20deg);
 }
 /****** grupo 5 *********/
 .group-five{
