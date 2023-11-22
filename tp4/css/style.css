@@ -388,7 +388,6 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 300px;
   }
   
 .listaEmail::before {
@@ -810,21 +809,44 @@ body{
     position: absolute;
     top: 272px;
 }
+/*** grupo 7.5 *****/
+#section-black{
+    background-color: #000;
+    height: 600px;
+    z-index: 0;
+    position: relative;
+}
+#section-black #tittle{
+    position: relative;
+    left: 110px;
+    top: 160px;
+    width: 816px;
+}
+#section-black .btn-header{
+    position: relative;
+    left: 110px;
+    top: 180px;
+    width: 292px;
+}
 /********** grupo 8 ******/
 #section-eight{
-    height: 550px;
-    margin-top: 200px;
-    
+    height: 550px; 
 }
 .group-eight{
     position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 200px;
     transition: 0.5s;
+    top: -200px;
+    
 }
 #fondogp8{
     position: absolute;
+    z-index: 1;
+    opacity: 2;
+}
+#line1,#line2{
+    z-index: 2;
 }
 #line1{
     position: absolute;
@@ -836,6 +858,7 @@ body{
 #gwen,#spider-man,#miles-morales{
     position: absolute;
     transition: 0.5s;
+    z-index: 2;
 }
 .group-eight .container1080 .grupoInicial #gwen{
     top: 171px;
