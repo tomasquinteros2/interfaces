@@ -27,7 +27,10 @@ let cielo = document.querySelector("#img-fondo");
 let duende = document.querySelector("#duende-verde")
 let posPersonaje4Top = duende.getBoundingClientRect().top;
 let posPersonaje4Bottom = duende.getBoundingClientRect().bottom;
-
+//grupo 3
+let charcard1 = document.getElementById('charCard1');
+let charcard2 = document.getElementById('charCard2');
+let charcard3 = document.getElementById('charCard3');
 //ghost spider
 let card1= document.getElementById('ghostc1');
 let card2= document.getElementById('ghostc2');

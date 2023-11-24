@@ -595,18 +595,44 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.group-thre #card1{
+.group-thre #charCard1{
     width: 332px;
 }
-.group-thre #card2{
+.group-thre #charCard2{
     width: 332px;
 }
-.group-thre #card3{
+.group-thre #charCard3{
     width: 332px;
 }
 .textBlack{
     color: black;
 }
+.group-thre #charCard1{
+    opacity: 0;
+    transform: translateY(300px);
+    animation: aparecer, 0.2s, ease-in-out forwards;
+}
+.group-thre #charCard2{
+    opacity: 0;
+    transform: translateY(300px);
+    animation: aparecer, 0.3s, ease-in-out forwards;
+}
+.group-thre #charCard3{
+    opacity: 0;
+    transform: translateY(300px);
+    animation: aparecer, 0.4s, ease-in-out forwards;
+}
+  @keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+  
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
 /***** grup 4 *******/
 .group-four{
     margin-top: 145px;
