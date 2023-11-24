@@ -210,6 +210,10 @@ body{
     line-height: 94.5%;
     letter-spacing: 2.2px;
 }
+.btn-header:hover{
+    background: #2981FF;
+    border: solid 10px #FFE901;
+}
 .logo{
     width: 590px;
     position:absolute;
