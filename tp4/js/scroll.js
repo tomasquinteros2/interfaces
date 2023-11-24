@@ -51,9 +51,9 @@ window.onscroll = function () {
     edificioDerecha.style.top = 30 + scrolled * 0.5 + "px";
     cielo.style.top = 1 + scrolled * 0.6 + "px";
 //gwen
-    card1.style.top= 1100 - scrolled * 0.5 + "px";
-    card2.style.top= 1250 - scrolled * 0.5 + "px";
-    card3.style.top= 1430 - scrolled * 0.5 + "px";
+    card1.style.top= 1130 - scrolled * 0.5 + "px";
+    card2.style.top= 1280 - scrolled * 0.5 + "px";
+    card3.style.top= 1460 - scrolled * 0.5 + "px";
 
     /** duende scroll */
     if (((window.scrollY >= posPersonaje4Top-200))&&((posPersonaje4Bottom-100)>=window.scrollY)){
