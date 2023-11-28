@@ -1005,6 +1005,21 @@ body{
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
     100% { background-position:-559px -175px; }
   }
+/*spritesheet spiderman*/
+.spSpiderman{
+    position: absolute;
+    top: 1000px;
+    left: 250px;
+    width: 83.5px;
+    height: 80px;    
+    margin: auto;
+    background: url(../img/personajes/grupo4/spritesheet.png) repeat-x;
+    animation: jump 8s steps(16) infinite;
+}
+@keyframes jump { 
+	0% { background-position: 0px; }
+    100% { background-position: -4080px; }
+ } 
 /*footer*/
 footer{
     display: flex;
