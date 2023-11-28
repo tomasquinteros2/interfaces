@@ -992,18 +992,31 @@ body{
 /** spritesheet*/
 #spider-sheet{
     position: absolute;
+    top: 800px;
     width: 44px;
     height: 50px;
     margin:auto;
-    background: url(../img/spritesheet.png);
-    background-position:-22px -175px;
-    animation:walk 1.5s steps(11) infinite;
+    background: url(../img/spritesheet.png) repeat-x;
+    background-position:-25px -175px;
+    animation:walk 2s steps(10) infinite;
 }
 @keyframes walk {
     /* Partimos de la primera viñeta del sprite sheet */
-    0% { background-position:-22px -171px }
+    from { background-position:-25px -171px;
+         left: 0px;}
+    10%{left: 100px;}
+    20%{left: 200px;}
+    30%{left: 300px;}
+    40%{left: 450px;}
+    50%{left: 550px;}
+    60%{left: 650px;}
+    70%{left: 750px;}
+    80%{left: 950px;}
+    90%{left: 1100px;}
+    to{background-position:-502px -171px;
+        left: 1280px;}
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-    100% { background-position:-559px -175px; }
+    /**100% { background-position:-559px -175px; }**/
   }
 /*spritesheet spiderman*/
 .spSpiderman{
