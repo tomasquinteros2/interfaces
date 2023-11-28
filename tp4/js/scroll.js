@@ -40,15 +40,27 @@ window.onscroll = function () {
     const scrolled = window.scrollY;
     let scrollPosition = window.pageYOffset;    
     /** grupo 1 paralax */
-    spider1.style.top = 38 - scrolled * 0.2 + "px";
-    spider2.style.top = 0 - scrolled * 0.2 + "px";
-    spider3.style.top = -35 - scrolled * 0.2 + "px";
-    teladeaniaIzquierda.style.top = 9 - scrolled * 0.2 + "px";
-    teladeaniaDerecha.style.top = 18 - scrolled * 0.2 + "px";
+    if(window.scrollY > 0){
+        spider1.style.transform = 'translate(0px, 20px) scale(1.1)';
+        spider2.style.transform = 'translate(-40px, 10px) scale(1.1)';
+        spider3.style.transform = 'translate(80px, 0px) scale(1.1)';
+        teladeaniaIzquierda.style.transform = 'translate(-30px, 20px) scale(1.1)';
+        teladeaniaDerecha.style.transform = 'translate(110px, 10px) scale(1.1)';
+        edificioIzq.style.transform = 'scale(1.1)';
+        edificioCentro.style.transform = 'scale(1.1)';
+        edificioDerecha.style.transform = 'scale(1.1)';
+    }
+    else{
+        spider1.style.transform = 'translate(0px, 0px) scale(1)';
+        spider2.style.transform = 'translate(0px, 0px) scale(1)';
+        spider3.style.transform = 'translate(0px, 0px) scale(1)';
+        teladeaniaIzquierda.style.transform = 'translate(0px, 0px) scale(1)';
+        teladeaniaDerecha.style.transform = 'translate(0px, 0px) scale(1)';
+        edificioIzq.style.transform = 'scale(1)';
+        edificioCentro.style.transform = 'scale(1)';
+        edificioDerecha.style.transform = 'scale(1)';
+    }
 
-    edificioIzq.style.top = 30 + scrolled * 0.5 + "px";
-    edificioCentro.style.top = 520 + scrolled * 0.5 + "px";
-    edificioDerecha.style.top = 30 + scrolled * 0.5 + "px";
     cielo.style.top = 1 + scrolled * 0.6 + "px";
     //gwen
     card1.style.top= 1130 - scrolled * 0.5 + "px";
@@ -56,7 +68,8 @@ window.onscroll = function () {
     card3.style.top= 1460 - scrolled * 0.5 + "px";
 
     /** duende scroll */
-    if (((window.scrollY >= posPersonaje4Top-200))&&((posPersonaje4Bottom-100)>=window.scrollY)){
+    //console.log(window.scrollY)
+    if (((window.scrollY >= 800))&&((window.scrollY <= 1500))){
         duende.style.top = 85 + scrolled * 0.21 + 'px';
     }
     else{
@@ -74,7 +87,7 @@ window.onscroll = function () {
         text2.style.opacity = "0"
     }
     if(scrollPosition>4200 && scrollPosition<4620){
-        img2.style.position = "sticky";
+        img2.style.position = "sitcky";
         img2.style.top = 250 + "px";
         img1.style.display = "none";
         img3.style.display = "none";
@@ -85,7 +98,7 @@ window.onscroll = function () {
         text3.style.opacity = "0"
     }
     if(scrollPosition>4620 && scrollPosition<5130){
-        img3.style.position = "sticky";
+        img3.style.position = "sitcky";
         img3.style.top = 250 + "px";
         img1.style.display = "none";
         img2.style.display = "none";
@@ -96,7 +109,7 @@ window.onscroll = function () {
         text4.style.opacity = "0"
     }
     if(scrollPosition>5130){
-        img4.style.position = "sticky";
+        img4.style.position = "sitcky";
         img4.style.top = 250 + "px";
         img1.style.display = "none";
         img2.style.display = "none";
@@ -129,7 +142,7 @@ window.onscroll = function () {
         charcard2.style.opacity = 0;
         charcard3.style.opacity = 0;
     }
-    if(window.scrollY >= 1500 && window.scrollY <= 1700){
+    if(window.scrollY >= 1500 && window.scrollY <= 1900){
         charcard1.style.transform = "translateY("+0+"px)";
         charcard1.style.opacity = 1;
         if(window.scrollY >= 1600){

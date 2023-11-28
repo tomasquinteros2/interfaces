@@ -29,7 +29,8 @@ body{
 }
 .container1280{
     width: 1280px;
-    
+    overflow: hidden;
+    position: relative;
 }
 .container1080{
     width: 1080px;
@@ -160,7 +161,7 @@ body{
     position: sticky;
     top: 0px;
     z-index: 10;
-    
+    width: 1280px;
 }
 .header-sticky{
     position: sticky;
@@ -505,51 +506,59 @@ body{
     position: absolute;
     left: -54px;
     top: 40px;
+    transition: 0.5s;
 }
 .group-one #fondo #img-edificioCentro{
     z-index: 2;
     position: absolute;
     left: 383px;
     top: 520px;
+    transition: 0.5s;
 }
 .group-one #fondo #img-edificioDerecha{
     position: absolute;
     z-index: 2;
     right: -8px;
     bottom: -40px;
+    transition: 0.5s;
 }
 .group-one #spiders-group-one{
     position: absolute;
     top: 360px;
     z-index: 4;
     width: 1280px;
+    transition: 0.5s;
 }
 
 .group-one #spiders-group-one #img-gwen{
     position: relative;
     margin-left: 90px;
+    transition: 0.5s;
 }
 
 .group-one #spiders-group-one #img-spider-man{
     position: relative;
     right: 50px;
     top: 38px;
-    
+    transition: 0.5s;
 }
 .group-one #spiders-group-one #img-miles{
     position: absolute;
     right: 190px;
     top: -35px;
+    transition: 0.5s;
 }
 .group-one #spiders-group-one #teladeaniaDerecha{
     position: absolute;
     right: 0px;
     top: 18px;
+    transition: 0.5s;
 }
 #teladeaniaIzquierda{
     position: absolute;
     left: 0px;
     top: 9px;
+    transition: 0.5s;
 }
 /******* grupo2 *******/
 .group-two{
@@ -794,27 +803,26 @@ body{
 }
 .group-six .container1080 #mas-diversion .card-diversion #contenido1{
     position: absolute;
-    right: 100px;
+    right: 30px;
     top: 150px;
-    
 }
 .group-six .container1080 #mas-diversion .card-diversion #contenido2{
     position: absolute;
-    right: 100px;
+    right: 30px;
     top: 553px;
     opacity: 0;
     transition: 1s;
 }
 .group-six .container1080 #mas-diversion .card-diversion #contenido3{
     position: absolute;
-    right: 100px;
+    right: 30px;
     top: 979px;
     opacity: 0;
     transition: 1s;
 }
 .group-six .container1080 #mas-diversion .card-diversion #contenido4{
     position: absolute;
-    right: 100px;
+    right: 30px;
     top: 1491px;
     opacity: 0;
     transition: 1s;
@@ -889,7 +897,7 @@ body{
     display: flex;
     justify-content: center;
     transition: 0.5s;
-    top: -200px;
+    top: -150px;
     
 }
 #fondogp8{
@@ -982,19 +990,12 @@ body{
     scale: 1.5;
 }
 /** spritesheet*/
-#container-sheet{
-    width: 1280px;
-    height: 50px;
-    background-color: #5E5E5D;
-    display: flex;
-    justify-content: center;
-}
 #spider-sheet{
     position: absolute;
     width: 44px;
     height: 50px;
     margin:auto;
-    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6d89e6c8-77a7-44fd-8541-1a24eb994c56/deyducf-3526ab6e-75b0-4563-b59a-5dda87e39d25.png/v1/fit/w_592,h_440,q_70,strp/spider_man_lsw_sprite_sheet__far_from_home__by_xxstevegamesxx_deyducf-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDQwIiwicGF0aCI6IlwvZlwvNmQ4OWU2YzgtNzdhNy00NGZkLTg1NDEtMWEyNGViOTk0YzU2XC9kZXlkdWNmLTM1MjZhYjZlLTc1YjAtNDU2My1iNTlhLTVkZGE4N2UzOWQyNS5wbmciLCJ3aWR0aCI6Ijw9NTkyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.GnVs1WFXE4mZK_bNcAYJktg_WEG2d0uAI7Ch0QLvIzM);
+    background: url(../img/spritesheet.png);
     background-position:-22px -175px;
     animation:walk 1.5s steps(11) infinite;
 }
