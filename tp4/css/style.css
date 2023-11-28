@@ -328,7 +328,7 @@ body{
 #menuH{
     background-color: #5499F8;
     height: 1000px;
-    width: 220px;
+    width: 250px;
     left: -100px;
     position: absolute;
     opacity: 0;
@@ -339,16 +339,23 @@ body{
     animation: menuDesplegable 1s;
     animation-fill-mode: forwards;
 }
+#menuH.view li{
+    cursor: pointer;
+}
+#menuH.view li:hover{
+    scale: 1.1;
+    text-decoration: underline #FFF;
+}
 #menuH.view #li1{
     animation: animationLi1 1s;
     animation-fill-mode: forwards;
 }
 #menuH.view #li2{
-    animation: animationLi1 1.5s;
+    animation: animationLi1 1.7s;
     animation-fill-mode: forwards;
 }
 #menuH.view #li3{
-    animation: animationLi1 2s;
+    animation: animationLi1 3s;
     animation-fill-mode: forwards;
 }
 @keyframes animationLi1{
