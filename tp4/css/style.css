@@ -1021,17 +1021,17 @@ body{
 /*spritesheet spiderman*/
 .spSpiderman{
     position: absolute;
-    top: 1000px;
-    left: 250px;
-    width: 83.5px;
-    height: 80px;    
+    top: 1080px;
+    left: 423px;
+    width: 85px;
+    height: 80.1px;    
     margin: auto;
-    background: url(../img/personajes/grupo4/spritesheet.png) repeat-x;
-    animation: jump 8s steps(16) infinite;
+    background: url(../img/personajes/grupo4/spSpiderman.png) repeat-x;
+    animation: jump 2s steps(16) infinite;
 }
 @keyframes jump { 
 	0% { background-position: 0px; }
-    100% { background-position: -4080px; }
+    100% { background-position: -1360px; }
  } 
 /*footer*/
 footer{
