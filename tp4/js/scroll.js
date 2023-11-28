@@ -40,9 +40,17 @@ window.onscroll = function () {
     const scrolled = window.scrollY;
     let scrollPosition = window.pageYOffset;    
     /** grupo 1 paralax */
+    spider1.style.top = 38 - scrolled * 0.2 + "px";
+    spider2.style.top = 0 - scrolled * 0.2 + "px";
+    spider3.style.top = -35 - scrolled * 0.2 + "px";
+    teladeaniaIzquierda.style.top = 9 - scrolled * 0.2 + "px";
+    teladeaniaDerecha.style.top = 18 - scrolled * 0.2 + "px";
+    edificioIzq.style.top = 30 + scrolled * 0.5 + "px";
+    edificioCentro.style.top = 520 + scrolled * 0.5 + "px";
+    edificioDerecha.style.top = 30 + scrolled * 0.5 + "px";
     if(window.scrollY > 0){
-        spider1.style.transform = 'translate(0px, 20px) scale(1.1)';
-        spider2.style.transform = 'translate(-40px, 10px) scale(1.1)';
+        spider1.style.transform = 'translate(0px, 0px) scale(1.1)';
+        spider2.style.transform = 'translate(-40px, 0px) scale(1.1)';
         spider3.style.transform = 'translate(80px, 0px) scale(1.1)';
         teladeaniaIzquierda.style.transform = 'translate(-30px, 20px) scale(1.1)';
         teladeaniaDerecha.style.transform = 'translate(110px, 10px) scale(1.1)';
