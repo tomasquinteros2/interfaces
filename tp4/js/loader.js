@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", function (){
             counter+=1;
             number.textContent = counter + "%";
         }
-    }, 15);
+    }, 1);
 
 })

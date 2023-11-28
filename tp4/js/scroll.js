@@ -50,7 +50,7 @@ window.onscroll = function () {
     edificioCentro.style.top = 520 + scrolled * 0.5 + "px";
     edificioDerecha.style.top = 30 + scrolled * 0.5 + "px";
     cielo.style.top = 1 + scrolled * 0.6 + "px";
-//gwen
+    //gwen
     card1.style.top= 1130 - scrolled * 0.5 + "px";
     card2.style.top= 1280 - scrolled * 0.5 + "px";
     card3.style.top= 1460 - scrolled * 0.5 + "px";
@@ -59,7 +59,7 @@ window.onscroll = function () {
     if (((window.scrollY >= posPersonaje4Top-200))&&((posPersonaje4Bottom-100)>=window.scrollY)){
         duende.style.top = 85 + scrolled * 0.21 + 'px';
     }
-    if(window.scrollY < posPersonaje4Top+250){
+    else{
         duende.style.top = 85 + "px";
     }
     /**cards columnas */
@@ -105,12 +105,14 @@ window.onscroll = function () {
         text3.style.opacity = "0"
         text4.style.opacity = "1"
     }
+    /* header */
     if(scrollPosition>=50){
         header.style.height = 91+"px";
     }
     if(scrollPosition<50){
         header.style.height = 120+"px";
     }
+    /* logo */
     if (window.scrollY > 0) {
         logo.classList.add("fixed-img");
         logo.style.zIndex=20;
@@ -118,4 +120,25 @@ window.onscroll = function () {
         logo.classList.remove("fixed-img");
         logo.style.zIndex=3;
       }
+    //console.log(window.scrollY);
+    if(window.scrollY<1500){
+        charcard1.style.transform = "translateY("+300+"px)";
+        charcard2.style.transform = "translateY("+300+"px)";
+        charcard3.style.transform = "translateY("+300+"px)";
+        charcard1.style.opacity = 0;
+        charcard2.style.opacity = 0;
+        charcard3.style.opacity = 0;
+    }
+    if(window.scrollY >= 1500 && window.scrollY <= 1700){
+        charcard1.style.transform = "translateY("+0+"px)";
+        charcard1.style.opacity = 1;
+        if(window.scrollY >= 1600){
+            charcard2.style.transform = "translateY("+0+"px)";
+            charcard2.style.opacity = 1;
+            if(window.scrollY >= 1680){
+                charcard3.style.transform = "translateY("+0+"px)";
+                charcard3.style.opacity = 1;
+            }
+        }
+    }
 }

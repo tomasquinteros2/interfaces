@@ -606,6 +606,9 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.group-thre #charCard1, .group-thre #charCard2, .group-thre #charCard3{
+    transition: 0.5s;
+}
 .group-thre #charCard1{
     width: 332px;
 }
