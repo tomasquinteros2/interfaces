@@ -536,12 +536,12 @@ body{
 }
 .group-one #spiders-group-one #teladeaniaDerecha{
     position: absolute;
-    right: -149px;
+    right: 0px;
     top: 18px;
 }
 #teladeaniaIzquierda{
     position: absolute;
-    left: -181px;
+    left: 0px;
     top: 9px;
 }
 /******* grupo2 *******/
